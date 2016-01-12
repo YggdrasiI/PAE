@@ -40,6 +40,10 @@ import CvDebugTools
 import CvDebugInfoScreen
 #import CvDiplomacy
 
+import CvStartingPointsScreen
+import thread
+from threading import Timer, Thread, Event
+
 import CvUtil
 import CvEventInterface
 import CvPopupInterface
@@ -116,10 +120,14 @@ corporationScreen = CvCorporationScreen.CvCorporationScreen()
 def showCorporationScreen():
         if CyGame().getActivePlayer() > -1:
                 corporationScreen.interfaceScreen()
-
 optionsScreen = CvOptionsScreen.CvOptionsScreen()
 def showOptionsScreen():
         optionsScreen.interfaceScreen()
+"""
+optionsScreen = CvStartingPointsScreen.CvStartingPointsScreen()
+def showOptionsScreen():
+        optionsScreen.showScreen(True)
+"""
 
 #foreignAdvisor = CvForeignAdvisor.CvForeignAdvisor()
 foreignAdvisor = CvExoticForeignAdvisor.CvExoticForeignAdvisor()
@@ -210,6 +218,10 @@ def showVictoryScreen():
         if CyGame().getActivePlayer() > -1:
            victoryScreen.interfaceScreen()
 
+startingpointsScreen = CvStartingPointsScreen.CvStartingPointsScreen()
+def showStartingPointsScreen():
+        startingpointsScreen.showScreen(True)
+
 #################################################
 ## Civilopedia
 #################################################
@@ -278,8 +290,14 @@ def pediaJumpToSpecialist(argsList):
         pediaMainScreen.pediaJump(PEDIA_SPECIALIST, argsList[0], True)
 
 def pediaShowHistorical(argsList):
-        iEntryId = pediaMainScreen.pediaHistorical.getIdFromEntryInfo(argsList[0], argsList[1])
-        pediaMainScreen.pediaJump(PEDIA_HISTORY, iEntryId, True)
+        # PAE, switch between Pedia and Startingpoint screen
+        if argsList[0] >= 11111:
+          val1 = argsList[0]-11111
+          val2 = argsList[1]
+          startingpointsScreen.handleClick(val1,val2)
+        else:
+          iEntryId = pediaMainScreen.pediaHistorical.getIdFromEntryInfo(argsList[0], argsList[1])
+          pediaMainScreen.pediaJump(PEDIA_HISTORY, iEntryId, True)
         return
 
 #################################################
@@ -2286,3 +2304,36 @@ HandleNavigationMap = {
 
                                 # add new screens here
                                 }
+
+
+
+class PerpetualTimer:
+
+    def __init__(self, screen):
+        # Timeout between call of hFunction
+        self.t = 1
+        # Initial timeout
+        self.tFirst = self.t + 1
+        self.screen = screen
+        self.hFunction = self.request
+        self.thread = Timer(self.tFirst, self.handle_function)
+
+    def handle_function(self):
+        print("Ramk - call handler!")
+        if( self.hFunction(self.screen) ):
+            self.thread = Timer(self.t, self.handle_function)
+            self.thread.start()
+            print("Ramk - restart handler!")
+
+    def start(self):
+        self.thread.start()
+
+    def cancel(self):
+        self.thread.cancel()
+
+    def request(self, screen):
+        if CyInterface().isInMainMenu() == True:
+            screen.showScreen(True)
+            return False
+        return True
+

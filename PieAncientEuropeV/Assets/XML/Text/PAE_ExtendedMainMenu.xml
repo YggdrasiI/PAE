@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_HEADLINE</Tag>
+    <English></English>
+    <French></French>
+    <German>PAE Hilfsmen&#252;</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_FIRST_START</Tag>
+    <English></English>
+    <French></French>
+    <German>Erster Start?</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_INFO</Tag>
+    <English></English>
+    <French></French>
+    <German>Hinweise zum Spielstart</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_40DLL</Tag>
+    <English></English>
+    <French></French>
+    <German>Hinweise zur 40er DLL</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_SCENARIO_LIST</Tag>
+    <English>Recommended Scenario's</English>
+    <French></French>
+    <German>Empfohlene Szenarios</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_STARTING_POINTS</Tag>
+    <English></English>
+    <French></French>
+    <German>Szenario anpassen</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_SCENARIO</Tag>
+    <English></English>
+    <French></French>
+    <German>Szenario Details</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_MINIMIZE</Tag>
+    <English></English>
+    <French></French>
+    <German>Minimieren</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_INFO_FIRST_START</Tag>
+    <English></English>
+    <French></French>
+    <German>Am besten l&#228;uft PAE auf Szenarien-Karten.</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_INFO_GENERAL</Tag>
+    <English></English>
+    <French></French>
+    <German>Daten aus Pedia kopieren.</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_INFO_40DLL</Tag>
+    <English></English>
+    <French></French>
+    <German></German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PAE_NATION</Tag>
+		<English>Civilization</English>
+		<French>Civilisation</French>
+		<German>Zivilisation</German>
+		<Italian>Civilt&#192;</Italian>
+		<Spanish>Civilizaci&#211;n</Spanish>
+	</TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_SELECTED_PLAYER</Tag>
+    <English>Properties of selected player slot:</English>
+    <French></French>
+    <German>Eigenschaften des gew&#228;hlten Spielers:</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_SELECT</Tag>
+    <English>Select</English>
+    <French></French>
+    <German>Ausw&#228;hlen</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_APPLY</Tag>
+    <English>Apply</English>
+    <French></French>
+    <German>Anwenden</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_ASSIGN_SPOT</Tag>
+    <English>Select different start spot for %s1:</English>
+    <French></French>
+    <German>Anderen Startpunkt f&#252;r %s1 w&#228;hlen:</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_INFO_STARTINGPOINTS</Tag>
+    <English></English>
+    <French></French>
+		<German>Mit diesem Men&#252; k&#246;nnen Sie ausw&#228;hlen, welche Startpunkte genutzt werden sollen. [NEWLINE] Um einen Spieler zu versetzen w&#228;hlen Sie zuerst den Spieler ganz oben aus. In der Mitte werden dann die derzeitigen Eigenschaften den Spielers angezeigt. Darunter befindet sich eine Liste alternativer Startpunkte. [NEWLINE]  Je nach Startplatz wechselt auch die verwendete Nation. [NEWLINE] [NEWLINE] Sie k&#246;nnen die Wahl auch dem Zufall &#252;berlassen. Beim Ausw&#252;rfeln der Startpl&#228;tze werden die gew&#228;hlten Nationen bebehalten. In der anderen Variante werden auch die Nationen vertauscht. [NEWLINE] [NEWLINE] [BOLD]Achtung[\BOLD], um die Einstellungen zu &#252;bernehmen, m&#252;ssen Sie am Ende die Karte neu laden! Klicken Sie unten links auf Zur&#252;ck und w&#228;hlen Sie die gleiche Szenariokarte erneut aus. Danach enth&#228;lt das normale Men&#252; die neuen Startpunkte.</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_RANDOM1</Tag>
+    <English>Randomize nation positions</English>
+    <French></French>
+    <German>Startpl&#228;tze ausw&#252;rfeln</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_MENU_RANDOM2</Tag>
+    <English>Randomize nations</English>
+    <French></French>
+    <German>Nationen ausw&#252;rfeln</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_NO_FREE_SP</Tag>
+    <English>No further plots available</English>
+    <French></French>
+    <German>Keine weiteren Startpl&#228;tze</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_SPOT</Tag>
+    <English>starting spot</English>
+    <French></French>
+    <German>Startpunkt</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_UNNAMED_SPOT</Tag>
+    <English>Unnamed starting point</English>
+    <French></French>
+    <German>Unbennanter Startpunkt</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_CLEAR_SPOT</Tag>
+    <English>Remove player</English>
+    <French></French>
+    <German>Spieler entfernen</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PAE_ALREADY_SETTLED</Tag>
+    <English>First city already founded.</English>
+    <French></French>
+    <German>Erste Stadt bereits gegr&#252;ndet.</German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_</Tag>
+    <English></English>
+    <French></French>
+    <German></German>
+    <Italian></Italian>
+    <Spanish></Spanish>
+  </TEXT>
+</Civ4GameText>

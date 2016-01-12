@@ -44,12 +44,28 @@
      <Spanish>&#161;Creado por Thorgal![NEWLINE][NEWLINE]El a&#241;o 300 a.C., un punto de inflexi&#243;n en la historia de la antig&#252;edad.[NEWLINE]Despu&#233;s de la muerte de Alejandro el Magno comenz&#243; una guerra de sucesi&#243;n en el Mediterr&#225;neo Oriental. Durante estas Guerras de los Di&#225;docos imperios enteros caer&#225;n, pero otros nuevos emerger&#225;n.[NEWLINE]Al mismo tiempo el surgimiento de Roma comienza en el Oeste, que tienen que tratar primero con las colonias griegas del sur de Italia y del poder emergente de Cartago.[NEWLINE]Juega con uno de los Di&#225;docos y gana la guerra.[NEWLINE]Lleva a Roma a su tama&#241;o hist&#243;rica o previene en surgimiento de Cartago, Tarento o una civilizaci&#243;n del norte de Europa.</Spanish>
    </TEXT>
    <TEXT>
+     <Tag>TXT_KEY_SCENARIO_RISEOFEGYPT_TITLE</Tag>
+     <English>Pie's Ancient Europe - The Rise of Egypt</English>
+     <French>Pie's Ancient Europe - The Rise of Egypt</French>
+     <German>Pies Antikes Europa - Der Aufstieg &#196;gyptens</German>
+     <Italian>Pie's Ancient Europe - The Rise of Egypt</Italian>
+     <Spanish>Pie's Ancient Europe - The Rise of Egypt</Spanish>
+   </TEXT>
+   <TEXT>
      <Tag>TXT_KEY_SCENARIO_RISEOFEGYPT</Tag>
      <English>Created by Thorgal![NEWLINE][NEWLINE]It's the year 4000 BC On fertile banks of the Nile the first foundations of a new civilization were set. But also on the coasts of the Eastern Mediterranean and the Aegean new civilizations are arising and in inland Anatolia another power heads to a glorious future.</English>
      <French>Created by Thorgal![NEWLINE][NEWLINE]It's the year 4000 BC On fertile banks of the Nile the first foundations of a new civilization were set. But also on the coasts of the Eastern Mediterranean and the Aegean new civilizations are arising and in inland Anatolia another power heads to a glorious future.</French>
      <German>Erstellt von Thorgal![NEWLINE][NEWLINE]Wir schreiben das Jahr 4000 v. Chr. Am fruchtbaren Ufer des Nils wurden die ersten Grundsteine einer neuen Zivilisation gesetzt. Aber auch an den K&#252;sten des &#246;stlichen Mittelmeers und der &#196;g&#228;is entstehen neue Kulturen und im Innland Anatolien macht sich ein weiteres Volk auf den Weg in eine glorreiche Zukunft.</German>
      <Italian>Created by Thorgal![NEWLINE][NEWLINE]It's the year 4000 BC On fertile banks of the Nile the first foundations of a new civilization were set. But also on the coasts of the Eastern Mediterranean and the Aegean new civilizations are arising and in inland Anatolia another power heads to a glorious future.</Italian>
      <Spanish>&#161;Creado por Thorgal![NEWLINE][NEWLINE]It's the year 4000 BC On fertile banks of the Nile the first foundations of a new civilization were set. But also on the coasts of the Eastern Mediterranean and the Aegean new civilizations are arising and in inland Anatolia another power heads to a glorious future.</Spanish>
+   </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_PAE_ORIENT_TITLE</Tag>
+     <English>Pie's Ancient Europe - The Orient</English>
+     <French>Pie's Ancient Europe - The Orient</French>
+     <German>Pies Antikes Europa - Der Orient</German>
+     <Italian>Pie's Ancient Europe - The Orient</Italian>
+     <Spanish>Pie's Ancient Europe - The Orient</Spanish>
    </TEXT>
    <TEXT>
      <Tag>TXT_KEY_PAE_ORIENT</Tag>
@@ -71,7 +87,7 @@
      <Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_PELOPONNESIAN_WAR</Tag>
      <English>Pie's Ancient Europe - The Peloponnesian War</English>
      <French>Pie's Ancient Europe - La Guerre du P&#233;loponn&#232;se</French>
-     <German>Pie's Ancient Europe - Der Peloponnesische Krieg</German>
+     <German>Pies Antikes Europa - Der Peloponnesische Krieg</German>
      <Italian>Pie's Ancient Europe - The Peloponnesian War</Italian>
      <Spanish>Pie's Ancient Europe - La guerra del Peloponeso</Spanish>
    </TEXT>
@@ -95,7 +111,7 @@
      <Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_ICE_AGE</Tag>
      <English>Pie's Ancient Europe - Ice Age</English>
      <French>Pie's Ancient Europe - Ice Age</French>
-     <German>Pie's Ancient Europe - Ice Age</German>
+     <German>Pies Antikes Europa - Ice Age</German>
      <Italian>Pie's Ancient Europe - Ice Age</Italian>
      <Spanish>Pie's Ancient Europe - Ice Age</Spanish>
    </TEXT>
@@ -114,6 +130,14 @@
      <German>Erstellt von Inex! [NEWLINE]Bearbeitet von Keinpferd und Thorgal! [NEWLINE]Eine sehr gro&#223;e Karte (BxH: 101x67) f&#252;r ein wahrhaft gro&#223;es Imperium Romanum.</German>
      <Italian>Created by Inex! [NEWLINE]Arranged by Keinpferd and Thorgal! [NEWLINE]A really big map (WxH: 101x67) for a veritable great Imperium Romanum.</Italian>
      <Spanish>&#161;Creado por Inex! [NEWLINE]&#161;Adaptado por Keinpferd y Thorgal! [NEWLINE]Un mapa realmente grande (Ancho por Alto: 101x67) para un Imperio Romano de verdad.</Spanish>
+   </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_ICE_AGE2</Tag>
+     <English>Pie's Ancient Europe - Ice Age 2</English>
+     <French>Pie's Ancient Europe - Ice Age 2</French>
+     <German>Pies Antikes Europa - Ice Age 2</German>
+     <Italian>Pie's Ancient Europe - Ice Age 2</Italian>
+     <Spanish>Pie's Ancient Europe - Ice Age 2</Spanish>
    </TEXT>
    <TEXT>
      <Tag>TXT_KEY_SCENARIO_ICE_AGE2</Tag>
@@ -167,7 +191,7 @@
      <Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_EASTERN_MED</Tag>
      <English>Pie's Ancient Europe - The Eastern Mediterranean</English>
      <French>Pie's Ancient Europe - La M&#233;diterran&#233;e orientale</French>
-     <German>Pie's Ancient Europe - Das &#214;stliche Mittelmeer</German>
+     <German>Pies Antikes Europa - Das &#214;stliche Mittelmeer</German>
      <Italian>Pie's Ancient Europe - The Eastern Mediterranean</Italian>
      <Spanish>Pie's Ancient Europe - El Mediterr&#225;neo oriental</Spanish>
    </TEXT>
@@ -191,7 +215,7 @@
      <Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_LIMES_GERMANICUS</Tag>
      <English>Pie's Ancient Europe - Limes Germanicus</English>
      <French>Pie's Ancient Europe - Limes Germanicus</French>
-     <German>Pie's Ancient Europe - Limes Germanicus</German>
+     <German>Pies Antikes Europa - Limes Germanicus</German>
      <Italian>Pie's Ancient Europe - Limes Germanicus</Italian>
      <Spanish>Pie's Ancient Europe - Limes Germanicus</Spanish>
    </TEXT>
@@ -202,6 +226,14 @@
      <German>Wir schreiben das Jahr 235 nach Christus am Limes Germanicus. [NEWLINE] [NEWLINE]Seit 233 nutzen die Alamannen eine schwache Phase der R&#246;mer f&#252;r Pl&#252;nderungen und Zerst&#246;rungen. Der Kaiser Severus Alexander und seine Mutter, die mit den Germanen eine feige Verhandlungsl&#246;sung anstrebten, sind aus dem Weg ger&#228;umt. Der Offizier, der f&#252;r die Ausbildung der neu ausgehobenen Truppen f&#252;r einen Feldzug gegen die Germanen zust&#228;ndig war, Maximinus Thrax, ist von den Truppen zum neuen r&#246;mischen Kaiser ausgerufen worden. Er verspricht eine Erh&#246;hung des Solds, Sonderzuwendungen (Donativen) und eine Amnestie bei allen Disziplinarstrafen. Die Legion&#228;re hingegen erhoffen sich Beute, Vergeltung und einen leichten Sieg &#252;ber die Germanen. Im Sommer 235 nach Christus beginnt nun ein Vergeltungsfeldzug, bis tief in die germanischen Siedlungsgebiete hinein. [NEWLINE] [NEWLINE]F&#252;hre die R&#246;mer und unterwerfe ganz Germanien... oder bestimme &#252;ber einen der germanischen St&#228;mme, um Rom daran zu hindern.</German>
      <Italian>It is the year 235 AD at the Limes Germanicus. [NEWLINE] [NEWLINE]Since 233, the Alemanni use a weak phase of the Romans for looting and destruction. The Emperor Severus Alexander and his mother, who sought a cowardly negotiated solution with the Germans, are swept out of the way. The officer, who was responsible for the training of new excavated troops for a campaign against the Germans, Maximinus Thrax, has now been proclaimed by the troops to the new Roman Emperor. He promises an increase in salae, gratuities (donations) and an amnesty for all disciplinary sanctions. The Legionaries by contrast hoping prey, retribution and an easy victory over the Germans. In the summer of 235 AD, a campaign of retaliation begins, deep into the Germanic settlements. [NEWLINE] [NEWLINE]Lead the Romans and subdue all Germania... or be in charge of one of the Germanic tribes to stop Rome.</Italian>
      <Spanish>Es el a&#241;o 235 d.C. en las limes germ&#225;nicas. [NEWLINE] [NEWLINE]Desde el 233, los alemanni utilizan una etapa d&#233;bil de los romanos para saquear y destruir. El emperador Alejandro Severo y su madre, quienes buscaron una cobarde soluci&#243;n negociado con los germanos, han sido asesinados. El oficial, quien fue el responsable del entrenamiento de nuevas tropas reclutadas para una campa&#241;a contra los germanos, Maximino el Tracio, ha sido ahora proclamado por las tropas como el nuevo emperador romano. El promete un aumento de salario, propinas (donaciones) y una amnist&#237;a para todas las sanciones disciplinarias. Los legionarios por contra desean cazar, castigar y una f&#225;cil victoria sobre los germanos. En el verano del 235 d.C., una campa&#241;a de represalia empieza, en lo m&#225;s profundo de los asentamientos germanos. [NEWLINE] [NEWLINE]Lidera a los romanos y subyuga a toda Germania... o se en cambio una de las tribus germanas que parar&#225;n a Roma.</Spanish>
+   </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_EURASIA</Tag>
+     <English>Pie's Ancient Europe - Eurasia</English>
+     <French>Pie's Ancient Europe - Eurasie</French>
+     <German>Pies Antikes Europa - Eurasien</German>
+     <Italian>Pie's Ancient Europe - Eurasia</Italian>
+     <Spanish>Pie's Ancient Europe - Eurasia</Spanish>
    </TEXT>
    <TEXT>
      <Tag>TXT_KEY_EURASIA_5000BC</Tag>

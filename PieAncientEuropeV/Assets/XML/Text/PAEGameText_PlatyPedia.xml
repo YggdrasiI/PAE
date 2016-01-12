@@ -660,6 +660,14 @@
      <Spanish>Ha interceptado</Spanish>
    </TEXT>
    <TEXT>
+     <Tag>TXT_KEY_WB_UNIT_HOLD</Tag>
+		 <English>Holding / Sleeping</English>
+     <French>Holding / Sleeping</French>
+		 <German>Verschanzt/Schl&#228;ft</German>
+     <Italian>Holding / Sleeping</Italian>
+     <Spanish>Holding / Sleeping</Spanish>
+   </TEXT>
+   <TEXT>
      <Tag>TXT_KEY_WB_DIRECTION</Tag>
      <English>Direction</English>
      <French>Direction</French>

@@ -3590,6 +3590,12 @@ class CvEventManager:
     'Called when the game window activates or deactivates'
     bActive = argsList[0]
 
+    # Show PAE Extra screen after Window switch
+    # Check if game is running
+    #if CyGame().getActivePlayer() < 0 and bActive:
+    if CyInterface().isInMainMenu() == True and bActive:
+        CvScreensInterface.showStartingPointsScreen()
+
   def onUnInit(self, argsList):
     'Called when Civ shuts down'
     CvUtil.pyPrint('OnUnInit')

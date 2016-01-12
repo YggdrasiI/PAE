@@ -1,0 +1,8 @@
+<Szenario>
+	<!-- Programm use very simple parser. Do not use multiple tags in one line. -->
+	<Image>Art/Interface/Screens/WorldPicker/pae_map.dds</Image>
+	<Title>TXT_KEY_DAWN_OF_MAN_SCREEN_TITLE_FIRST_PUNIC_WAR</Title>
+	<Description>TXT_KEY_SCENARIO_FIRST_PUNIC_WAR</Description>
+	<StartingPoints>
+	</StartingPoints>
+</Szenario>

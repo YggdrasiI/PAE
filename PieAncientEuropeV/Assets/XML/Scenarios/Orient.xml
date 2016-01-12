@@ -1,0 +1,55 @@
+<Szenario>
+	<!-- Program use very simple parser. Do not use multiple tags in one line. -->
+	<Image>Art/Interface/Screens/WorldPicker/pae_map.dds</Image>
+	<Title>TXT_KEY_PAE_ORIENT_TITLE</Title>
+	<Description>TXT_KEY_PAE_ORIENT</Description>
+	<StartingPoints>
+		<StartingPoint>
+			<StartName>Spot 1</StartName>
+			<LeaderName>Testname</LeaderName>
+			<StartX>40</StartX>
+			<StartY>40</StartY>
+			<LeaderType>LEADER_TIGLATPILESER1</LeaderType>
+			<Civilization>CIVILIZATION_ASSYRIA</Civilization>
+      <Description>TXT_KEY_CIV_ASSYRIA_DESC</Description>
+      <ShortDescription>TXT_KEY_CIV_ASSYRIA_DESC</ShortDescription>
+      <Adjective>TXT_KEY_CIV_ASSYRIA_ADJECTIVE</Adjective>
+      <DefaultPlayerColor>PLAYERCOLOR_ASSUR</DefaultPlayerColor>
+      <Cities>
+        <City>Stadt A</City>
+        <City>Stadt B</City>
+			</Cities>
+		</StartingPoint>
+		<StartingPoint>
+			<StartName>Spot 2</StartName>
+			<LeaderName>Testname 2</LeaderName>
+			<StartX>30</StartX>
+			<StartY>30</StartY>
+			<LeaderType>LEADER_ASSURBANIPAL</LeaderType>
+			<Civilization>CIVILIZATION_ASSYRIA</Civilization>
+      <Description>Beschreibung</Description>
+      <ShortDescription>Kurze Beschreibung</ShortDescription>
+      <Adjective>Adjektiv</Adjective>
+      <DefaultPlayerColor>PLAYERCOLOR_MIDDLE_PURPLE</DefaultPlayerColor>
+      <Cities>
+        <City>Stadt C</City>
+        <City>Stadt D</City>
+        <City>Stadt E</City>
+        <City>Stadt F</City>
+        <City>Stadt G</City>
+			</Cities>
+		</StartingPoint>
+		<StartingPoint>
+			<StartName>Reiner Startpunkt</StartName>
+			<Civilization>NONE</Civilization>
+			<StartX>10</StartX>
+			<StartY>10</StartY>
+		</StartingPoint>
+		<StartingPoint>
+			<StartName>Reiner Startpunkt 2</StartName>
+			<Civilization>NONE</Civilization>
+			<StartX>14</StartX>
+			<StartY>14</StartY>
+		</StartingPoint>
+	</StartingPoints>
+</Szenario>
