@@ -2362,6 +2362,51 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, bool bAttack, bool bDeclareWar, bo
 		}
 	}
 
+	// Ramk - Check culture restrictions
+			if (m_pUnitInfo->getCultureRestriction() != NO_CULTURE_RESTRICTION)
+			{
+				//Skip check if no city was found.
+				if( GET_PLAYER(getOwnerINLINE()).getNumCities() > 0)
+				{
+					switch (m_pUnitInfo->getCultureRestriction()){
+						case CULTURE_RESTRICTION_HOMELAND:
+							//if (pPlot->getOwnerINLINE() != getOwnerINLINE())
+							if (pPlot->getTeam() != getTeam())
+							{
+								return false;
+							}
+							break;
+						case CULTURE_RESTRICTION_VASALLS:
+							{
+								TeamTypes ePlotTeam = pPlot->getTeam();
+								if( ePlotTeam == NO_TEAM ) return false;
+								//if (pPlot->getOwnerINLINE() != getOwnerINLINE() ||
+								if (! (ePlotTeam == getTeam() ||
+											GET_TEAM(ePlotTeam).isVassal(getTeam()) ||
+											GET_TEAM(getTeam()).isVassal(ePlotTeam)) )
+								{
+									return false;
+								}
+							}
+							break;
+						case CULTURE_RESTRICTION_NO_FOREIGN:
+							{
+								TeamTypes ePlotTeam = pPlot->getTeam();
+								if (! (ePlotTeam == NO_TEAM ||
+											ePlotTeam == getTeam() ||
+											GET_TEAM(ePlotTeam).isVassal(getTeam()) ||
+											GET_TEAM(getTeam()).isVassal(ePlotTeam)) )
+								{
+									return false;
+								}
+
+							}
+							break;
+					}
+				}
+			}
+	// END Ramk - Check culture restrictions
+
 	switch (getDomainType())
 	{
 	case DOMAIN_SEA:

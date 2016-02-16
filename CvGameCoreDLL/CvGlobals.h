@@ -669,6 +669,9 @@ public:
 	CvString*& getFootstepAudioTags();
 	DllExport CvString& getFootstepAudioTags(int i);
 
+	CvString*& getCultureRestrictionTypes();
+	DllExport CvString& getCultureRestrictionTypes(CultureRestrictionTypes e);
+
 	CvString& getCurrentXMLFile();
 	void setCurrentXMLFile(const TCHAR* szFileName);
 
@@ -1103,6 +1106,8 @@ protected:
 
 	CvString *m_paszFootstepAudioTags;
 	int m_iNumFootstepAudioTags;
+
+	CvString *m_paszCultureRestrictionTypes;
 
 	CvString m_szCurrentXMLFile;
 	//////////////////////////////////////////////////////////////////////////

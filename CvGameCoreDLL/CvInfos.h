@@ -962,6 +962,7 @@ public:
 	bool getFreePromotions(int i) const;		// Exposed to Python
 	int getLeaderPromotion() const;   // Exposed to Python
 	int getLeaderExperience() const;				// Exposed to Python
+	int getCultureRestriction() const;		// Exposed to Python
 
 	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;				// Exposed to Python
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
@@ -1099,6 +1100,7 @@ protected:
 	bool m_bAlwaysHostile;
 	bool m_bNoRevealMap;
 	int m_iLeaderPromotion;
+	int m_iCultureRestriction;
 
 	float m_fUnitMaxSpeed;
 	float m_fUnitPadTime;

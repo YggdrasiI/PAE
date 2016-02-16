@@ -4027,6 +4027,11 @@ int CvUnitInfo::getLeaderExperience() const
 	return m_iLeaderExperience;
 }
 
+int CvUnitInfo::getCultureRestriction() const
+{
+	return m_iCultureRestriction;
+}
+
 const TCHAR* CvUnitInfo::getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const
 {
 	FAssertMsg(i < getGroupDefinitions(), "Index out of bounds");
@@ -4428,6 +4433,7 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 
 	stream->Read(&m_iLeaderPromotion);
 	stream->Read(&m_iLeaderExperience);
+	stream->Read(&m_iCultureRestriction);
 
 	SAFE_DELETE_ARRAY(m_paszEarlyArtDefineTags);
 	m_paszEarlyArtDefineTags = new CvString [m_iGroupDefinitions];
@@ -4617,6 +4623,7 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumPromotionInfos(), m_pbFreePromotions);
 	stream->Write(m_iLeaderPromotion);
 	stream->Write(m_iLeaderExperience);
+	stream->Write(m_iCultureRestriction);
 
 	stream->WriteString(m_iGroupDefinitions, m_paszEarlyArtDefineTags);
 	stream->WriteString(m_iGroupDefinitions, m_paszLateArtDefineTags);
@@ -4964,6 +4971,9 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iLeaderPromotion = pXML->FindInInfoClass(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iLeaderExperience, "iLeaderExperience");
+
+	pXML->GetChildXmlValByName(szTextVal, "CultureRestriction");
+	m_iCultureRestriction = GC.getTypesEnum(szTextVal);
 
 	updateArtDefineButton();
 

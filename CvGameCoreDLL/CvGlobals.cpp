@@ -2566,6 +2566,18 @@ CvString& CvGlobals::getFootstepAudioTags(int i)
 	return m_paszFootstepAudioTags[i];
 }
 
+CvString*& CvGlobals::getCultureRestrictionTypes()
+{
+	return m_paszCultureRestrictionTypes;
+}
+
+CvString& CvGlobals::getCultureRestrictionTypes(CultureRestrictionTypes e)
+{
+	FAssert(e > -1);
+	FAssert(e < NUM_CULTURE_RESTRICTION_TYPES);
+	return m_paszCultureRestrictionTypes[e];
+}
+
 void CvGlobals::setCurrentXMLFile(const TCHAR* szFileName)
 {
 	m_szCurrentXMLFile = szFileName;
@@ -3477,6 +3489,7 @@ void CvGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
+	SAFE_DELETE_ARRAY(GC.getCultureRestrictionTypes());
 	deleteInfoArray(m_paQuestInfo);
 	deleteInfoArray(m_paTutorialInfo);
 

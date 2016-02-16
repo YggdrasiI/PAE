@@ -394,6 +394,9 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 		SetGlobalStringArray(&GC.getDirectionTypes(), "Civ4Types/DirectionTypes/DirectionType", &iEnumVal, true);
 		SetGlobalStringArray(&GC.getFootstepAudioTypes(), "Civ4Types/FootstepAudioTypes/FootstepAudioType", &GC.getNumFootstepAudioTypes());
 
+		iEnumVal = NUM_CULTURE_RESTRICTION_TYPES;
+		SetGlobalStringArray(&GC.getCultureRestrictionTypes(), "Civ4Types/CultureRestrictionTypes/CultureRestrictionType", &iEnumVal, true);
+
 		gDLL->getXMLIFace()->SetToParent(m_pFXml);
 		gDLL->getXMLIFace()->SetToParent(m_pFXml);
 		SetVariableListTagPair(&GC.getFootstepAudioTags(), "FootstepAudioTags", GC.getFootstepAudioTypes(), GC.getNumFootstepAudioTypes(), "");

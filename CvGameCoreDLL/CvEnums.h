@@ -2756,4 +2756,16 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
+/* Note: Use NONE instead of NO_CULTURE_RESTRICTION
+ * in XML files. All other values are propagated 
+ * as keywords in CvGlobalTypes.xml.
+ */
+enum CultureRestrictionTypes				// Exposed to Python
+{
+	NO_CULTURE_RESTRICTION = -1, /* All plots allowed */
+	CULTURE_RESTRICTION_NO_FOREIGN, /* Plots without culture, own culture or vassal culture. */ 
+	CULTURE_RESTRICTION_VASALLS, /* Plots with own culture and vasal culture. */
+	CULTURE_RESTRICTION_HOMELAND, /* Plots with own culture. */
+	NUM_CULTURE_RESTRICTION_TYPES
+};
 #endif	// CVENUMS_h
