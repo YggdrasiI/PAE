@@ -214,6 +214,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BEAR</Class>
@@ -413,6 +414,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_UR</Class>
@@ -604,6 +606,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PANTHER</Class>
@@ -795,6 +798,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WOLF</Class>
@@ -999,6 +1003,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BOAR</Class>
@@ -1185,6 +1190,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_DEER</Class>
@@ -1366,6 +1372,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HYENA</Class>
@@ -1562,6 +1569,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TIGER</Class>
@@ -1753,6 +1761,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LEOPARD</Class>
@@ -1949,6 +1958,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BERGZIEGE</Class>
@@ -2144,6 +2154,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SETTLER</Class>
@@ -2324,6 +2335,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>CULTURE_RESTRICTION_VASALLS</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_EMIGRANT</Class>
@@ -2504,6 +2516,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>CULTURE_RESTRICTION_VASALLS</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WORKER</Class>
@@ -2761,6 +2774,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WORKER</Class>
@@ -3022,6 +3036,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WORKER</Class>
@@ -3359,6 +3374,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SUPPLY_WAGON</Class>
@@ -3531,6 +3547,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SUPPLY_WAGON</Class>
@@ -3703,6 +3720,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SUPPLY_WAGON</Class>
@@ -3875,6 +3893,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SUPPLY_FOOD</Class>
@@ -4037,6 +4056,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GOLDKARREN</Class>
@@ -4204,6 +4224,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TREIBGUT</Class>
@@ -4371,6 +4392,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_STRANDGUT</Class>
@@ -4533,6 +4555,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CARAVAN</Class>
@@ -4710,6 +4733,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TRADE_MERCHANT</Class>
@@ -4887,6 +4911,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TRADE_MERCHANTMAN</Class>
@@ -5069,6 +5094,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SCOUT</Class>
@@ -5246,6 +5272,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SCOUT</Class>
@@ -5423,6 +5450,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_MOUNTED_SCOUT</Class>
@@ -5595,6 +5623,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPY</Class>
@@ -5772,6 +5801,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL3</Class>
@@ -5965,6 +5995,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL3</Class>
@@ -6156,6 +6187,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -6355,6 +6387,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -6548,6 +6581,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -6758,6 +6792,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -6959,6 +6994,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -7169,6 +7205,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -7379,6 +7416,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -7580,6 +7618,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -7777,6 +7816,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -7961,6 +8001,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -8187,6 +8228,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ROME_NUMERI</Class>
@@ -8381,6 +8423,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -8578,6 +8621,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -8779,6 +8823,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -8976,6 +9021,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL3</Class>
@@ -9199,6 +9245,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -9383,6 +9430,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -9567,6 +9615,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -9756,6 +9805,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -9942,6 +9992,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -10126,6 +10177,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -10311,6 +10363,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -10495,6 +10548,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -10679,6 +10733,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -10879,6 +10934,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -11064,6 +11120,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -11257,6 +11314,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -11453,6 +11511,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -11666,6 +11725,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -11885,6 +11945,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WARRIOR</Class>
@@ -12069,6 +12130,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HUNTER</Class>
@@ -12259,6 +12321,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AXEWARRIOR</Class>
@@ -12466,6 +12529,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AXEMAN</Class>
@@ -12676,6 +12740,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AXEMAN</Class>
@@ -12863,6 +12928,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AXEMAN2</Class>
@@ -13065,6 +13131,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WURFAXT</Class>
@@ -13249,6 +13316,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -13467,6 +13535,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -13678,6 +13747,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -13880,6 +13950,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -14064,6 +14135,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KURZSCHWERT</Class>
@@ -14249,6 +14321,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KURZSCHWERT</Class>
@@ -14434,6 +14507,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KURZSCHWERT</Class>
@@ -14622,6 +14696,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SCHILDTRAEGER</Class>
@@ -14814,6 +14889,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -15016,6 +15092,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PRINCIPES2</Class>
@@ -15198,6 +15275,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LEGION</Class>
@@ -15500,6 +15578,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LEGION2</Class>
@@ -15892,6 +15971,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -16093,6 +16173,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -16286,6 +16367,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SCHILDTRAEGER</Class>
@@ -16478,6 +16560,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SWORDSMAN</Class>
@@ -16662,6 +16745,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -16846,6 +16930,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -17039,6 +17124,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -17236,6 +17322,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TRIARII2</Class>
@@ -17453,6 +17540,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -17637,6 +17725,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PRAETORIAN2</Class>
@@ -17821,6 +17910,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PRAETORIAN3</Class>
@@ -18001,6 +18091,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TEUTONEN</Class>
@@ -18194,6 +18285,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_THRAKIEN_WARRIOR</Class>
@@ -18387,6 +18479,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_MARS</Class>
@@ -18567,6 +18660,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LIGHT_SPEARMAN</Class>
@@ -18772,6 +18866,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPEARMAN</Class>
@@ -18968,6 +19063,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPEARMAN</Class>
@@ -19169,6 +19265,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HASTATI2</Class>
@@ -19405,6 +19502,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HASTATI2</Class>
@@ -19641,6 +19739,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -19836,6 +19935,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AUXILIAR</Class>
@@ -20016,6 +20116,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AUXILIAR</Class>
@@ -20305,6 +20406,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AUXILIAR</Class>
@@ -20485,6 +20587,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LIGHT_ARCHER</Class>
@@ -20673,6 +20776,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ARCHER</Class>
@@ -20886,6 +20990,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ARCHER</Class>
@@ -21094,6 +21199,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_COMPOSITE_ARCHER</Class>
@@ -21323,6 +21429,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_REFLEX_ARCHER</Class>
@@ -21539,6 +21646,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_REFLEX_ARCHER</Class>
@@ -21752,6 +21860,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ARCHER_LEGION</Class>
@@ -21963,6 +22072,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_REFLEX_ARCHER</Class>
@@ -22174,6 +22284,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_REFLEX_ARCHER</Class>
@@ -22387,6 +22498,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ARCHER_KRETA</Class>
@@ -22613,6 +22725,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -22839,6 +22952,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PELTIST</Class>
@@ -23040,6 +23154,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PELTIST</Class>
@@ -23241,6 +23356,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_THRAKIEN_PELTAST</Class>
@@ -23439,6 +23555,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BALEAREN</Class>
@@ -23645,6 +23762,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SKIRMISHER</Class>
@@ -23843,6 +23961,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SKIRMISHER</Class>
@@ -24041,6 +24160,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SKIRMISHER</Class>
@@ -24244,6 +24364,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SKIRMISHER</Class>
@@ -24437,6 +24558,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SKIRMISHER</Class>
@@ -24622,6 +24744,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LIGHT_CHARIOT</Class>
@@ -24866,6 +24989,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHARIOT_ARCHER</Class>
@@ -25125,6 +25249,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHARIOT</Class>
@@ -25397,6 +25522,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHARIOT</Class>
@@ -25673,6 +25799,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHARIOT</Class>
@@ -25953,6 +26080,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHARIOT</Class>
@@ -26229,6 +26357,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHARIOT</Class>
@@ -26505,6 +26634,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -26782,6 +26912,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WAR_CHARIOT</Class>
@@ -27055,6 +27186,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -27320,6 +27452,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -27580,6 +27713,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -27840,6 +27974,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -28105,6 +28240,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -28372,6 +28508,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -28644,6 +28781,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSEMAN</Class>
@@ -28889,6 +29027,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_MERC_HORSEMAN</Class>
@@ -29163,6 +29302,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSE_ARCHER</Class>
@@ -29441,6 +29581,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSE_ARCHER</Class>
@@ -29719,6 +29860,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSE_ARCHER</Class>
@@ -29955,6 +30097,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BAKTRIEN</Class>
@@ -30232,6 +30375,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -30497,6 +30641,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_AUXILIAR_HORSE</Class>
@@ -30762,6 +30907,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -31029,6 +31175,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -31293,6 +31440,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -31562,6 +31710,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -31831,6 +31980,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -32093,6 +32243,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -32355,6 +32506,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -32619,6 +32771,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -32890,6 +33043,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PRAETORIAN_RIDER</Class>
@@ -33155,6 +33309,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PRAETORIAN2_RIDER</Class>
@@ -33420,6 +33575,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HEAVY_HORSEMAN</Class>
@@ -33683,6 +33839,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CAMEL_ARCHER</Class>
@@ -33971,6 +34128,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CAMEL_CATAPHRACT</Class>
@@ -34247,6 +34405,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WAR_ELEPHANT</Class>
@@ -34457,6 +34616,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WAR_ELEPHANT_GILDE</Class>
@@ -34680,6 +34840,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_RAM</Class>
@@ -34857,6 +35018,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BATTERING_RAM</Class>
@@ -35039,6 +35201,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BATTERING_RAM2</Class>
@@ -35216,6 +35379,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ONAGER</Class>
@@ -35396,6 +35560,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CATAPULT</Class>
@@ -35585,6 +35750,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_FIRE_CATAPULT</Class>
@@ -35769,6 +35935,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BALLISTA</Class>
@@ -35971,6 +36138,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BEGLEITHUND</Class>
@@ -36177,6 +36345,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KAMPFHUND</Class>
@@ -36378,6 +36547,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KAMPFHUND</Class>
@@ -36579,6 +36749,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KAMPFHUND</Class>
@@ -36780,6 +36951,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KAMPFHUND</Class>
@@ -36981,6 +37153,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BURNING_PIGS</Class>
@@ -37179,6 +37352,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TROJAN_HORSE</Class>
@@ -37355,6 +37529,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_WORKBOAT</Class>
@@ -37555,6 +37730,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL4</Class>
@@ -37750,6 +37926,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CARVEL_WAR</Class>
@@ -37937,6 +38114,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KONTERE</Class>
@@ -38124,6 +38302,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KONTERE</Class>
@@ -38319,6 +38498,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PIRAT_KONTERE</Class>
@@ -38515,6 +38695,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BIREME</Class>
@@ -38705,6 +38886,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PIRAT_BIREME</Class>
@@ -38898,6 +39080,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_TRIREME</Class>
@@ -39086,6 +39269,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PIRAT_TRIREME</Class>
@@ -39282,6 +39466,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GALLEY</Class>
@@ -39467,6 +39652,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -39654,6 +39840,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_QUINQUEREME</Class>
@@ -39835,6 +40022,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -40022,6 +40210,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LIBURNE</Class>
@@ -40207,6 +40396,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PIRAT_LIBURNE</Class>
@@ -40400,6 +40590,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_KILIKIEN</Class>
@@ -40595,6 +40786,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_NUMID_HORSE_GILDE</Class>
@@ -40859,6 +41051,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ARCHER_GILDE</Class>
@@ -41073,6 +41266,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_COMPOSITE_ARCHER_GILDE</Class>
@@ -41307,6 +41501,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_LEGION_GILDE</Class>
@@ -41544,6 +41739,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PHALANX_GILDE</Class>
@@ -41753,6 +41949,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GALLIER_GILDE</Class>
@@ -41958,6 +42155,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GERMAN_GILDE</Class>
@@ -42155,6 +42353,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PROPHET</Class>
@@ -42450,6 +42649,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ARTIST</Class>
@@ -42715,6 +42915,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SCIENTIST</Class>
@@ -42987,6 +43188,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_MERCHANT</Class>
@@ -43226,6 +43428,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ENGINEER</Class>
@@ -43514,6 +43717,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GREAT_GENERAL</Class>
@@ -43720,6 +43924,7 @@
       <FreePromotions/>
       <LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
       <iLeaderExperience>20</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GREAT_SPY</Class>
@@ -43957,6 +44162,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_JEWISH_MISSIONARY</Class>
@@ -44133,6 +44339,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CHRISTIAN_MISSIONARY</Class>
@@ -44309,6 +44516,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_MISSIONARY_JAINISMUS</Class>
@@ -44485,6 +44693,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ROME_MISSIONARY</Class>
@@ -44661,6 +44870,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SUMER_MISSIONARY</Class>
@@ -44837,6 +45047,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HINDU_MISSIONARY</Class>
@@ -45013,6 +45224,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BUDDHIST_MISSIONARY</Class>
@@ -45189,6 +45401,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ZORO_MISSIONARY</Class>
@@ -45365,6 +45578,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PHOEN_MISSIONARY</Class>
@@ -45541,6 +45755,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GREEK_MISSIONARY</Class>
@@ -45717,6 +45932,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CELTIC_MISSIONARY</Class>
@@ -45893,6 +46109,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_EGYPT_MISSIONARY</Class>
@@ -46069,6 +46286,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_NORDIC_MISSIONARY</Class>
@@ -46245,6 +46463,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_INQUISITOR</Class>
@@ -46416,6 +46635,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_1</Class>
@@ -46584,6 +46804,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_2</Class>
@@ -46752,6 +46973,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_3</Class>
@@ -46920,6 +47142,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_4</Class>
@@ -47088,6 +47311,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_5</Class>
@@ -47256,6 +47480,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_6</Class>
@@ -47424,6 +47649,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_7</Class>
@@ -47592,6 +47818,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_8</Class>
@@ -47760,6 +47987,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
                         <Class>UNITCLASS_EXECUTIVE_9</Class>
@@ -47928,6 +48156,7 @@
                         <FreePromotions/>
                         <LeaderPromotion>NONE</LeaderPromotion>
                         <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SLAVE</Class>
@@ -48198,6 +48427,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_FREED_SLAVE</Class>
@@ -48370,6 +48600,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_HORSE</Class>
@@ -48542,6 +48773,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WILD_HORSE</Class>
@@ -48719,6 +48951,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_CAMEL</Class>
@@ -48886,6 +49119,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_WILD_CAMEL</Class>
@@ -49063,6 +49297,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELEFANT</Class>
@@ -49249,6 +49484,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_REBELL</Class>
@@ -49443,6 +49679,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_FREEDOM_FIGHTER</Class>
@@ -49644,6 +49881,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_BEDUINE</Class>
@@ -49915,6 +50153,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_GLADIATOR</Class>
@@ -50101,6 +50340,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_PRIVATEER</Class>
@@ -50282,6 +50522,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -50444,6 +50685,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -50606,6 +50848,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL3</Class>
@@ -50768,6 +51011,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL4</Class>
@@ -50930,6 +51174,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL5</Class>
@@ -51092,6 +51337,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE1</Class>
@@ -51254,6 +51500,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE2</Class>
@@ -51416,6 +51663,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_ELITE3</Class>
@@ -51578,6 +51826,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL1</Class>
@@ -51755,6 +52004,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -51965,6 +52215,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL3</Class>
@@ -52171,6 +52422,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL2</Class>
@@ -52339,6 +52591,7 @@
       <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
     <UnitInfo>
       <Class>UNITCLASS_SPECIAL3</Class>
@@ -52528,6 +52781,7 @@
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
+      <CultureRestriction>NONE</CultureRestriction>
     </UnitInfo>
   </UnitInfos>
 </Civ4UnitInfos>

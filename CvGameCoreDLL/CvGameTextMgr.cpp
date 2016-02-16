@@ -710,6 +710,27 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_UNIT_IGNORE_TERRAIN"));
 			}
 
+			if (GC.getUnitInfo(pUnit->getUnitType()).getCultureRestriction() != NO_CULTURE_RESTRICTION)
+			{
+				CultureRestrictionTypes eRest = (CultureRestrictionTypes) GC.getUnitInfo(pUnit->getUnitType()).getCultureRestriction();
+				szString.append(NEWLINE);
+				szString.append(CvWString::format(L"%c", gDLL->getSymbolID(BULLET_CHAR)));
+				switch (eRest){
+					case CULTURE_RESTRICTION_NO_FOREIGN:
+						szString.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_NO_FOREIGN"));
+						break;
+					case CULTURE_RESTRICTION_VASALLS:
+						szString.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_VASALLS"));
+						break;
+					case CULTURE_RESTRICTION_HOMELAND:
+						szString.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_HOMELAND"));
+						break;
+					default:
+						szString.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_UNKNOWN"));
+				}
+			}
+
+
 			if (pUnit->isBlitz())
 			{
 				szString.append(NEWLINE);
@@ -5779,6 +5800,26 @@ void CvGameTextMgr::setBasicUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit,
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_IGNORE_TERRAIN"));
+	}
+
+	if (GC.getUnitInfo(eUnit).getCultureRestriction() != NO_CULTURE_RESTRICTION)
+	{
+		CultureRestrictionTypes eRest = (CultureRestrictionTypes) GC.getUnitInfo(eUnit).getCultureRestriction();
+		szBuffer.append(NEWLINE);
+		szBuffer.append(CvWString::format(L"%c", gDLL->getSymbolID(BULLET_CHAR)));
+		switch (eRest){
+			case CULTURE_RESTRICTION_NO_FOREIGN:
+				szBuffer.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_NO_FOREIGN"));
+				break;
+			case CULTURE_RESTRICTION_VASALLS:
+				szBuffer.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_VASALLS"));
+				break;
+			case CULTURE_RESTRICTION_HOMELAND:
+				szBuffer.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_HOMELAND"));
+				break;
+			default:
+				szBuffer.append(gDLL->getText("TXT_KEY_CULTURE_RESTRICTION_UNKNOWN"));
+		}
 	}
 
 	if (GC.getUnitInfo(eUnit).getInterceptionProbability() > 0)

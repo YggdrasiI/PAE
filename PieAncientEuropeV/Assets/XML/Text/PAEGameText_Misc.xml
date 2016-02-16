@@ -750,4 +750,36 @@
      <Italian>Una rivolta %s1_CivAdj &#232; scoppiata a %s2_CityName!</Italian>
      <Spanish>Ha tenido lugar una rebeli&#243;n %s1:2_CivAdj en %s2_CityName.</Spanish>
    </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_CULTURE_RESTRICTION_NO_FOREIGN</Tag>
+     <English>No movement in foreign culture.</English>
+     <French></French>
+     <German>Fremde Kultur nur eingeschr&#228; betretbar.</German>
+     <Italian></Italian>
+     <Spanish></Spanish>
+   </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_CULTURE_RESTRICTION_VASALLS</Tag>
+     <English>Movement in own and vasall culture, only.</English>
+     <French></French>
+     <German>Bewegung beschr&#228;kt auf eigene Kultur und Vasallen.</German>
+     <Italian></Italian>
+     <Spanish></Spanish>
+   </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_CULTURE_RESTRICTION_HOMELAND</Tag>
+     <English>Movement in own culture, only.</English>
+     <French></French>
+     <German>Bewegung beschr&#228;kt auf eigene Kultur.</German>
+     <Italian></Italian>
+     <Spanish></Spanish>
+   </TEXT>
+   <TEXT>
+     <Tag>TXT_KEY_CULTURE_RESTRICTION_UNKNOWN</Tag>
+     <English>Culture Restriction undefined.</English>
+     <French></French>
+     <German>Culture Restriction undefined.</German>
+     <Italian></Italian>
+     <Spanish></Spanish>
+   </TEXT>
 </Civ4GameText>

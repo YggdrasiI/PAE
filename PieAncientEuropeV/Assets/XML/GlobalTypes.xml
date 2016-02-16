@@ -277,4 +277,10 @@
                 <InterfaceVisibilityType>INTERFACE_HIDE</InterfaceVisibilityType>
                 <InterfaceVisibilityType>INTERFACE_HIDE_ALL</InterfaceVisibilityType>
         </InterfaceVisibilityTypes>
+        <CultureRestrictionTypes>
+                <!--Changes must be reflected in CvEnums.h-->
+                <CultureRestrictionType>CULTURE_RESTRICTION_NO_FOREIGN</CultureRestrictionType>
+                <CultureRestrictionType>CULTURE_RESTRICTION_VASALLS</CultureRestrictionType>
+                <CultureRestrictionType>CULTURE_RESTRICTION_HOMELAND</CultureRestrictionType>
+        </CultureRestrictionTypes>
 </Civ4Types>
