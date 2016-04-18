@@ -363,6 +363,7 @@ public:
 	virtual bool AI_isSneakAttackPreparing(TeamTypes eIndex) const = 0;
 	virtual bool AI_isSneakAttackReady(TeamTypes eIndex) const = 0;
 	virtual void AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar = true) = 0;
+	bool techPathCostNeedsUpdate() const;
 
 protected:
 
@@ -431,6 +432,7 @@ protected:
 
 	bool* m_pabHasTech;
 	bool* m_pabNoTradeTech;
+	bool m_bHasTechChanged; //m_bInitTechPathCosts; // Flag true after each change of m_pabHasTech
 
 	int** m_ppaaiImprovementYieldChange;
 

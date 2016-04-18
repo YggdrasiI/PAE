@@ -1,5 +1,8 @@
 // player.cpp
 
+#include <vector>
+#include <list>
+#include <algorithm>
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvArea.h"
@@ -34,7 +37,7 @@
 
 // Public Functions...
 
-CvPlayer::CvPlayer()
+CvPlayer::CvPlayer():m_techSuccessor(GC.getNumTechInfos()/* this is 0 here. */, std::vector<TechTypes>())
 {
 	m_aiSeaPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -82,6 +85,8 @@ CvPlayer::CvPlayer()
 
 	m_ppaaiSpecialistExtraYield = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
+
+	m_iTechPathCosts = NULL;
 
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                        09/01/07                                MRGENIE      */
@@ -5301,7 +5306,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 
 	eUnitClass = ((UnitClassTypes)(GC.getUnitInfo(eUnit).getUnitClassType()));
 
-	FAssert(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) == eUnit);
+	PAE_Assert(FAssert(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) == eUnit);)
 	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass) != eUnit)
 	{
 		return false;
@@ -5416,7 +5421,7 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 
 	eBuildingClass = ((BuildingClassTypes)(GC.getBuildingInfo(eBuilding).getBuildingClassType()));
 
-	FAssert(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(eBuildingClass) == eBuilding);
+	PAE_Assert(FAssert(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(eBuildingClass) == eBuilding);)
 	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(eBuildingClass) != eBuilding)
 	{
 		return false;
@@ -10717,7 +10722,7 @@ void CvPlayer::changeCommerceRate(CommerceTypes eIndex, int iChange)
 	if (iChange != 0)
 	{
 		m_aiCommerceRate[eIndex] += iChange;
-		FAssert(getCommerceRate(eIndex) >= 0);
+		PAE_Assert(FAssert(getCommerceRate(eIndex) >= 0);)
 
 		if (getID() == GC.getGameINLINE().getActivePlayer())
 		{
@@ -12002,6 +12007,11 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 		//	Base case return 0, we know it...
 		return 0;
 	}
+
+	updateTechPathCache(eTech);
+	return m_iTechPathCosts[(int)eTech];
+
+	//The original approach follows...
 
 	//	Cycle through the and paths and add up their tech lengths
 	for (i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++)
@@ -15701,6 +15711,10 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 
 	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 	{
+		if( getCivilizationType() == -1 ){
+			//PAE. Value sometimes -1. (Why?)
+			break;
+		}
 		BuildingTypes eOurBuilding = (BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI);
 		if (NO_BUILDING != eOurBuilding)
 		{
@@ -21700,5 +21714,196 @@ bool CvPlayer::hasSpaceshipArrived() const
 		}
 	}
 
+	return false;
+}
+
+
+// Search element in std::vector and similar. (Easier as switch to std::set, I assume...)
+// Example set of types T1 = std::vector<T2>, T2 = TechTypes
+template <typename T1, typename T2>
+bool In(T1 set, T2 el){
+	return (set.end() != std::find(set.begin(), set.end(), el));
+}
+
+
+/* Saves for each tech the minmal costs based on the current set of team techs.
+ * The default approach doesn't cache this value in findPathLength() which leads
+ * to quadratic complexity.
+ * Moreover, the old recursive approach (search from top to down)
+ * could be trapped into infinite loops.
+ *
+ */
+void CvPlayer::updateTechPathCache(TechTypes eTech) const{
+	const int NUM_PREREQS = GC.getNUM_OR_TECH_PREREQS() + GC.getNUM_AND_TECH_PREREQS();
+
+	// Initialisation array for costs map (one time). 
+	// and invert prereq map (m_techSuccessor).
+	if( m_iTechPathCosts == NULL ){
+		while( (int)m_techSuccessor.size() < GC.getNumTechInfos() ){
+			m_techSuccessor.push_back(std::vector<TechTypes>());
+		}
+		m_iTechPathCosts = new int[GC.getNumTechInfos()];
+		TechTypes ePreReq;
+		int iI, iJ;
+		for (iI = 0; iI < GC.getNumTechInfos(); iI++){
+			for (iJ= 0; iJ< NUM_PREREQS; iJ++){
+				ePreReq = getPrereqTech((TechTypes)iI, iJ);
+				if (ePreReq != NO_TECH) {
+					m_techSuccessor[(int)ePreReq].push_back((TechTypes)iI);
+				}
+			}
+		}
+	}
+
+	if( GET_TEAM(getTeam()).techPathCostNeedsUpdate() ){
+		// Reset costs map.
+		for (int iI = 0; iI < GC.getNumTechInfos(); iI++){
+			m_iTechPathCosts[iI] = MAX_INT;
+		}
+	}
+
+	if( m_iTechPathCosts[(int)eTech] < MAX_INT ){
+		// Path costs already cached.
+		return ;//m_iTechPathCosts[(int)eTech];
+	}
+
+	// 1. Create tree of predecessors
+	TechTypes ePreReq;
+	std::list<TechTypes> X = std::list<TechTypes>(); 
+	std::vector<TechTypes> Y = std::vector<TechTypes>(); 
+	std::list<TechTypes>::iterator find;
+
+	// Active set in greedy algorithm. (Researched techs at start)
+	std::list<TechTypes> Active = std::list<TechTypes>(); 
+
+	X.push_back(eTech);
+	int iJ;
+	
+	while( X.size() > 0 ){
+		TechTypes x = X.front();
+		X.pop_front();
+		Y.push_back(x);
+		for (iJ = 0; iJ < NUM_PREREQS; iJ++){
+			ePreReq = getPrereqTech(x, iJ);
+			if( ePreReq != NO_TECH ){
+				// Skip if tech already in X or Y.
+				if( In(X,ePreReq) || In(Y,ePreReq) ){
+					continue;
+				}
+				// Check if Tech is leaf. If not, add predecessors.
+				if( GET_TEAM(getTeam()).isHasTech(ePreReq) ){
+					m_iTechPathCosts[(int)ePreReq] = 0;
+					if( !In(Active, ePreReq) ) Active.push_back(ePreReq);					
+				}else if( m_iTechPathCosts[(int)ePreReq] < MAX_INT ){
+					Y.push_back(ePreReq);					
+					if( !In(Active, ePreReq) ) Active.push_back(ePreReq);					
+				}else{
+					X.push_back(ePreReq);
+				}
+			}
+		}
+	}
+
+	// 2. Loop through from left to right in tech tree and update costs map.
+	X.clear();
+	X.assign(Active.begin(), Active.end());
+	addSuccessors(Active, X, true);
+	while( X.size() > 0 ){
+		TechTypes x = X.front();
+		X.pop_front();
+		// Skip successors outside of subtree of eTech.
+		if( !In(Y,x) ){
+			continue;
+		}
+		if( updateCostMap(x, m_iTechPathCosts) ){
+			//Active.push_back(x); //not used
+			addSuccessors(x, X, true);
+		}
+	}	
+
+	//return m_iTechPathCosts[(int)eTech];
+}
+
+TechTypes CvPlayer::getPrereqTech(TechTypes eTech, int index) const{
+	const int iOrTechs = GC.getNUM_OR_TECH_PREREQS();
+	TechTypes ret(NO_TECH);
+	if( index < iOrTechs ){
+		ret = (TechTypes) GC.getTechInfo(eTech).getPrereqOrTechs(index);
+	}else{
+		ret = (TechTypes) GC.getTechInfo(eTech).getPrereqAndTechs(index-iOrTechs);
+	}
+	FAssertMsg(ret < GC.getNumTechInfos(), "Index out of bounds");
+	FAssertMsg(ret > -2, "Index out of bounds");
+	return ret;
+}
+
+void CvPlayer::addSuccessors(TechTypes eTech, std::list<TechTypes> &out,
+		bool omitDuplicates) const{
+	std::vector<TechTypes> &suc = m_techSuccessor[(int)eTech];
+	std::vector<TechTypes>::iterator it= suc.begin(); 
+	std::vector<TechTypes>::iterator itEnd= suc.end(); 
+	for( ; it != itEnd; it++ ){
+		if( omitDuplicates && In(out, *it) ){
+			continue;
+		}
+		out.push_back(*it);
+	}
+}
+
+void CvPlayer::addSuccessors(std::list<TechTypes> &techs, std::list<TechTypes> &out,
+		bool omitDuplicates) const{
+	std::list<TechTypes>::iterator it= techs.begin(); 
+	std::list<TechTypes>::iterator itEnd= techs.end(); 
+	for( ; it != itEnd; it++ ){
+		addSuccessors(*it, out, omitDuplicates);
+	}
+}
+
+// Returns true if lower costs was found.
+bool CvPlayer::updateCostMap(TechTypes eTech, int* costMap) const{
+	int iPreReq;
+	int costs = MAX_INT;
+	bool bOrBranch(false);
+	int i;
+
+	for (i = 0; i < GC.getNUM_OR_TECH_PREREQS(); i++){
+		iPreReq = GC.getTechInfo(eTech).getPrereqOrTechs(i);
+		if (iPreReq != (int)NO_TECH) {
+			bOrBranch = true;
+			if( costs > costMap[iPreReq] ){
+				costs = costMap[iPreReq];
+			}
+		}
+	}
+
+	if( bOrBranch && costs == MAX_INT ){
+		//Or branch missing. Do not update costMap.
+		return false;
+	}
+	// Reset costs if no or branch exists.
+	if( !bOrBranch ) costs = 0;
+
+	for (i = 0; i < GC.getNUM_AND_TECH_PREREQS(); i++){
+		iPreReq = GC.getTechInfo(eTech).getPrereqAndTechs(i);
+		if (iPreReq != (int)NO_TECH) {
+			if( costMap[iPreReq] == MAX_INT ){
+				return false;
+			}
+			costs += costMap[iPreReq];
+		}
+	}
+
+	/* In der ursprünglichen Version wird bei !bCost nur 1 addiert. Diese Variable haben wir hier nicht.*/
+	if( getTeam() != NO_TEAM){
+		costs += GET_TEAM(getTeam()).getResearchCost(eTech);
+	}else{
+		costs += 1;
+	}
+	if( costs < costMap[(int)eTech] ){
+		costMap[(int)eTech] = costs;
+		return true;
+	}
+
+	// Should not be reached if every node processed only one time.
 	return false;
 }

@@ -1289,6 +1289,9 @@ protected:
 	CvTurnScoreMap m_mapCultureHistory;
 	CvTurnScoreMap m_mapEspionageHistory;
 
+	mutable int* m_iTechPathCosts;
+	mutable std::vector< std::vector<TechTypes> > m_techSuccessor;
+
 	void doGold();
 	void doResearch();
 	void doEspionagePoints();
@@ -1319,6 +1322,13 @@ protected:
 	void getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const;  // used by Globeview resource layer
 	void getReligionLayerColors(ReligionTypes eSelectedReligion, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const;  // used by Globeview religion layer
 	void getCultureLayerColors(std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const;  // used by Globeview culture layer
+
+private:
+	void updateTechPathCache(TechTypes eTech) const;
+	TechTypes getPrereqTech(TechTypes eTech, int index) const; //Helper for updateTechPathCache
+	void addSuccessors(TechTypes eTech, std::list<TechTypes> &out, bool omitDuplicates = false) const; //Helper for updateTechPathCache
+	void addSuccessors(std::list<TechTypes> &techs, std::list<TechTypes> &out, bool omitDuplicates = false) const; //Helper for updateTechPathCache
+	bool updateCostMap(TechTypes eTech, int* costMap) const;
 };
 
 #endif
