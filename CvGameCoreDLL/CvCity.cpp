@@ -1069,10 +1069,10 @@ void CvCity::doTurn()
 
 		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
-			FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);
-			FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);
-			FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);
+			PAE_Assert(FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);)
+			PAE_Assert(FAssert(getSpecialistCommerce((CommerceTypes)iI) >= 0);)
+			PAE_Assert(FAssert(getReligionCommerce((CommerceTypes)iI) >= 0);)
+			PAE_Assert(FAssert(getCorporationCommerce((CommerceTypes)iI) >= 0);)
 			FAssert(GET_PLAYER(getOwnerINLINE()).getFreeCityCommerce((CommerceTypes)iI) >= 0);
 		}
 
@@ -8153,7 +8153,7 @@ void CvCity::updateCommerce(CommerceTypes eIndex)
 	if (iOldCommerce != iNewCommerce)
 	{
 		m_aiCommerceRate[eIndex] = iNewCommerce;
-		FAssert(m_aiCommerceRate[eIndex] >= 0);
+		PAE_Assert(FAssert(m_aiCommerceRate[eIndex] >= 0);)
 
 		GET_PLAYER(getOwnerINLINE()).invalidateCommerceRankCache(eIndex);
 
@@ -8282,7 +8282,7 @@ void CvCity::updateBuildingCommerce()
 		if (getBuildingCommerce((CommerceTypes)iI) != iNewBuildingCommerce)
 		{
 			m_aiBuildingCommerce[iI] = iNewBuildingCommerce;
-			FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);
+			PAE_Assert(FAssert(getBuildingCommerce((CommerceTypes)iI) >= 0);)
 
 			updateCommerce((CommerceTypes)iI);
 		}

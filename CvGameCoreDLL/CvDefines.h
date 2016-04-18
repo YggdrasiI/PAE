@@ -96,6 +96,10 @@
 
 #define ANIMATION_DEFAULT											(1)			// Default idle animation
 
+// Some Assert call are wrapped with this to disable them for PAE.
+#define PAE_Assert(x)
+//#define PAE_Assert(x) x
+
 // python module names
 #define PYDebugToolModule			"CvDebugInterface"
 #define PYScreensModule				"CvScreensInterface"

@@ -10299,7 +10299,7 @@ int CvUnit::getExtraEnemyHeal() const
 void CvUnit::changeExtraEnemyHeal(int iChange)						
 {
 	m_iExtraEnemyHeal += iChange;
-	FAssert(getExtraEnemyHeal() >= 0);
+	PAE_Assert(FAssert(getExtraEnemyHeal() >= 0);)
 }
 
 int CvUnit::getExtraNeutralHeal() const
@@ -10310,7 +10310,7 @@ int CvUnit::getExtraNeutralHeal() const
 void CvUnit::changeExtraNeutralHeal(int iChange)			
 {
 	m_iExtraNeutralHeal += iChange;
-	FAssert(getExtraNeutralHeal() >= 0);
+	PAE_Assert(FAssert(getExtraNeutralHeal() >= 0);)
 }
 
 int CvUnit::getExtraFriendlyHeal() const
@@ -10322,7 +10322,7 @@ int CvUnit::getExtraFriendlyHeal() const
 void CvUnit::changeExtraFriendlyHeal(int iChange)			
 {
 	m_iExtraFriendlyHeal += iChange;
-	FAssert(getExtraFriendlyHeal() >= 0);
+	PAE_Assert(FAssert(getExtraFriendlyHeal() >= 0);)
 }
 
 int CvUnit::getSameTileHeal() const
