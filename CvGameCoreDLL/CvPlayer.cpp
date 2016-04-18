@@ -21807,7 +21807,13 @@ void CvPlayer::updateTechPathCache(TechTypes eTech) const{
 	// 2. Loop through from left to right in tech tree and update costs map.
 	X.clear();
 	X.assign(Active.begin(), Active.end());
-	addSuccessors(Active, X, true);
+
+	// For techs of first row is Active empty. Add end tech.
+	if( X.size() == 0 )
+		X.push_back(eTech);
+	else:
+		addSuccessors(Active, X, true);
+
 	while( X.size() > 0 ){
 		TechTypes x = X.front();
 		X.pop_front();
