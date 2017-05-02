@@ -13,6 +13,7 @@ function help ()
   Feature
   Improvement
   Route
+	Building
   "
 }
 

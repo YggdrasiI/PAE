@@ -11,13 +11,14 @@ BeginGame
   Victory=VICTORY_CULTURAL
   Victory=VICTORY_DIPLOMATIC
   Victory=VICTORY_RELIGION
+  Victory=VICTORY_7_WONDERS
   GameTurn=0
   MaxTurns=0
   MaxCityElimination=0
   NumAdvancedStartPoints=0
   TargetScore=0
   StartYear=-5000
-  Description=TXT_KEY_SCENARIO_KEINPFERD_1
+  Description=TXT_KEY_HELLENIC
   ModPath=
 EndGame
 BeginTeam
@@ -40,7 +41,6 @@ EndTeam
 BeginTeam
   TeamID=4
   Tech=TECH_GREEK
-  ContactWithTeam=12
   RevealMap=0
 EndTeam
 BeginTeam
@@ -76,7 +76,6 @@ EndTeam
 BeginTeam
   TeamID=12
   Tech=TECH_GREEK
-  ContactWithTeam=4
   RevealMap=0
 EndTeam
 BeginTeam
@@ -100,7 +99,99 @@ BeginTeam
   RevealMap=0
 EndTeam
 BeginTeam
+  TeamID=17
+  RevealMap=0
+EndTeam
+BeginTeam
   TeamID=18
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=19
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=20
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=21
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=22
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=23
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=24
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=25
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=26
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=27
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=28
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=29
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=30
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=31
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=32
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=33
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=34
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=35
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=36
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=37
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=38
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=39
+  RevealMap=0
+EndTeam
+BeginTeam
+  TeamID=40
   ContactWithTeam=0
   ContactWithTeam=1
   ContactWithTeam=2
@@ -13706,7 +13797,7 @@ EndPlot
 BeginPlot
   x=33,y=20
   BonusType=BONUS_COW
-  TerrainType=TERRAIN_PLAINS
+  TerrainType=TERRAIN_SWAMP
   PlotType=2
   TeamReveal=0,
   Player0Culture=2
@@ -15255,7 +15346,7 @@ BeginPlot
     CityName=Skodra
     CityPopulation=1
     BuildingType=BUILDING_SIEDLUNG
-    BuildingType=BUILDING_TRAIT_MARITIME_LOCAL
+    BuildingType=BUILDING_TRAIT_MARITIME_GLOBAL
   EndCity
   TeamReveal=8,
   Player8Culture=2
@@ -15388,7 +15479,7 @@ BeginPlot
   RiverNSDirection=0
   isWOfRiver
   ImprovementType=IMPROVEMENT_GOODY_HUT
-  TerrainType=TERRAIN_PLAINS
+  TerrainType=TERRAIN_SWAMP
   PlotType=2
   TeamReveal=40,
 EndPlot
@@ -17201,7 +17292,7 @@ BeginPlot
 EndPlot
 BeginPlot
   x=42,y=27
-  TerrainType=TERRAIN_PLAINS
+  TerrainType=TERRAIN_SWAMP
   PlotType=0
   TeamReveal=16,40,
 EndPlot
@@ -18617,7 +18708,7 @@ BeginPlot
 EndPlot
 BeginPlot
   x=46,y=26
-  TerrainType=TERRAIN_PLAINS
+  TerrainType=TERRAIN_SWAMP
   PlotType=0
   TeamReveal=40,
 EndPlot
@@ -20707,7 +20798,7 @@ BeginPlot
     CityName=TXT_KEY_CITY_NAME_THEBES
     CityPopulation=1
     BuildingType=BUILDING_SIEDLUNG
-    BuildingType=BUILDING_TRAIT_MARITIME_LOCAL
+    BuildingType=BUILDING_TRAIT_MARITIME_GLOBAL
     Player11Culture=1
   EndCity
   TeamReveal=4,11,40,
@@ -22696,7 +22787,7 @@ BeginPlot
     CityName=TXT_KEY_CIV_ATHENS_SHORT_DESC
     CityPopulation=1
     BuildingType=BUILDING_SIEDLUNG
-    BuildingType=BUILDING_TRAIT_MARITIME_LOCAL
+    BuildingType=BUILDING_TRAIT_MARITIME_GLOBAL
     BuildingType=BUILDING_TRAIT_PHILOSOPHICAL_GLOBAL
   EndCity
   TeamReveal=4,12,40,
@@ -27450,7 +27541,7 @@ BeginPlot
   RiverWEDirection=3
   isWOfRiver
   ImprovementType=IMPROVEMENT_GOODY_HUT
-  TerrainType=TERRAIN_PLAINS
+  TerrainType=TERRAIN_SWAMP
   PlotType=2
 EndPlot
 BeginPlot
@@ -31053,7 +31144,7 @@ BeginPlot
     CityName=TXT_KEY_CITY_NAME_BYBLOS
     CityPopulation=1
     BuildingType=BUILDING_SIEDLUNG
-    BuildingType=BUILDING_TRAIT_MARITIME_LOCAL
+    BuildingType=BUILDING_TRAIT_MARITIME_GLOBAL
   EndCity
   TeamReveal=14,
   Player14Culture=2

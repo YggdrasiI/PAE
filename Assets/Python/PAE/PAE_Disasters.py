@@ -1458,6 +1458,10 @@ def doComet():
     iDarkIce = gc.getInfoTypeForString("FEATURE_DARK_ICE")
 
     iImpType1 = gc.getInfoTypeForString("IMPROVEMENT_LUMBER_CAMP")
+    lVillages = []
+    lVillages.append(gc.getInfoTypeForString("IMPROVEMENT_HAMLET"))
+    lVillages.append(gc.getInfoTypeForString("IMPROVEMENT_VILLAGE"))
+    lVillages.append(gc.getInfoTypeForString("IMPROVEMENT_TOWN"))
 
     bonus_magnetit = gc.getInfoTypeForString("BONUS_MAGNETIT")
     bonus_oreichalkos = gc.getInfoTypeForString("BONUS_OREICHALKOS")
@@ -1560,6 +1564,10 @@ def doComet():
                     if not loopPlot.isCity():
                       loopPlot.setRouteType(-1)
                       loopPlot.setImprovementType(-1)
+                  # Gemeinden und Doerfer -> Huetten/Cottages
+                  elif loopPlot.getImprovementType() in lVillages: loopPlot.setImprovementType(gc.getInfoTypeForString("IMPROVEMENT_COTTAGE"))
+
+
                   # Entfernung zum Einschlag berechnen
                   iBetrag = (iRandX - loopPlot.getX()) * (iRandX - loopPlot.getX()) + (iRandY - loopPlot.getY()) * (iRandY - loopPlot.getY())
                   if iBetrag == 1:
@@ -1599,29 +1607,20 @@ def doComet():
 
   # iChance = Wahrscheinlichkeit, dass ein Gebaeude zerstoert wird
 def doDestroyCityBuildings(pCity, iChance):
-  iOwner = pCity.getOwner()
-  lIgnoreBuildings = []
-  lIgnoreBuildings.append(gc.getInfoTypeForString("BUILDING_SIEDLUNG"))
-  lIgnoreBuildings.append(gc.getInfoTypeForString("BUILDING_KOLONIE"))
-  lIgnoreBuildings.append(gc.getInfoTypeForString("BUILDING_STADT"))
-  lIgnoreBuildings.append(gc.getInfoTypeForString("BUILDING_PROVINZ"))
-  lIgnoreBuildings.append(gc.getInfoTypeForString("BUILDING_METROPOLE"))
-  lIgnoreBuildings.append(gc.getInfoTypeForString("BUILDING_TRAIT_MARITIME_LOCAL"))
-  # PAE IV Update: Palast darf zerstoert werden... hehe ;)
-  #iBuildingPalace = gc.getInfoTypeForString('BUILDING_PALACE')
-
-  if pCity.getNumBuildings() > 0:
+    iOwner = pCity.getOwner()
     iRange = gc.getNumBuildingInfos()
     for iBuilding in range(iRange):
-      pBuilding = gc.getBuildingInfo(iBuilding)
-      if pCity.getNumBuilding(iBuilding):
-        if iBuilding not in lIgnoreBuildings and not isWorldWonderClass(gc.getBuildingInfo(iBuilding).getBuildingClassType()):
-          iRand = myRandom(100)
-          if iRand < iChance:
-            pCity.setNumRealBuilding(iBuilding,0)
-            if iOwner != -1:
-              if gc.getPlayer(iOwner).isHuman():
-                CyInterface().addMessage(gc.getPlayer(iOwner).getID(), True, 8, CyTranslator().getText("TXT_KEY_DISASTER_DESTROYED_BUILDING",(pCity.getName(),pBuilding.getDescription())),None,2,pBuilding.getButton(),ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+        if pCity.getNumRealBuilding(iBuilding):
+            pBuilding = gc.getBuildingInfo(iBuilding)
+            if not isWorldWonderClass(pBuilding.getBuildingClassType()):
+                if myRandom(100) < iChance:
+                    pCity.setNumRealBuilding(iBuilding,0)
+                    pOwner = gc.getPlayer(iOwner)
+                    if pOwner.isHuman():
+                        CyInterface().addMessage(pOwner.getID(), True, 8, CyTranslator().getText("TXT_KEY_DISASTER_DESTROYED_BUILDING",(pCity.getName(),pBuilding.getDescription())),None,2,pBuilding.getButton(),ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+    PAE_City.doCheckCityState(pCity)
+    PAE_City.doCheckTraitBuildings(pCity)
+    PAE_City.doCheckGlobalTraitBuildings(iOwner)
 
 
   # iChance = Wahrscheinlichkeit, dass ein Wunder zerstoert wird
@@ -1677,9 +1676,7 @@ def doKillUnits(pPlot, iChance):
             # Message: Eure Einheit %s hat diese schreckliche Naturgewalt nicht ueberlebt!
             CyInterface().addMessage( pUnit.getOwner(), True, 8, CyTranslator().getText("TXT_KEY_MESSAGE_DISASTER_UNIT_KILLED",(pPlot.getUnit(iUnit).getName(),0)), "AS2D_PLAGUE", 2, pPlot.getUnit(iUnit).getButton(), ColorTypes(7), pPlot.getX(), pPlot.getY(), True, True)
 
-        # VOID kill (BOOL bDelay, INT PlayerType ePlayer)
-        #pPlot.getUnit(iUnit).kill(1,pPlot.getUnit(iUnit).getOwner())
-        pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
+        pUnit.kill(1,pUnit.getOwner())
 
       else:
         pPlot.getUnit(iUnit).setDamage(60, -1)

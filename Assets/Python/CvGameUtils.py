@@ -157,7 +157,10 @@ class CvGameUtils:
         if iUnitType in PAE_Trade.lCultivationUnits:
             eBonus = CvUtil.getScriptData(pHeadSelectedUnit, ["b"], -1)
             if eBonus != -1 and not gc.getActivePlayer().isOption(PlayerOptionTypes.PLAYEROPTION_NO_UNIT_RECOMMENDATIONS):
-                pCity = pHeadSelectedUnit.plot().getWorkingCity()
+              pPlayer = gc.getPlayer(pHeadSelectedUnit.getOwner())
+              (pCity, iter) = pPlayer.firstCity(False)
+              while pCity:
+                #pCity = pHeadSelectedUnit.plot().getWorkingCity()
                 if pCity != None:
                     pBestPlot = PAE_Trade.AI_bestCultivation(pCity, 0, eBonus)
                     if pBestPlot:
@@ -165,6 +168,7 @@ class CvGameUtils:
                         pSecondBestPlot = PAE_Trade.AI_bestCultivation(pCity, 1, eBonus)
                         if pSecondBestPlot:
                             CyEngine().addColoredPlotAlt(pSecondBestPlot.getX(), pSecondBestPlot.getY(), PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_HIGHLIGHT_TEXT", 1.0)
+                (pCity,iter) = pPlayer.nextCity(iter, False)
 
                 # iRange = 2
                 # for iDX in range(-iRange, iRange+1):
@@ -242,6 +246,9 @@ class CvGameUtils:
   def isActionRecommended(self,argsList):
     pUnit = argsList[0]
     iAction = argsList[1]
+    # TEST ungueltige Action abgefragt, wo kommt das her.
+    if iAction == -1:
+        CyInterface().addMessage(CyGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",(pUnit.getName,iAction)), None, 2, None, ColorTypes(12), 0, 0, False, False)
     return False
 
   def unitCannotMoveInto(self,argsList):
@@ -1459,12 +1466,12 @@ class CvGameUtils:
             bUpgrade = False
             UnitHorse = gc.getInfoTypeForString('UNIT_HORSE')
             iRange = pPlot.getNumUnits()
-            for iUnit in range (iRange):
-              if pPlot.getUnit(iUnit).getUnitType() == UnitHorse and pPlot.getUnit(iUnit).getOwner() == pUnit.getOwner():
-                bUpgrade = True
-                #pPlot.getUnit(iUnit).doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
-                pPlot.getUnit(iUnit).kill(1,pPlot.getUnit(iUnit).getOwner())
-                break
+            for i in range (iRange):
+                pLoopUnit = pPlot.getUnit(i)
+                if pLoopUnit.getUnitType() == UnitHorse and pLoopUnit.getOwner() == pUnit.getOwner():
+                    bUpgrade = True
+                    pLoopUnit.kill(1,pLoopUnit.getOwner())
+                    break
 
             if bUpgrade:
               iX = pUnit.getX()
@@ -1485,7 +1492,6 @@ class CvGameUtils:
                 # init all promotions the unit had
                 if (pUnit.isHasPromotion(iPromotion)):
                   NewUnit.setHasPromotion(iPromotion, True)
-              #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
               pUnit.kill(1,pUnit.getOwner())
               return True
 # END Unit -> Horse UPGRADE
@@ -1528,7 +1534,7 @@ class CvGameUtils:
 
                     if not xCity.isHasBuilding(iBuilding1):
                       if xCity.isHasBuilding(iBuilding2):
-                        pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, xCity.getX(), xCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pPlot, pUnit)
+                        pUnit.getGroup().pushMoveToMission(xCity.getX(), xCity.getY())
                         return True
 
 
@@ -1735,7 +1741,7 @@ class CvGameUtils:
                   if iImp in lLatifundien:
                     if pPlot.getUpgradeTimeLeft(iImp, iOwner) > 1:
                       pPlot.changeUpgradeProgress(10)
-                      pUnit.kill(1,iOwner)
+                      pUnit.kill(1,pUnit.getOwner())
                       bLatifundien = False
                       break
 
@@ -1774,7 +1780,7 @@ class CvGameUtils:
 
                 if not xCity.isHasBuilding(iBuilding1):
                   if xCity.isHasBuilding(iBuilding2):
-                    pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, xCity.getX(), xCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pPlot, pUnit)
+                    pUnit.getGroup().pushMoveToMission(xCity.getX(), xCity.getY())
                     return True
 
 
@@ -1795,7 +1801,7 @@ class CvGameUtils:
 
           if lCityX:
             if not pUnit.atPlot(lCityX.plot()):
-              pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, lCityX.getX(), lCityX.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
+              pUnit.getGroup().pushMoveToMission(lCityX.getX(), lCityX.getY())
             else:
               lCityX.changePopulation(1)
               pUnit.kill(1,pUnit.getOwner())
@@ -1803,22 +1809,25 @@ class CvGameUtils:
 
 # Beutegold / Treasure / Goldkarren -> zur Hauptstadt
       if iUnitType == gc.getInfoTypeForString("UNIT_GOLDKARREN") and iOwner != gc.getBARBARIAN_PLAYER():
-        pCapital = pOwner.getCapitalCity()
-        if pCapital.getID() == -1: pCityX = lCities[0].GetCy()
-        else: pCityX = pCapital
-        if not pUnit.atPlot(pCityX.plot()):
-          pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, pCityX.getX(), pCityX.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
-          return True
-        else:
-          if pCapital.getID() == pCityX.getID():
-            iGold = 80 + self.myRandom(71, None)
-            pOwner.changeGold(iGold)
-            pUnit.kill(1,pUnit.getOwner())
-            #iBuilding = CvUtil.findInfoTypeNum(gc.getBuildingInfo, gc.getNumBuildingInfos(), 'BUILDING_PALACE')
-            #pCityX.setBuildingCommerceChange(gc.getBuildingInfo(iBuilding).getBuildingClassType(), CommerceTypes.COMMERCE_CULTURE, 1)
-          else:
-            pUnit.finishMoves()
-          return True
+
+        if pOwner.getNumCities() > 0:
+          pCapital = pOwner.getCapitalCity()
+          if pCapital.getID() == -1: pCityX = lCities[0].GetCy()
+          else: pCityX = pCapital
+
+          if not pCityX.isNone() and pCityX != None:
+            if not pUnit.atPlot(pCityX.plot()):
+              pUnit.getGroup().pushMoveToMission(pCityX.getX(), pCityX.getY())
+              return True
+            else:
+              if pCapital.getID() == pCityX.getID():
+                iGold = 80 + self.myRandom(71, None)
+                pOwner.changeGold(iGold)
+                pUnit.kill(1,pUnit.getOwner())
+              else:
+                pUnit.finishMoves()
+              return True
+        return False
 
 # Trojanisches Pferd
       if iUnitType == gc.getInfoTypeForString("UNIT_TROJAN_HORSE") and iOwner != gc.getBARBARIAN_PLAYER():
@@ -1850,11 +1859,15 @@ class CvGameUtils:
 
                  pPlayer.initUnit(gc.getInfoTypeForString("UNIT_GREAT_GENERAL"), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-                 iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT4")
+                 iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT6")
                  if pUnit.isHasPromotion(iPromo): pUnit.setHasPromotion(iPromo, False)
                  iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT5")
                  if pUnit.isHasPromotion(iPromo): pUnit.setHasPromotion(iPromo, False)
-                 iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT6")
+                 iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT4")
+                 if pUnit.isHasPromotion(iPromo): pUnit.setHasPromotion(iPromo, False)
+                 iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT3")
+                 if pUnit.isHasPromotion(iPromo): pUnit.setHasPromotion(iPromo, False)
+                 iPromo = gc.getInfoTypeForString("PROMOTION_COMBAT2")
                  if pUnit.isHasPromotion(iPromo): pUnit.setHasPromotion(iPromo, False)
                  iPromo = gc.getInfoTypeForString("PROMOTION_HERO")
                  if pUnit.isHasPromotion(iPromo): pUnit.setHasPromotion(iPromo, False)
@@ -2490,13 +2503,18 @@ class CvGameUtils:
 ## Platy WorldBuilder End ##
 ## ---------------------- ##
 
-    if (eWidgetType == WidgetTypes.WIDGET_ACTION):
+    # if (eWidgetType == WidgetTypes.WIDGET_ACTION):
+      # #PAE TradeRoute Advisor
+      # if iData1 == -1:
+        # if iData2 == 1: return CyTranslator().getText("TXT_KEY_TRADE_ROUTE_ADVISOR_SCREEN",())
+        # if iData2 == 2: return CyTranslator().getText("TXT_KEY_TRADE_ROUTE2_ADVISOR_SCREEN",())
+
+    if (eWidgetType == WidgetTypes.WIDGET_GENERAL):
       #PAE TradeRoute Advisor
-      if iData1 == -1:
+      if iData1 == 10000:
         if iData2 == 1: return CyTranslator().getText("TXT_KEY_TRADE_ROUTE_ADVISOR_SCREEN",())
         if iData2 == 2: return CyTranslator().getText("TXT_KEY_TRADE_ROUTE2_ADVISOR_SCREEN",())
 
-    elif (eWidgetType == WidgetTypes.WIDGET_GENERAL):
       #Inquisitor
       if iData1 == 665:
         return CyTranslator().getText("TXT_KEY_GODS_INQUISTOR_CLEANSE_MOUSE_OVER",())
@@ -2615,6 +2633,7 @@ class CvGameUtils:
 
       # Unit Formations
       if (iData2 == 718):
+        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("718 GameUtils erreicht",)), None, 2, None, ColorTypes(10), 0, 0, False, False)
         if iData1 == -1: return u"<color=155,255,255,0>" + CyTranslator().getText("TXT_KEY_PROMOTION_FORM_NONE",()) + u"</color>"
         else: return u"<color=155,255,255,0>%s</color>" % gc.getPromotionInfo(iData1).getDescription()
 
@@ -2823,7 +2842,6 @@ class CvGameUtils:
                 pUnitGroup.pushMission(MissionTypes.MISSION_MOVE_TO, iX, iY, 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
               else:
                 pCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE"),1)
-                #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
                 pUnit.kill(1,pUnit.getOwner())
                 return True
 
@@ -2831,44 +2849,42 @@ class CvGameUtils:
   def doCamel_AI( self, pUnit ):
     pUnitGroup = pUnit.getGroup()
     if pUnitGroup.getMissionType(0) != 0:
-     iOwner = pUnit.getOwner()
+        iOwner = pUnit.getOwner()
 
-     # Nur 1x pro Runde alle Staedte checken
-     # PAE AI Unit Instances (better turn time)
-     if self.PAE_AI_ID != iOwner:
-      self.PAE_AI_ID = iOwner
+        # Nur 1x pro Runde alle Staedte checken
+        # PAE AI Unit Instances (better turn time)
+        if self.PAE_AI_ID != iOwner:
+            self.PAE_AI_ID = iOwner
 
-      pPlayer = gc.getPlayer(iOwner)
+            pPlayer = gc.getPlayer(iOwner)
 
-      lCities = PyPlayer(iOwner).getCityList()
-      iDesert = gc.getInfoTypeForString("TERRAIN_DESERT")
+            lCities = PyPlayer(iOwner).getCityList()
+            iDesert = gc.getInfoTypeForString("TERRAIN_DESERT")
 
-      for lCity in lCities:
-        pCity = lCity.GetCy()
-        if not pCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
-           # Check plots (Klima / climate)
-           iX = pCity.getX()
-           iY = pCity.getY()
-           bOK = False
-           for i in [-1,0,1]:
-             for j in [-1,0,1]:
-               loopPlot = plotXY(iX, iY, i-1, j-1)
-               if loopPlot != None and not loopPlot.isNone():
-                 if loopPlot.getTerrainType() == iDesert:
-                   bOK = True
-                   break
-             if bOK: break
+            for lCity in lCities:
+                pCity = lCity.GetCy()
+                if not pCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
+                    # Check plots (Klima / climate)
+                    iX = pCity.getX()
+                    iY = pCity.getY()
+                    bOK = False
+                    for iI in range(-1, DirectionTypes.NUM_DIRECTION_TYPES):
+                        pLoopPlot = plotDirection(iX, iY, DirectionTypes(iI))
+                        if pLoopPlot != None and not pLoopPlot.isNone():
+                            if pLoopPlot.getTerrainType() == iDesert:
+                                bOK = True
+                                break
 
-           if bOK:
-             if pUnit.generatePath( pCity.plot(), 0, False, None ):
-               if not pUnit.atPlot(pCity.plot()):
-                 pUnitGroup.clearMissionQueue()
-                 pUnitGroup.pushMission(MissionTypes.MISSION_MOVE_TO, iX, iY, 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
-               else:
-                 pCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE"),1)
-                 #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
-                 pUnit.kill(1,pUnit.getOwner())
-                 return True
+                    if bOK:
+                        if pUnit.generatePath( pCity.plot(), 0, False, None ):
+                            if not pUnit.atPlot(pCity.plot()):
+                                pUnitGroup.clearMissionQueue()
+                                pUnit.getGroup().pushMoveToMission(iX, iY)
+                                return True
+                            else:
+                                pCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE"),1)
+                                pUnit.kill(1,pUnit.getOwner())
+                                return True
 
   # Inquisitor -------------------
   def doInquisitorCore_AI( self, pUnit ):
@@ -2884,64 +2900,6 @@ class CvGameUtils:
       lCities = PyPlayer(iOwner).getCityList()
       iNumReligions = gc.getNumReligionInfos()
 
-
-      ##--------Gegen Relisieg
-      #iStateReligionPercent = CyGame().calculateReligionPercent(iStateReligion)
-      #Checks religion percents
-      #bestReligionPercent = 0
-      #iBestReligion = -1
-      #for iReligionLoop in range(iNumReligions):
-      #  if (iReligionLoop != iStateReligion):
-      #    religionPercent = CyGame().calculateReligionPercent(iReligionLoop)
-      #    if (religionPercent > bestReligionPercent):
-      #      bestReligionPercent = religionPercent
-      #      iBestReligion = iReligionLoop
-
-      #Prevent religious victory
-      #if bestReligionPercent >= 90 or bestReligionPercent > iStateReligionPercent:
-      #  for iCity in range(len(lCities)):
-      #    pCity = pOwner.getCity( lCities[ iCity ].getID( ) )
-      #    if pCity.isHasReligion(iBestReligion) and pCity.isHasReligion(iStateReligion):
-      #      #Makes the unit move to the City and purge it
-      #      iPlayer = pOwner.getID()
-      #      PAE_City.doInquisitorPersecution2(iPlayer, pCity.getID(), -1, iReligion, pUnit.getID())
-      #      #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
-      #      pUnit.kill(1,pUnit.getOwner())
-      #      return
-      ##--------Ende Relisieg
-
-      # First Version
-      #Looks to see if the AI controls a City with unhappiness and non-state religions
-      #iRange = len(lCities)
-      #for iCity in range(iRange):
-      #    pCity = pOwner.getCity( lCities[ iCity ].getID( ) )
-      #    # has this city probably unhappiness of religion cause
-      #    if pCity.happyLevel() < pCity.unhappyLevel(0):
-      #      for iReligion in range(iNumReligions):
-      #        if iReligion != iStateReligion and pCity.isHasReligion( iReligion ) and pCity.isHolyCityByType( iReligion ) == 0:
-      #          #Makes the unit purge it
-      #          iPlayer = pOwner.getID()
-      #          PAE_City.doInquisitorPersecution2(iPlayer, pCity.getID(), -1, iReligion, pUnit.getID())
-      #          #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
-      #          pUnit.kill(1,pUnit.getOwner())
-      #          return 1
-
-      # lReligions.difference = Fehler: list object: GIBTS NICHT
-      #for pCity in lCities:
-      #  # has this city probably unhappiness of religion cause
-      #  if pCity.getAngryPopulation() > 0:
-      #    lReligions = pCity.getReligions()
-      #    lHoly = pCity.getHolyCity()
-      #    lReligionsWithoutHolyOrState = lReligions.difference(lHoly,iStateReligion)
-      #    iRand = self.myRandom(len(lReligionsWithoutHolyOrState),None)
-      #    iReligion = lReligionsWithoutHolyOrState(iRand)
-      #    iPlayer = pOwner.getID( )       #
-      #    PAE_City.doInquisitorPersecution2(iPlayer,pCity.getID(), -1, iReligion, pUnit.getID())
-      #    #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
-      #    pUnit.kill(1,pUnit.getOwner())
-      #    return 1
-
-
       for pyCity in lCities:
         # has this city probably unhappiness of religion cause
         if pyCity.getAngryPopulation() > 0:
@@ -2953,19 +2911,10 @@ class CvGameUtils:
                 if pCity.isHolyCityByType( iReligion ) == 0:
                   #Makes the unit purge it
                   PAE_City.doInquisitorPersecution2(iOwner, pCity.getID(), -1, iReligion, pUnit.getID())
-                  #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
                   pUnit.kill(1,pUnit.getOwner())
                   return True
 
     return
-
-  #def doHolyCitySeekAndDestroy( self, pUnit, pCity ):
-  #
-  #  if pUnit.getX() != pCity.getX() or pUnit.getY() != pCity.getY():
-  #    pUnit.getGroup().clearMissionQueue()
-  #    pUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, pCity.getX(), pCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
-  #  else:
-  #    PAE_City.doInquisitorPersecution( pCity, pUnit )
 
   def getExperienceNeeded(self, argsList):
     # use this function to set how much experience a unit needs
@@ -3016,7 +2965,6 @@ class CvGameUtils:
         #  pUnitGroup.pushMission(MissionTypes.MISSION_MOVE_TO, pSeekCity.getX(), pSeekCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
         #else:
         pSeekCity.changeFreeSpecialistCount(0,1) # Spezialist Citizen
-        #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
         pUnit.kill(1,pUnit.getOwner())
         return True
 
@@ -3061,10 +3009,9 @@ class CvGameUtils:
             if pSeekCity != None and not pSeekCity.isNone():
               if pUnit.getX() != pSeekCity.getX() or pUnit.getY() != pSeekCity.getY():
                 pUnitGroup.clearMissionQueue()
-                pUnitGroup.pushMission(MissionTypes.MISSION_MOVE_TO, pSeekCity.getX(), pSeekCity.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
+                pUnit.getGroup().pushMoveToMission(pSeekCity.getX(), pSeekCity.getY())
               else:
                 pSeekCity.changeFreeSpecialistCount(19,1) # SPECIALIST_RESERVIST
-                #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
                 pUnit.kill(1,pUnit.getOwner())
                 return True
 
@@ -3112,7 +3059,6 @@ class CvGameUtils:
               if iPromo != gc.getInfoTypeForString("PROMOTION_NAVIGATION4") or pCity.isCoastal(gc.getMIN_WATER_SIZE_FOR_OCEAN()):
                 pCity.setNumRealBuilding(iBuilding,1)
                 pUnit.kill(1,pUnit.getOwner())
-                #pUnit.doCommand(CommandTypes.COMMAND_DELETE, 1, 1)
                 return True
 
     return

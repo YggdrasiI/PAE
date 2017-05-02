@@ -507,14 +507,6 @@
           <BuildingType>BUILDING_TUMULUS</BuildingType>
         </Building>
         <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_HEROON</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE4</BuildingType>
-        </Building>
-        <Building>
           <BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
           <BuildingType>BUILDING_AMPHITHEATER</BuildingType>
         </Building>
@@ -677,14 +669,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -1178,14 +1162,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -1420,14 +1396,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -1730,14 +1698,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -2044,14 +2004,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -2281,14 +2233,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -2401,14 +2345,6 @@
         <Building>
           <BuildingClassType>BUILDINGCLASS_STEINGRAB</BuildingClassType>
           <BuildingType>BUILDING_NUBIAN_PYRAMID</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE3</BuildingType>
         </Building>
         <Building>
           <BuildingClassType>BUILDINGCLASS_HEROIC_EPIC</BuildingClassType>
@@ -2559,14 +2495,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -2684,10 +2612,6 @@
           <BuildingType>BUILDING_SCHULE</BuildingType>
         </Building>
         <Building>
-          <BuildingClassType>BUILDINGCLASS_SPECIAL4</BuildingClassType>
-          <BuildingType>BUILDING_TRIUMPH</BuildingType>
-        </Building>
-        <Building>
           <BuildingClassType>BUILDINGCLASS_SPECIAL5</BuildingClassType>
           <BuildingType>BUILDING_PANTHEON</BuildingType>
         </Building>
@@ -2702,14 +2626,6 @@
         <Building>
           <BuildingClassType>BUILDINGCLASS_STEINGRAB</BuildingClassType>
           <BuildingType>BUILDING_TUMULUS</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_HEROON</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE2</BuildingType>
         </Building>
         <Building>
           <BuildingClassType>BUILDINGCLASS_BADEHAUS</BuildingClassType>
@@ -2910,14 +2826,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -3210,14 +3118,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -3540,14 +3440,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -3804,14 +3696,6 @@
           <BuildingType>BUILDING_TUMULUS</BuildingType>
         </Building>
         <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_HEROON</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE4</BuildingType>
-        </Building>
-        <Building>
           <BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
           <BuildingType>BUILDING_AMPHITHEATER</BuildingType>
         </Building>
@@ -3986,14 +3870,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -4742,14 +4618,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -4977,14 +4845,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -5243,14 +5103,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
       </DisableTechs>
@@ -5793,14 +5645,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -6065,14 +5909,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -6409,14 +6245,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -6546,14 +6374,6 @@
         <Building>
           <BuildingClassType>BUILDINGCLASS_STEINGRAB</BuildingClassType>
           <BuildingType>BUILDING_NUBIAN_PYRAMID</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE3</BuildingType>
         </Building>
         <Building>
           <BuildingClassType>BUILDINGCLASS_FORT</BuildingClassType>
@@ -6693,14 +6513,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -7888,10 +7700,6 @@
           <BuildingType>BUILDING_SCHULE</BuildingType>
         </Building>
         <Building>
-          <BuildingClassType>BUILDINGCLASS_SPECIAL4</BuildingClassType>
-          <BuildingType>BUILDING_TRIUMPH</BuildingType>
-        </Building>
-        <Building>
           <BuildingClassType>BUILDINGCLASS_SPECIAL5</BuildingClassType>
           <BuildingType>BUILDING_PANTHEON</BuildingType>
         </Building>
@@ -7906,14 +7714,6 @@
         <Building>
           <BuildingClassType>BUILDINGCLASS_STEINGRAB</BuildingClassType>
           <BuildingType>BUILDING_TUMULUS</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_HEROON</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE2</BuildingType>
         </Building>
         <Building>
           <BuildingClassType>BUILDINGCLASS_BADEHAUS</BuildingClassType>
@@ -8114,14 +7914,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -8653,14 +8445,6 @@
           <BuildingType>BUILDING_MILITARY_ACADEMY_SPARTA</BuildingType>
         </Building>
         <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_HEROON</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE4</BuildingType>
-        </Building>
-        <Building>
           <BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
           <BuildingType>BUILDING_AMPHITHEATER</BuildingType>
         </Building>
@@ -8826,14 +8610,6 @@
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
           <TechType>TECH_PARTHERSCHUSS</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
@@ -8947,10 +8723,6 @@
         <Building>
           <BuildingClassType>BUILDINGCLASS_STEINGRAB</BuildingClassType>
           <BuildingType>BUILDING_KOENIGSGRAB</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_GEIERSTELE</BuildingType>
         </Building>
         <Building>
           <BuildingClassType>BUILDINGCLASS_HEROIC_EPIC</BuildingClassType>
@@ -9304,14 +9076,6 @@
           <BuildingType>BUILDING_TUMULUS</BuildingType>
         </Building>
         <Building>
-          <BuildingClassType>BUILDINGCLASS_OBELISK</BuildingClassType>
-          <BuildingType>BUILDING_HEROON</BuildingType>
-        </Building>
-        <Building>
-          <BuildingClassType>BUILDINGCLASS_SAEULE</BuildingClassType>
-          <BuildingType>BUILDING_SAEULE4</BuildingType>
-        </Building>
-        <Building>
           <BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
           <BuildingType>BUILDING_AMPHITHEATER</BuildingType>
         </Building>
@@ -9474,14 +9238,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>
@@ -9796,14 +9552,6 @@
         </DisableTech>
         <DisableTech>
           <TechType>TECH_HORSE_ARCHER</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_HORSE_ARMOR</TechType>
-          <bDisableTech>1</bDisableTech>
-        </DisableTech>
-        <DisableTech>
-          <TechType>TECH_PANZERREITER</TechType>
           <bDisableTech>1</bDisableTech>
         </DisableTech>
         <DisableTech>

@@ -12,6 +12,7 @@ PAE_Extras
 *.pch
 *.res
 *.pdb
+.ropeproject
 /CvGameCoreDLL/depends
 /PieAncientEuropeV/Assets/XML/Art/CIV4ArtDefinesSchema.xml
 /PieAncientEuropeV/Assets/XML/CIV4GlobalTypesSchema.xml

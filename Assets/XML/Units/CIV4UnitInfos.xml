@@ -3941,7 +3941,7 @@
       <Type>UNIT_STRANDGUT</Type>
       <UniqueNames/>
       <Special>NONE</Special>
-      <Capture>UNITCLASS_TRADE_MERCHANT</Capture>
+      <Capture>UNITCLASS_GOLDKARREN</Capture>
       <Combat>NONE</Combat>
       <Domain>DOMAIN_IMMOBILE</Domain>
       <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
@@ -4103,7 +4103,7 @@
       <Type>UNIT_CARAVAN</Type>
       <UniqueNames/>
       <Special>NONE</Special>
-      <Capture>UNITCLASS_CARAVAN</Capture>
+      <Capture>UNITCLASS_GOLDKARREN</Capture>
       <Combat>NONE</Combat>
       <Domain>DOMAIN_LAND</Domain>
       <DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
@@ -4271,12 +4271,7 @@
       <bShiftDown>0</bShiftDown>
       <bCtrlDown>0</bCtrlDown>
       <iHotKeyPriority>0</iHotKeyPriority>
-      <FreePromotions>
-        <FreePromotion>
-          <PromotionType>PROMOTION_DESERT_DOUBLEMOVE</PromotionType>
-          <bFreePromotion>1</bFreePromotion>
-        </FreePromotion>
-      </FreePromotions>
+      <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
     </UnitInfo>
@@ -4285,7 +4280,7 @@
       <Type>UNIT_TRADE_MERCHANT</Type>
       <UniqueNames/>
       <Special>SPECIALUNIT_PEOPLE</Special>
-      <Capture>UNITCLASS_TRADE_MERCHANT</Capture>
+      <Capture>UNITCLASS_GOLDKARREN</Capture>
       <Combat>NONE</Combat>
       <Domain>DOMAIN_LAND</Domain>
       <DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
@@ -4464,7 +4459,7 @@
       <Type>UNIT_TRADE_MERCHANTMAN</Type>
       <UniqueNames/>
       <Special>NONE</Special>
-      <Capture>UNITCLASS_TRADE_MERCHANTMAN</Capture>
+      <Capture>UNITCLASS_GOLDKARREN</Capture>
       <Combat>NONE</Combat>
       <Domain>DOMAIN_SEA</Domain>
       <DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
@@ -12889,7 +12884,7 @@
       <bFirstStrikeImmune>0</bFirstStrikeImmune>
       <bNoDefensiveBonus>0</bNoDefensiveBonus>
       <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
-      <bCanMoveImpassable>0</bCanMoveImpassable>
+      <bCanMoveImpassable>1</bCanMoveImpassable>
       <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
       <bFlatMovementCost>0</bFlatMovementCost>
       <bIgnoreTerrainCost>0</bIgnoreTerrainCost>
@@ -13520,7 +13515,7 @@
       <bFirstStrikeImmune>0</bFirstStrikeImmune>
       <bNoDefensiveBonus>0</bNoDefensiveBonus>
       <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
-      <bCanMoveImpassable>0</bCanMoveImpassable>
+      <bCanMoveImpassable>1</bCanMoveImpassable>
       <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
       <bFlatMovementCost>0</bFlatMovementCost>
       <bIgnoreTerrainCost>0</bIgnoreTerrainCost>
@@ -15043,7 +15038,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -15354,7 +15349,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -15547,7 +15542,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -15751,7 +15746,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -16049,7 +16044,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -16350,7 +16345,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -16625,7 +16620,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>14</iCombat>
+      <iCombat>12</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -17220,7 +17215,7 @@
       <bFirstStrikeImmune>0</bFirstStrikeImmune>
       <bNoDefensiveBonus>0</bNoDefensiveBonus>
       <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
-      <bCanMoveImpassable>0</bCanMoveImpassable>
+      <bCanMoveImpassable>1</bCanMoveImpassable>
       <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
       <bFlatMovementCost>0</bFlatMovementCost>
       <bIgnoreTerrainCost>0</bIgnoreTerrainCost>
@@ -18663,7 +18658,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>11</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -18847,7 +18842,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>14</iCombat>
+      <iCombat>12</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -19037,7 +19032,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>14</iCombat>
+      <iCombat>12</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -19217,7 +19212,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -19682,7 +19677,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>14</iCombat>
+      <iCombat>12</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -19864,7 +19859,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -20050,7 +20045,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -20260,7 +20255,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>12</iCombat>
+      <iCombat>10</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -20488,7 +20483,7 @@
       <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
-      <iCombat>14</iCombat>
+      <iCombat>12</iCombat>
       <iCombatLimit>100</iCombatLimit>
       <iAirCombat>0</iAirCombat>
       <iAirCombatLimit>0</iAirCombatLimit>
@@ -38918,10 +38913,6 @@
           <PromotionType>PROMOTION_SKIRMISH1</PromotionType>
           <bFreePromotion>1</bFreePromotion>
         </FreePromotion>
-        <FreePromotion>
-          <PromotionType>PROMOTION_DESERT_DOUBLEMOVE</PromotionType>
-          <bFreePromotion>1</bFreePromotion>
-        </FreePromotion>
       </FreePromotions>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
@@ -39202,12 +39193,7 @@
       <bShiftDown>0</bShiftDown>
       <bCtrlDown>0</bCtrlDown>
       <iHotKeyPriority>0</iHotKeyPriority>
-      <FreePromotions>
-        <FreePromotion>
-          <PromotionType>PROMOTION_DESERT_DOUBLEMOVE</PromotionType>
-          <bFreePromotion>1</bFreePromotion>
-        </FreePromotion>
-      </FreePromotions>
+      <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
     </UnitInfo>
@@ -39487,12 +39473,7 @@
       <bShiftDown>0</bShiftDown>
       <bCtrlDown>0</bCtrlDown>
       <iHotKeyPriority>0</iHotKeyPriority>
-      <FreePromotions>
-        <FreePromotion>
-          <PromotionType>PROMOTION_DESERT_DOUBLEMOVE</PromotionType>
-          <bFreePromotion>1</bFreePromotion>
-        </FreePromotion>
-      </FreePromotions>
+      <FreePromotions/>
       <LeaderPromotion>NONE</LeaderPromotion>
       <iLeaderExperience>0</iLeaderExperience>
     </UnitInfo>
@@ -40798,7 +40779,7 @@
       <UniqueNames/>
       <Special>NONE</Special>
       <Capture>UNITCLASS_BALLISTA</Capture>
-      <Combat>UNITCOMBAT_SIEGE</Combat>
+      <Combat>UNITCOMBAT_ARCHER</Combat>
       <Domain>DOMAIN_LAND</Domain>
       <DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
       <Invisible>NONE</Invisible>
@@ -42525,7 +42506,12 @@
                         <iTradeMultiplier>0</iTradeMultiplier>
                         <iGreatWorkCulture>0</iGreatWorkCulture>
                         <iEspionagePoints>0</iEspionagePoints>
-                        <TerrainImpassables/>
+                        <TerrainImpassables>
+                                <TerrainImpassable>
+                                          <TerrainType>TERRAIN_OCEAN</TerrainType>
+                                          <bTerrainImpassable>1</bTerrainImpassable>
+                                </TerrainImpassable>
+                        </TerrainImpassables>
                         <FeatureImpassables/>
                         <TerrainPassableTechs>
                                 <TerrainPassableTech>
@@ -42715,9 +42701,19 @@
       <iTradeMultiplier>9</iTradeMultiplier>
       <iGreatWorkCulture>0</iGreatWorkCulture>
       <iEspionagePoints>0</iEspionagePoints>
-      <TerrainImpassables/>
+      <TerrainImpassables>
+        <TerrainImpassable>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <bTerrainImpassable>1</bTerrainImpassable>
+        </TerrainImpassable>
+      </TerrainImpassables>
       <FeatureImpassables/>
-      <TerrainPassableTechs/>
+      <TerrainPassableTechs>
+        <TerrainPassableTech>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <PassableTech>TECH_COLONIZATION2</PassableTech>
+        </TerrainPassableTech>
+      </TerrainPassableTechs>
       <FeaturePassableTechs/>
       <iCombat>1</iCombat>
       <iCombatLimit>100</iCombatLimit>
@@ -42758,8 +42754,8 @@
       <iBombRate>0</iBombRate>
       <iBombardRate>0</iBombardRate>
       <SpecialCargo>NONE</SpecialCargo>
-      <DomainCargo>DOMAIN_LAND</DomainCargo>
-      <iCargo>1</iCargo>
+      <DomainCargo>NONE</DomainCargo>
+      <iCargo>0</iCargo>
       <iConscription>0</iConscription>
       <iCultureGarrison>0</iCultureGarrison>
       <iExtraCost>0</iExtraCost>
@@ -42897,9 +42893,19 @@
       <iTradeMultiplier>0</iTradeMultiplier>
       <iGreatWorkCulture>0</iGreatWorkCulture>
       <iEspionagePoints>0</iEspionagePoints>
-      <TerrainImpassables/>
+      <TerrainImpassables>
+        <TerrainImpassable>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <bTerrainImpassable>1</bTerrainImpassable>
+        </TerrainImpassable>
+      </TerrainImpassables>
       <FeatureImpassables/>
-      <TerrainPassableTechs/>
+      <TerrainPassableTechs>
+        <TerrainPassableTech>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <PassableTech>TECH_COLONIZATION2</PassableTech>
+        </TerrainPassableTech>
+      </TerrainPassableTechs>
       <FeaturePassableTechs/>
       <iCombat>2</iCombat>
       <iCombatLimit>100</iCombatLimit>
@@ -43079,9 +43085,19 @@
       <iTradeMultiplier>0</iTradeMultiplier>
       <iGreatWorkCulture>0</iGreatWorkCulture>
       <iEspionagePoints>0</iEspionagePoints>
-      <TerrainImpassables/>
+      <TerrainImpassables>
+        <TerrainImpassable>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <bTerrainImpassable>1</bTerrainImpassable>
+        </TerrainImpassable>
+      </TerrainImpassables>
       <FeatureImpassables/>
-      <TerrainPassableTechs/>
+      <TerrainPassableTechs>
+        <TerrainPassableTech>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <PassableTech>TECH_COLONIZATION2</PassableTech>
+        </TerrainPassableTech>
+      </TerrainPassableTechs>
       <FeaturePassableTechs/>
       <iCombat>3</iCombat>
       <iCombatLimit>100</iCombatLimit>
@@ -43274,9 +43290,19 @@
       <iTradeMultiplier>15</iTradeMultiplier>
       <iGreatWorkCulture>0</iGreatWorkCulture>
       <iEspionagePoints>0</iEspionagePoints>
-      <TerrainImpassables/>
+      <TerrainImpassables>
+        <TerrainImpassable>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <bTerrainImpassable>1</bTerrainImpassable>
+        </TerrainImpassable>
+      </TerrainImpassables>
       <FeatureImpassables/>
-      <TerrainPassableTechs/>
+      <TerrainPassableTechs>
+        <TerrainPassableTech>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <PassableTech>TECH_COLONIZATION2</PassableTech>
+        </TerrainPassableTech>
+      </TerrainPassableTechs>
       <FeaturePassableTechs/>
       <iCombat>2</iCombat>
       <iCombatLimit>100</iCombatLimit>
@@ -43460,9 +43486,19 @@
       <iTradeMultiplier>0</iTradeMultiplier>
       <iGreatWorkCulture>0</iGreatWorkCulture>
       <iEspionagePoints>0</iEspionagePoints>
-      <TerrainImpassables/>
+      <TerrainImpassables>
+        <TerrainImpassable>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <bTerrainImpassable>1</bTerrainImpassable>
+        </TerrainImpassable>
+      </TerrainImpassables>
       <FeatureImpassables/>
-      <TerrainPassableTechs/>
+      <TerrainPassableTechs>
+        <TerrainPassableTech>
+          <TerrainType>TERRAIN_OCEAN</TerrainType>
+          <PassableTech>TECH_COLONIZATION2</PassableTech>
+        </TerrainPassableTech>
+      </TerrainPassableTechs>
       <FeaturePassableTechs/>
       <iCombat>3</iCombat>
       <iCombatLimit>100</iCombatLimit>
@@ -47081,36 +47117,20 @@
       <GreatPeoples/>
       <Buildings>
         <Building>
-          <BuildingType>BUILDING_OBELISK</BuildingType>
+          <BuildingType>BUILDING_SIEGESSTELE</BuildingType>
           <bBuilding>1</bBuilding>
         </Building>
         <Building>
-          <BuildingType>BUILDING_HEROON</BuildingType>
+          <BuildingType>BUILDING_SIEGESSTATUE</BuildingType>
           <bBuilding>1</bBuilding>
         </Building>
         <Building>
-          <BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+          <BuildingType>BUILDING_MONUMENT</BuildingType>
           <bBuilding>1</bBuilding>
         </Building>
         <Building>
-          <BuildingType>BUILDING_GEIERSTELE</BuildingType>
-          <bBuilding>1</bBuilding>
-        </Building>
-        <Building>
-          <BuildingType>BUILDING_SAEULE</BuildingType>
-          <bBuilding>1</bBuilding>
-        </Building>
-        <Building>
-          <BuildingType>BUILDING_SAEULE2</BuildingType>
-          <bBuilding>1</bBuilding>
-        </Building>
-        <Building>
-          <BuildingType>BUILDING_SAEULE3</BuildingType>
-          <bBuilding>1</bBuilding>
-        </Building>
-        <Building>
-          <BuildingType>BUILDING_SAEULE4</BuildingType>
-          <bBuilding>1</bBuilding>
+          <BuildingType>BUILDING_SIEGESSAEULE</BuildingType>
+    <bBuilding>1</bBuilding>
         </Building>
         <Building>
           <BuildingType>BUILDING_ELEPHANTMONUMENT</BuildingType>
@@ -50191,8 +50211,8 @@
       <iTradeMultiplier>0</iTradeMultiplier>
       <iGreatWorkCulture>0</iGreatWorkCulture>
       <iEspionagePoints>0</iEspionagePoints>
-			<TerrainImpassables/>
-			<FeatureImpassables/>
+      <TerrainImpassables/>
+      <FeatureImpassables/>
       <TerrainPassableTechs/>
       <FeaturePassableTechs/>
       <iCombat>0</iCombat>
@@ -52359,9 +52379,9 @@
       <BonusProductionModifiers/>
       <iBombRate>0</iBombRate>
       <iBombardRate>0</iBombardRate>
-      <SpecialCargo>NONE</SpecialCargo>
-      <DomainCargo>NONE</DomainCargo>
-      <iCargo>0</iCargo>
+      <SpecialCargo>SPECIALUNIT_FUSSTRUPPEN</SpecialCargo>
+      <DomainCargo>DOMAIN_LAND</DomainCargo>
+      <iCargo>3</iCargo>
       <iConscription>0</iConscription>
       <iCultureGarrison>0</iCultureGarrison>
       <iExtraCost>0</iExtraCost>

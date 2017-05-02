@@ -10,6 +10,7 @@ import time
 import PyHelpers
 
 import PAE_Trade
+import PAE_Unit
 
 # globals
 gc = CyGlobalContext()
@@ -383,11 +384,13 @@ class CvMainInterface:
 
     # PAE TradeRouteAdvisor
     iBtnX += iBtnAdvance + 5
-    screen.setImageButton( "TradeRouteAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, 1 )
+    screen.setImageButton( "TradeRouteAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_GENERAL, 10000, 1 )
+    # screen.setImageButton( "TradeRouteAdvisorButton", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, 1 )
     screen.setStyle( "TradeRouteAdvisorButton", "Button_HUDAdvisorTradeRoute_Style" )
     screen.hide( "TradeRouteAdvisorButton" )
     iBtnX += iBtnAdvance + 5
-    screen.setImageButton( "TradeRouteAdvisorButton2", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, 2 )
+    screen.setImageButton( "TradeRouteAdvisorButton2", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_GENERAL, 10000, 2 )
+    # screen.setImageButton( "TradeRouteAdvisorButton2", "", iBtnX, iBtnY, iBtnWidth, iBtnWidth, WidgetTypes.WIDGET_ACTION, -1, 2 )
     screen.setStyle( "TradeRouteAdvisorButton2", "Button_HUDAdvisorTradeRoute2_Style" )
     screen.hide( "TradeRouteAdvisorButton2" )
 
@@ -2519,21 +2522,20 @@ class CvMainInterface:
                 pPlot = g_pSelectedUnit.plot()
                 if iUnitType in PAE_Trade.lCultivationUnits:
                   if pPlot.getOwner() == pUnit.getOwner():
-                    if pPlot.isCity(): iIsCity = 1
-                    else: iIsCity = 0
+                    iIsCity = pPlot.isCity()
                     eBonus = CvUtil.getScriptData(pUnit, ["b"], -1)
                     # Collect bonus from plot or city
                     ePlotBonus = pPlot.getBonusType(pUnit.getOwner()) # Invisible bonuses can NOT be collected
-                    if ePlotBonus in PAE_Trade.lCultivatable or iIsCity:
-                      # remove from plot => iData2 = 0. 1 = charge all goods without removing. Nur bei leerem Karren.
-                      if eBonus == -1 and ePlotBonus != -1:
-                        screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_COLLECT").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 0, True )
-                        screen.show( "BottomButtonContainer" )
-                        iCount = iCount + 1
-                      if iIsCity:
-                        screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_BUY").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 1, True )
-                        screen.show( "BottomButtonContainer" )
-                        iCount = iCount + 1
+                    # remove from plot => iData2 = 0. 1 = charge all goods without removing. Nur bei leerem Karren.
+                    if eBonus == -1:
+                        if ePlotBonus != -1 and ePlotBonus in PAE_Trade.lCultivatable:
+                            screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_COLLECT").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 0, True )
+                            screen.show( "BottomButtonContainer" )
+                            iCount = iCount + 1
+                        if iIsCity:
+                            screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_BUY").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 1, True )
+                            screen.show( "BottomButtonContainer" )
+                            iCount = iCount + 1
                     else:
                       screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_COLLECT_IMPOSSIBLE").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 739, False )
                       screen.show( "BottomButtonContainer" )
@@ -2564,7 +2566,7 @@ class CvMainInterface:
                     iCount = iCount + 1
             # Cancel automated trade route
             if iUnitType in PAE_Trade.lTradeUnits:
-              bTradeRouteActive = int(CvUtil.getScriptData(pUnit, ["automActive"], 0))
+              bTradeRouteActive = int(CvUtil.getScriptData(pUnit, ["autA"], 0))
               if bTradeRouteActive:
                 screen.appendMultiListButton( "BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_AUTO_STOP").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 748, 748, False )
                 screen.show( "BottomButtonContainer" )
@@ -3083,7 +3085,8 @@ class CvMainInterface:
                         iCount = iCount + 1
 
               # Handelsposten
-              if pUnit.getUnitClassType() == gc.getInfoTypeForString("UNITCLASS_WORKER") or pUnit.getUnitClassType() == gc.getInfoTypeForString("UNITCLASS_SLAVE"):
+              #if pUnit.getUnitClassType() == gc.getInfoTypeForString("UNITCLASS_WORKER") or pUnit.getUnitClassType() == gc.getInfoTypeForString("UNITCLASS_SLAVE"):
+              if pUnit.getUnitClassType() == gc.getInfoTypeForString("UNITCLASS_TRADE_MERCHANT"):
                 # Update: auch in eigenen Grenzen anzeigen (zB fuer Inseln), aber nur wenn nicht bereits was drauf steht
                 #if pUnit.plot().getOwner() == -1:
                 pPlot = pUnit.plot()
@@ -5149,7 +5152,8 @@ class CvMainInterface:
 
         iTech  = CvUtil.findInfoTypeNum(gc.getTechInfo,gc.getNumTechInfos(),'TECH_ENSLAVEMENT')
         iTech2 = CvUtil.findInfoTypeNum(gc.getTechInfo,gc.getNumTechInfos(),'TECH_GLADIATOR')
-        iSlaveIcon = gc.getInfoTypeForString("BONUS_SLAVES")
+        # TODO: Slave-Char ohne extra Bonus
+        iSlaveIcon = gc.getInfoTypeForString("BONUS_THRAKIEN")
         iGladsIcon = gc.getInfoTypeForString("BONUS_BRONZE")
 
         szBuffer = u"%d %c " %(iCitySlaves,gc.getBonusInfo(iSlaveIcon).getChar())
@@ -5586,18 +5590,10 @@ class CvMainInterface:
                         if pUnit.getUnitCombatType() == gc.getInfoTypeForString("UNITCOMBAT_HEALER"):
 
                           UnitBarType = "HEALER"
-                          # Trait Strategist / Stratege: +50% Kapazitaet / +50% capacity
-                          sSup = CvUtil.getScriptData(pUnit, ["s", "t"])
-                          if sSup != "": iValue1 += int(sSup)
-
-                          if pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_SUPPLY_WAGON"): iValue3 = 200
-                          else: iValue3 = 100
-
-                          if gc.getPlayer(pUnit.getOwner()).hasTrait(gc.getInfoTypeForString("TRAIT_STRATEGE")):
-                            iValue3 *= 3
-                            iValue3 /= 2
-
-                          iValue2 += iValue3
+                          (iSup, iMax) = PAE_Unit.getSupply(pUnit)
+                          # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Current Supply "+str(iSup)+" max Supply "+str(iMax),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+                          iValue1 += iSup
+                          iValue2 += iMax
 
                         elif pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_EMIGRANT"):
                           UnitBarType = "EMIGRANT"
@@ -5854,15 +5850,10 @@ class CvMainInterface:
           # PAE HEALER and EMIGRANT + Unit Info Bar
           if pHeadSelectedUnit.getUnitCombatType() == gc.getInfoTypeForString("UNITCOMBAT_HEALER"):
             UnitBarType = "HEALER"
-            # Trait Strategist / Stratege: +50% Kapazitaet / +50% capacity
-            sSup = CvUtil.getScriptData(pHeadSelectedUnit, ["s", "t"])
-            if sSup != "": iValue1 += int(sSup)
-            if pHeadSelectedUnit.getUnitType() == gc.getInfoTypeForString("UNIT_SUPPLY_WAGON"):
-              if gc.getPlayer(pHeadSelectedUnit.getOwner()).hasTrait(gc.getInfoTypeForString("TRAIT_STRATEGE")): iValue2 += 300
-              else: iValue2 += 200
-            else:
-              if gc.getPlayer(pHeadSelectedUnit.getOwner()).hasTrait(gc.getInfoTypeForString("TRAIT_STRATEGE")): iValue2 += 150
-              else: iValue2 += 100
+            (iSup, iMax) = PAE_Unit.getSupply(pHeadSelectedUnit)
+            iValue1 += iSup
+            iValue2 += iMax
+            # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Current Supply "+str(iValue1)+" max Supply "+str(iValue2),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
 
             szLeftBuffer = localText.getText("TXT_UNIT_INFO_BAR_6", ())
             szRightBuffer = u"(%d/%d)" %(iValue1, iValue2)
@@ -6641,15 +6632,25 @@ class CvMainInterface:
        self.setFieldofView_Text(screen)
 # -------------
 
+    # # PAE TradeRouteAdvisor Screen
+    # if inputClass.getButtonType() == WidgetTypes.WIDGET_ACTION and inputClass.getData1() == -1 and inputClass.getData2() == 1:
+       # import CvTradeRouteAdvisor
+       # CvTradeRouteAdvisor.CvTradeRouteAdvisor().interfaceScreen()
+       # return 1
+    # if inputClass.getButtonType() == WidgetTypes.WIDGET_ACTION and inputClass.getData1() == -1 and inputClass.getData2() == 2:
+       # import CvTradeRouteAdvisor2
+       # CvTradeRouteAdvisor2.CvTradeRouteAdvisor().interfaceScreen()
+       # return 1
+
     # PAE TradeRouteAdvisor Screen
-    if inputClass.getButtonType() == WidgetTypes.WIDGET_ACTION and inputClass.getData1() == -1 and inputClass.getData2() == 1:
-       import CvTradeRouteAdvisor
-       CvTradeRouteAdvisor.CvTradeRouteAdvisor().interfaceScreen()
-       return 1
-    if inputClass.getButtonType() == WidgetTypes.WIDGET_ACTION and inputClass.getData1() == -1 and inputClass.getData2() == 2:
-       import CvTradeRouteAdvisor2
-       CvTradeRouteAdvisor2.CvTradeRouteAdvisor().interfaceScreen()
-       return 1
+    if inputClass.getButtonType() == WidgetTypes.WIDGET_GENERAL and inputClass.getData1() == 10000 and inputClass.getData2() == 1:
+        import CvTradeRouteAdvisor
+        CvTradeRouteAdvisor.CvTradeRouteAdvisor().interfaceScreen()
+        return 1
+    if inputClass.getButtonType() == WidgetTypes.WIDGET_GENERAL and inputClass.getData1() == 10000 and inputClass.getData2() == 2:
+        import CvTradeRouteAdvisor2
+        CvTradeRouteAdvisor2.CvTradeRouteAdvisor().interfaceScreen()
+        return 1
 
     # Initialisierung
     if g_pSelectedUnit:
@@ -6972,6 +6973,7 @@ class CvMainInterface:
       if (inputClass.getNotifyCode() == 11 and inputClass.getData2() == 718 and inputClass.getOption()):
         CyAudioGame().Play2DSound('AS2D_BUILD_BARRACKS')
         CyMessageControl().sendModNetMessage( 718, 0, inputClass.getData1(), iOwner, iUnitID )
+
 
 # Platy ScoreBoard - Start
     if inputClass.getFunctionName() == "ScoreRowPlus":
