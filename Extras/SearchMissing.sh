@@ -10,7 +10,7 @@ function help ()
   Unit
   Tech
   Promotion
-  Terrian
+  Terrain
   Feature
   Improvement
   Route
@@ -27,7 +27,7 @@ fi
 # Fith argument should be > 1 if sed pattern in $4 contain pattern braches \(\)...
 function search ()
 {
-  USED_NAMES=$(grep "$3" *.CivBeyondSwordWBSave \
+  USED_NAMES=$(grep "$3" ../PrivateMaps/*.CivBeyondSwordWBSave \
     | sed -n -e "s/^.*$4=\([^, ]\+\).*\$/\\$5/p" \
     | sed -e "s/\r//p" \
     | sort | uniq )
