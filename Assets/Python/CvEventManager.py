@@ -1848,39 +1848,40 @@ class CvEventManager:
     # +++++ PAE Debug: disband/delete things (for different reasons: CtD or OOS)
     def onGameStartAndKickSomeAss(self):
         pass
-
-        # iRange = gc.getMAX_PLAYERS()
-        # for iPlayer in range(iRange):
-            # pPlayer = gc.getPlayer(iPlayer)
-            # if pPlayer is not None and not pPlayer.isNone() and pPlayer.isAlive():
-                # if pPlayer.isBarbarian():
-                    # # Units
-                    # # if not pPlayer.isHuman():
-                    # lUnits = PyPlayer(pPlayer.getID()).getUnitList()
-                    # for pUnit in lUnits:
-                        # if pUnit is not None and not pUnit.isNone():
-                            # eUnitType = pUnit.getUnitType()
-                            # if (eUnitType == gc.getInfoTypeForString("UNIT_TRADE_MERCHANT")
-                                    # or eUnitType == gc.getInfoTypeForString("UNIT_TRADE_MERCHANTMAN")
-                                    # or eUnitType == gc.getInfoTypeForString("UNIT_EMIGRANT")
-                                    # or eUnitType == gc.getInfoTypeForString("UNIT_SUPPLY_FOOD")):
-                                # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
-                                # pUnit = None
-                # # City buildings
-                # #iNumCities = pPlayer.getNumCities()
-                # #for iCity in range (iNumCities):
-                # #  pCity = pPlayer.getCity(iCity)
-                # #  if not pCity.isNone():
-                # #    iRange2 = gc.getNumBuildingInfos()
-                # #    for iBuilding in range (iRange2):
-                # #        pCity.setNumRealBuilding(iBuilding,0)
-
-        # # Remove a certain improvement from all plots
-        # for i in xrange(CyMap().numPlots()):
-            # loopPlot = CyMap().plotByIndex(i)
-            # if loopPlot.getImprovementType() == gc.getInfoTypeForString("IMPROVEMENT_MINE"):
-                # loopPlot.setImprovementType(-1)
-
+        """
+        iRange = gc.getMAX_PLAYERS()
+        for iPlayer in range(iRange):
+            pPlayer = gc.getPlayer(iPlayer)
+            if pPlayer is not None and not pPlayer.isNone() and pPlayer.isAlive():
+                if pPlayer.isBarbarian():
+                    # Units
+                    # if not pPlayer.isHuman():
+                    lUnits = PyPlayer(pPlayer.getID()).getUnitList()
+                    for pUnit in lUnits:
+                        if pUnit is not None and not pUnit.isNone():
+                            eUnitType = pUnit.getUnitType()
+                            if (eUnitType == gc.getInfoTypeForString("UNIT_TRADE_MERCHANT")
+                                    or eUnitType == gc.getInfoTypeForString("UNIT_TRADE_MERCHANTMAN")
+                                    or eUnitType == gc.getInfoTypeForString("UNIT_EMIGRANT")
+                                    or eUnitType == gc.getInfoTypeForString("UNIT_SUPPLY_FOOD")):
+                                pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
+                                pUnit = None
+                # City buildings
+                #iNumCities = pPlayer.getNumCities()
+                #for iCity in range (iNumCities):
+                #  pCity = pPlayer.getCity(iCity)
+                #  if not pCity.isNone():
+                #    iRange2 = gc.getNumBuildingInfos()
+                #    for iBuilding in range (iRange2):
+                #        pCity.setNumRealBuilding(iBuilding,0)
+        """
+        """
+        # Remove a certain improvement from all plots
+        for i in xrange(CyMap().numPlots()):
+            loopPlot = CyMap().plotByIndex(i)
+            if loopPlot.getImprovementType() == gc.getInfoTypeForString("IMPROVEMENT_MINE"):
+                loopPlot.setImprovementType(-1)
+        """
 
     def onGameStart(self, argsList):
         'Called at the start of the game'

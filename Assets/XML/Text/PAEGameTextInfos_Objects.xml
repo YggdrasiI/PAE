@@ -3880,11 +3880,11 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_BUILDING_LABYRINTH</Tag>
-    <English>Labyrinth of Knossos</English>
-    <French>Labyrinthe de Cnossos</French>
-    <German>Labyrinth von Knossos</German>
-    <Italian>Labirinto di Cnosso</Italian>
-    <Spanish>Laberinto de Knossos</Spanish>
+    <English>Palace of Knossos</English>
+    <French>Palace de Cnossos</French>
+    <German>Palast von Knossos</German>
+    <Italian>Palazzo di Cnosso</Italian>
+    <Spanish>Palacio de Knossos</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_BUILDING_KASTELL</Tag>
@@ -8234,7 +8234,7 @@
     <Tag>TXT_KEY_BUILDING_ARTEMIS</Tag>
     <English>Temple of Artemis at Ephesus</English>
     <French>Temple d'Art&#233;mis &#225; Eph&#232;se</French>
-    <German>Tempel der Artemis von Ephesos</German>
+    <German>Artemistempel von Ephesos</German>
     <Italian>Tempio di Artemide</Italian>
     <Spanish><Text>Templo de Artemisa:Templos de Artemisa</Text><Gender>Male</Gender><Plural>0:1</Plural></Spanish>
   </TEXT>

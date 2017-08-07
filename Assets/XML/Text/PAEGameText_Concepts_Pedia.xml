@@ -10268,21 +10268,215 @@ Si tiene &#233;xito, no tendr&#225; costes, pero el rango de la unidad (veterana
   <TEXT>
     <Tag>TXT_KEY_CONCEPT_UNIT_RANKING_PEDIA</Tag>
     <English>
+In PAE, there is a unique ranking system for certain units and tribes that were verifiable part of a military hierarchy. The levels of these hierarchies differed from one nation to another. While there were hardly any steps in some tribes (eg the bravest and strongest warrior only), the Romans used a system of up to 150 ranks. Even PAE figures a part of it.
 
+Only attacking(!) units can climb to a higher rank.
+
+[H1]The Roman Empire[\H1]
+
+[H2]Infantry[H2]
+Units: Legionaries, Imperial Legionaires
+Chance: 100% (per fight)
+
+01. Signatus (units begins with this rank automatically)
+02. Munifex
+03. Immunes => from now on, the unit is able to promote to a praetorian
+Petty officer:
+04. Principales
+05. Tesserarius (maximum rank of an Auxiliar)
+
+06. Optio (new unit)*
+07. Signifer
+08. Aquilifer
+09. Optio ad spem
+
+Officers:
+
+10. Centurio (Captain, new unit)*
+11. Centurio Posterior
+12. Centurio Prior
+13. Primus Pilus
+14. Praefectus Castrorum
+
+Line officers (MOUNTED UNITS from now on):
+
+15. Praefectus (new unit)*
+16. Tribunus
+17. Tribunus Laticlavius
+18. Legatus Legionis
+19. Legatus Augusti
+20. Consul
+
+
+[H2]From the 4th century on:[\H2]
+Units: Comitatenses
+Chance: 100%
+
+01. Tiro
+02. Biarchus
+03. Ordinarius
+04. Centenarius
+05. Ducenarius
+
+Officers:
+
+06. Primicerius (Lieutenant, new unit)*
+07. Clarissimus
+08. Protector
+09. Praefectus
+10. Tribunus
+
+Generals:
+
+11. Dux (new unit)*
+12. Comes
+13. Magister
+14. Magister militum
+15. Patricius
+
+
+[H2]Mounted Units:[\H2]
+Units: Equites and Cohors Equitata
+Chance: 25%
+
+(Knighthood. Starts with rank 10 compared with legionaries)
+10. Curator
+11. Optio
+12. Decurio (new unit)
+13. Decurio Princeps
+14. Praefectus Alae
+continues with rank 15 of the legionaries: Praefectus
+
+[H1]Germans and Celts[\H1]
+Required technology: Ethos of Warriors
+Units: all
+Chance: 10%
+
+1. Warband
+2. Battle companion
+3. Clan leader
+4. Upgrade => Tribal chief
+
+[H1]Huns[\H1]
+Required technology: Ethos of Warriors
+Units: all
+Chance: 3%
+
+1. Khagan (Army leader)
+
+
+*has to be promoted in a capital or provincial capital (city with provincial palace)
     </English>
     <French>
+In PAE, there is a unique ranking system for certain units and tribes that were verifiable part of a military hierarchy. The levels of these hierarchies differed from one nation to another. While there were hardly any steps in some tribes (eg the bravest and strongest warrior only), the Romans used a system of up to 150 ranks. Even PAE figures a part of it.
 
+Only attacking(!) units can climb to a higher rank.
+
+[H1]The Roman Empire[\H1]
+
+[H2]Infantry[H2]
+Units: Legionaries, Imperial Legionaires
+Chance: 100% (per fight)
+
+01. Signatus (units begins with this rank automatically)
+02. Munifex
+03. Immunes => from now on, the unit is able to promote to a praetorian
+Petty officer:
+04. Principales
+05. Tesserarius (maximum rank of an Auxiliar)
+
+06. Optio (new unit)*
+07. Signifer
+08. Aquilifer
+09. Optio ad spem
+
+Officers:
+
+10. Centurio (Captain, new unit)*
+11. Centurio Posterior
+12. Centurio Prior
+13. Primus Pilus
+14. Praefectus Castrorum
+
+Line officers (MOUNTED UNITS from now on):
+
+15. Praefectus (new unit)*
+16. Tribunus
+17. Tribunus Laticlavius
+18. Legatus Legionis
+19. Legatus Augusti
+20. Consul
+
+
+[H2]From the 4th century on:[\H2]
+Units: Comitatenses
+Chance: 100%
+
+01. Tiro
+02. Biarchus
+03. Ordinarius
+04. Centenarius
+05. Ducenarius
+
+Officers:
+
+06. Primicerius (Lieutenant, new unit)*
+07. Clarissimus
+08. Protector
+09. Praefectus
+10. Tribunus
+
+Generals:
+
+11. Dux (new unit)*
+12. Comes
+13. Magister
+14. Magister militum
+15. Patricius
+
+
+[H2]Mounted Units:[\H2]
+Units: Equites and Cohors Equitata
+Chance: 25%
+
+(Knighthood. Starts with rank 10 compared with legionaries)
+10. Curator
+11. Optio
+12. Decurio (new unit)
+13. Decurio Princeps
+14. Praefectus Alae
+continues with rank 15 of the legionaries: Praefectus
+
+[H1]Germans and Celts[\H1]
+Required technology: Ethos of Warriors
+Units: all
+Chance: 10%
+
+1. Warband
+2. Battle companion
+3. Clan leader
+4. Upgrade => Tribal chief
+
+[H1]Huns[\H1]
+Required technology: Ethos of Warriors
+Units: all
+Chance: 3%
+
+1. Khagan (Army leader)
+
+
+*has to be promoted in a capital or provincial capital (city with provincial palace)
     </French>
     <German>
-In PAE gibt es ein einzigartiges Rangsystem f&#252;r bestimmte Einheiten und V&#246;lker, die nachweislich Bestandteil einer milit&#228;rischen Hierarchie waren. Die Stufen dieser Hierarchien waren von Volk zu Volk unterschiedlich. W&#228;hrend es bei manchen St&#228;mmen kaum Stufen gab (zB der tapferste und st&#228;rkste Krieger) nutzen die R&#246;mer ein System von bis zu 150 R&#228;ngen. PAE bildet auch hier einen Teil davon ab.
+In PAE gibt es ein einzigartiges Rangsystem f&#252;r bestimmte Einheiten und V&#246;lker, die nachweislich Bestandteil einer milit&#228;rischen Hierarchie waren. Die Stufen dieser Hierarchien waren von Volk zu Volk unterschiedlich. W&#228;hrend es bei manchen St&#228;mmen kaum Stufen gab (zB der tapferste und st&#228;rkste Krieger nur) nutzten die R&#246;mer ein System von bis zu 150 R&#228;ngen. PAE bildet auch hier einen Teil davon ab.
 
-Einen Rang h&#246;her steigen, k&#246;nnen nur angreifende(!) Einheiten.
+Nur angreifende(!) Einheiten k&#246;nnen einen Rang h&#246;her steigen.
 
-[H1]R&#246;misches Reich[\H1]
+[H1]Das R&#246;misches Reich[\H1]
 
 [H2]Infantrie[H2]
 Einheiten: Legion&#228;re, Imperiale Legion&#228;re
-Chance: pro Kampf (100%)
+Chance: 100% (pro Kampf)
 
 01. Signatus (Einheit startet automatisch mit diesem Rang)
 02. Munifex
@@ -10291,14 +10485,14 @@ Unteroffiziere:
 04. Principales
 05. Tesserarius (Maximalrang der Auxiliar Einheit)
 
-06. Optio (neue Einheit) => muss in der Hauptstadt dazu belobigt werden
+06. Optio (neue Einheit)*
 07. Signifer
 08. Aquilifer
 09. Optio ad spem
 
 Offiziere:
 
-10. Centurio (Hauptmann, neue Einheit) => muss in der Hauptstadt dazu belobigt werden
+10. Centurio (Hauptmann, neue Einheit)*
 11. Centurio Posterior
 12. Centurio Prior
 13. Primus Pilus
@@ -10306,7 +10500,7 @@ Offiziere:
 
 Offiziersstab (ab hier sind es BERITTENE EINHEITEN):
 
-15. Praefectus (neue Einheit) => muss in der Hauptstadt dazu belobigt werden
+15. Praefectus (neue Einheit)*
 16. Tribunus
 17. Tribunus Laticlavius
 18. Legatus Legionis
@@ -10316,7 +10510,7 @@ Offiziersstab (ab hier sind es BERITTENE EINHEITEN):
 
 [H2]Ab dem 4. Jahrhundert n. Chr.:[\H2]
 Einheiten: Comitatenses
-Chance: pro Kampf (100%)
+Chance: 100%
 
 01. Tiro
 02. Biarchus
@@ -10326,7 +10520,7 @@ Chance: pro Kampf (100%)
 
 Offiziere:
 
-06. Primicerius (Lieutnant, neue Einheit) => muss in der Hauptstadt dazu belobigt werden
+06. Primicerius (Lieutnant, neue Einheit)*
 07. Clarissimus
 08. Protector
 09. Praefectus
@@ -10334,7 +10528,7 @@ Offiziere:
 
 Gener&#228;le:
 
-11. Dux (neue Einheit) => muss in der Hauptstadt dazu belobigt werden
+11. Dux (neue Einheit)*
 12. Comes
 13. Magister
 14. Magister militum
@@ -10343,7 +10537,7 @@ Gener&#228;le:
 
 [H2]Berittene Einheiten:[\H2]
 Einheiten: Equites und Cohors Equitata
-Chance: pro Kampf (25%)
+Chance: 25%
 
 (Ritterstand. Startet verglichen mit den Legion&#228;ren mit Rang 10)
 10. Curator
@@ -10356,7 +10550,7 @@ setzt nun wie bei den Legion&#228;ren bei Rang 15. fort: Praefectus
 [H1]Germanen und Kelten[\H1]
 Ab der Technologie Kriegerethos
 Einheiten: alle
-Chance: pro Kampf (10%)
+Chance: 10%
 
 1. Kriegesbande
 2. Kampfgef&#228;hrte
@@ -10369,12 +10563,211 @@ Einheiten: alle
 Chance: pro Kampf (3%)
 
 1. Khagan (Heerf&#252;hrer)
+
+
+*muss in der Hauptstadt oder einer Provinzhauptstadt (Stadt mit Provinzpalast) dazu belobigt werden
     </German>
     <Italian>
+In PAE, there is a unique ranking system for certain units and tribes that were verifiable part of a military hierarchy. The levels of these hierarchies differed from one nation to another. While there were hardly any steps in some tribes (eg the bravest and strongest warrior only), the Romans used a system of up to 150 ranks. Even PAE figures a part of it.
 
+Only attacking(!) units can climb to a higher rank.
+
+[H1]The Roman Empire[\H1]
+
+[H2]Infantry[H2]
+Units: Legionaries, Imperial Legionaires
+Chance: 100% (per fight)
+
+01. Signatus (units begins with this rank automatically)
+02. Munifex
+03. Immunes => from now on, the unit is able to promote to a praetorian
+Petty officer:
+04. Principales
+05. Tesserarius (maximum rank of an Auxiliar)
+
+06. Optio (new unit)*
+07. Signifer
+08. Aquilifer
+09. Optio ad spem
+
+Officers:
+
+10. Centurio (Captain, new unit)*
+11. Centurio Posterior
+12. Centurio Prior
+13. Primus Pilus
+14. Praefectus Castrorum
+
+Line officers (MOUNTED UNITS from now on):
+
+15. Praefectus (new unit)*
+16. Tribunus
+17. Tribunus Laticlavius
+18. Legatus Legionis
+19. Legatus Augusti
+20. Consul
+
+
+[H2]From the 4th century on:[\H2]
+Units: Comitatenses
+Chance: 100%
+
+01. Tiro
+02. Biarchus
+03. Ordinarius
+04. Centenarius
+05. Ducenarius
+
+Officers:
+
+06. Primicerius (Lieutenant, new unit)*
+07. Clarissimus
+08. Protector
+09. Praefectus
+10. Tribunus
+
+Generals:
+
+11. Dux (new unit)*
+12. Comes
+13. Magister
+14. Magister militum
+15. Patricius
+
+
+[H2]Mounted Units:[\H2]
+Units: Equites and Cohors Equitata
+Chance: 25%
+
+(Knighthood. Starts with rank 10 compared with legionaries)
+10. Curator
+11. Optio
+12. Decurio (new unit)
+13. Decurio Princeps
+14. Praefectus Alae
+continues with rank 15 of the legionaries: Praefectus
+
+[H1]Germans and Celts[\H1]
+Required technology: Ethos of Warriors
+Units: all
+Chance: 10%
+
+1. Warband
+2. Battle companion
+3. Clan leader
+4. Upgrade => Tribal chief
+
+[H1]Huns[\H1]
+Required technology: Ethos of Warriors
+Units: all
+Chance: 3%
+
+1. Khagan (Army leader)
+
+
+*has to be promoted in a capital or provincial capital (city with provincial palace)
     </Italian>
     <Spanish>
+En PAE, hay un sistema de ranking &#250;nico para determinadas unidades y tribus, que era una parte verificable de una jerarqu&#237;a militar. Los niveles de estas jerarqu&#237;as difieren de una naci&#243;n a otro. Mientras hab&#237;an pocos pasos en algunas tribus (ej: el m&#225;s bravo y fuerte guerrero solamente), los romanos tuvieron un sistema de 150 rangos. En PAE tiene una parte de ellla.
 
+Solo atacando (&#161;!), las unidades pueden ascender a un rango mayor.
+
+[H1]El Imperio Romano[\H1]
+
+[H2]Infanter&#237;a[H2]
+Unidades: Legionarios, Legiones imperiales.
+Probabilidad: 100% (por combate)
+
+01. Signatus (Las unidades comienzan con este rango autom&#225;ticamente)
+02. Munifex
+03. Immunes => desde aqu&#237;, la unidad tiene la posibilidad de promocionarse en pretoriano
+
+Suboficiales:
+
+04. Principales
+05. Tesserarius (m&#225;ximo rango de un auxiliar)
+
+06. Optio (nueva unidad)*
+07. Signifer
+08. Aquilifer
+09. Optio ad spem
+
+Oficiales:
+
+10. Centurio (Capit&#225;n, nueva unidad)*
+11. Centurio Posterior
+12. Centurio Prior
+13. Primus Pilus
+14. Praefectus Castrorum
+
+Oficiales generales (UNIDADES MONTADAS desde ahora):
+
+15. Praefectus (nueva unidad)*
+16. Tribunus
+17. Tribunus Laticlavius
+18. Legatus Legionis
+19. Legatus Augusti
+20. Consul
+
+
+[H2]Desde el S. IV d.C. en adelante:[\H2]
+Unidad: Comitatenses
+Probabilidad: 100%
+
+01. Tiro
+02. Biarchus
+03. Ordinarius
+04. Centenarius
+05. Ducenarius
+
+Oficiales:
+
+06. Primicerius (Teniente, nueva unidad)*
+07. Clarissimus
+08. Protector
+09. Praefectus
+10. Tribunus
+
+Generales:
+
+11. Dux (nueva unidad)*
+12. Comes
+13. Magister
+14. Magister militum
+15. Patricius
+
+
+[H2]Unidades montadas:[\H2]
+Unidades: Equites y Cohors Equitata
+Probabilidad: 25%
+
+(T&#237;tulo de caballero. Empieza con el rango 10 comparado con los legionarios)
+10. Curator
+11. Optio
+12. Decurio (nueva unidad)
+13. Decurio Princeps
+14. Praefectus Alae
+continua con el rango 15 de los legionarios: Praefectus
+
+[H1]Germanos y Celtas[\H1]
+Tecnolog&#237;a requerida: Ethos del guerrero
+Unidades: todos
+Probabilidad: 10%
+
+1. Grupo de guerra
+2. Compa&#241;ero de batalla
+3. L&#237;der del clan
+4. Promoci&#243;n => Jefe Tribal
+
+[H1]Hunos[\H1]
+Tecnolog&#237;a requerida: Ethos del guerrero
+Unidades: todos
+Probabilidad: 3%
+
+1. Khagan (L&#237;der del ej&#233;rcito)
+
+
+*necesita ser promocionado en una capital o capital provincial (ciudad con palacio provincial)
     </Spanish>
   </TEXT>
   <TEXT>

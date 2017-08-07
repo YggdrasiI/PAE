@@ -1576,7 +1576,7 @@
       <iExtraHealth>0</iExtraHealth>
       <iFreeExperience>0</iFreeExperience>
       <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-      <iImprovementUpgradeRateModifier>100</iImprovementUpgradeRateModifier>
+      <iImprovementUpgradeRateModifier>50</iImprovementUpgradeRateModifier>
       <iMilitaryProductionModifier>0</iMilitaryProductionModifier>
       <iBaseFreeUnits>0</iBaseFreeUnits>
       <iBaseFreeMilitaryUnits>0</iBaseFreeMilitaryUnits>
@@ -1593,7 +1593,7 @@
       <iLargestCityHappiness>0</iLargestCityHappiness>
       <iWarWearinessModifier>0</iWarWearinessModifier>
       <iFreeSpecialist>0</iFreeSpecialist>
-      <iTradeRoutes>0</iTradeRoutes>
+      <iTradeRoutes>1</iTradeRoutes>
       <bNoForeignTrade>0</bNoForeignTrade>
       <bNoCorporations>0</bNoCorporations>
       <bNoForeignCorporations>0</bNoForeignCorporations>
@@ -1607,11 +1607,7 @@
       <iStateReligionFreeExperience>0</iStateReligionFreeExperience>
       <YieldModifiers/>
       <CapitalYieldModifiers/>
-      <TradeYieldModifiers>
-        <iYield>0</iYield>
-        <iYield>25</iYield>
-        <iYield>0</iYield>
-      </TradeYieldModifiers>
+      <TradeYieldModifiers/>
       <CommerceModifiers/>
       <CapitalCommerceModifiers/>
       <SpecialistExtraCommerces/>

@@ -617,14 +617,6 @@
     <Spanish>Esta maravilla a&#241;ade dos rutas comerciales a tu ciudad.</Spanish>
   </TEXT>
   <TEXT>
-    <Tag>TXT_KEY_BUILDING_PANTHEON_STRATEGY</Tag>
-    <English>The [COLOR_BUILDING_TEXT]pantheon[COLOR_REVERT] increases the cultural value of a city.</English>
-    <French>The [COLOR_BUILDING_TEXT]pantheon[COLOR_REVERT] increases the cultural value of a city.</French>
-    <German>Das [COLOR_BUILDING_TEXT]Pantheon[COLOR_REVERT] steigert den kulturellen Wert einer Stadt.</German>
-    <Italian>The [COLOR_BUILDING_TEXT]pantheon[COLOR_REVERT] increases the cultural value of a city.</Italian>
-    <Spanish>El [COLOR_BUILDING_TEXT]Pante&#243;n[COLOR_REVERT] aumenta el valor cultural de una ciudad.</Spanish>
-  </TEXT>
-  <TEXT>
     <Tag>TXT_KEY_BUILDING_COLOSSEUM_STRATEGY</Tag>
     <English>The [COLOR_BUILDING_TEXT]Colosseum[COLOR_REVERT] wipes out any discontent in the city.</English>
     <French>The [COLOR_BUILDING_TEXT]Colosseum[COLOR_REVERT] wipes out any discontent in the city.</French>
@@ -642,11 +634,11 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_BUILDING_LABYRINTH_STRATEGY</Tag>
-    <English>The [COLOR_BUILDING_TEXT]Labyrinth of Knossos[COLOR_REVERT] increases the defense value of the city and provides land units an additional experience bonus of +2.</English>
-    <French>The [COLOR_BUILDING_TEXT]Labyrinth of Knossos[COLOR_REVERT] increases the defense value of the city and provides land units an additional experience bonus of +2.</French>
-    <German>Das [COLOR_BUILDING_TEXT]Labyrinth von Knossos[COLOR_REVERT] erh&#246;ht den Verteidigungswert der Stadt und liefert Landeinheiten einen zus&#228;tzlichen Erfahrungsbonus von +2.</German>
-    <Italian>The [COLOR_BUILDING_TEXT]Labyrinth of Knossos[COLOR_REVERT] increases the defense value of the city and provides land units an additional experience bonus of +2.</Italian>
-    <Spanish>El [COLOR_BUILDING_TEXT]Laberinto de Knossos[COLOR_REVERT] aumenta el valor defensivo de la ciudad y provee a las unidades terrestres un bonus adicional de experiencia de +2.</Spanish>
+    <English>The [COLOR_BUILDING_TEXT]Palace of Knossos[COLOR_REVERT] increases the defense value of the city and provides land units an additional experience bonus of +2.</English>
+    <French>The [COLOR_BUILDING_TEXT]Palace of Knossos[COLOR_REVERT] increases the defense value of the city and provides land units an additional experience bonus of +2.</French>
+    <German>Der [COLOR_BUILDING_TEXT]Palast von Knossos[COLOR_REVERT] erh&#246;ht den Verteidigungswert der Stadt und liefert Landeinheiten einen zus&#228;tzlichen Erfahrungsbonus von +2.</German>
+    <Italian>The [COLOR_BUILDING_TEXT]Palace of Knossos[COLOR_REVERT] increases the defense value of the city and provides land units an additional experience bonus of +2.</Italian>
+    <Spanish>El [COLOR_BUILDING_TEXT]Palacio de Knossos[COLOR_REVERT] aumenta el valor defensivo de la ciudad y provee a las unidades terrestres un bonus adicional de experiencia de +2.</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_BUILDING_KRIEGSHAFEN_STRATEGY</Tag>

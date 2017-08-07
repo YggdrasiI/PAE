@@ -3579,10 +3579,10 @@
   <TEXT>
     <Tag>TXT_KEY_UNIT_STATTHALTER_NORTH</Tag>
     <English>Gau ruler</English>
-    <French>Gau ruler</French>
+    <French>Souverain du Gau</French>
     <German>Gauf&#252;rst</German>
-    <Italian>Gau ruler</Italian>
-    <Spanish>Gau ruler</Spanish>
+    <Italian>Righello del Gau</Italian>
+    <Spanish>Soberano de Gau</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_UNIT_STATTHALTER_EGYPT</Tag>
@@ -5498,11 +5498,11 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_TECH_KRIEGERETHOS</Tag>
-    <English>Warrior ethos</English>
-    <French>Warrior ethos</French>
+    <English>Ethos of Warriors</English>
+    <French>Ethos of Warriors</French>
     <German>Kriegerethos</German>
-    <Italian>Warrior ethos</Italian>
-    <Spanish>Guerrero Ethos</Spanish>
+    <Italian>Ethos of Warriors</Italian>
+    <Spanish>Ethos del guerrero</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_TECH_MARKTRECHT</Tag>

@@ -260,6 +260,11 @@ def AI_bestCultivation(pCity, iSkipN=-1, eBonus=-1):
 # Lets pUnit cultivate bonus at nearest city
 def doCultivation_AI(pUnit):
 
+    if not pUnit.getUnitType() in L.LCultivationUnits:
+        return False
+
+    lFood = L.LBonusCorn+L.LBonusLivestock
+
     pUnitPlot = pUnit.plot()
     iPlayer = pUnit.getOwner()
     pPlayer = gc.getPlayer(iPlayer)

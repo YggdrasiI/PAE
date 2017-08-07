@@ -1075,7 +1075,7 @@ def init():
 
     LBonusCultivatable = LBonusCorn + LBonusLivestock + LBonusPlantation + [gc.getInfoTypeForString("BONUS_HORSE")]
 
-    # # Tranfer local defined variables into module ones.
+    # # Transfer local defined variables into module ones.
     # lnames = [l for l in locals().keys() if l[0] != "_" and l != "gc"]
     # for l in lnames:
         # globals()[l] = locals()[l]

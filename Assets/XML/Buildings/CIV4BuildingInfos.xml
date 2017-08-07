@@ -2533,7 +2533,7 @@
       <iMilitaryProductionModifier>0</iMilitaryProductionModifier>
       <iSpaceProductionModifier>0</iSpaceProductionModifier>
       <iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-      <iTradeRoutes>1</iTradeRoutes>
+      <iTradeRoutes>0</iTradeRoutes>
       <iCoastalTradeRoutes>0</iCoastalTradeRoutes>
       <iGlobalTradeRoutes>0</iGlobalTradeRoutes>
       <iTradeRouteModifier>0</iTradeRouteModifier>
@@ -17563,7 +17563,7 @@
       <iMilitaryProductionModifier>0</iMilitaryProductionModifier>
       <iSpaceProductionModifier>0</iSpaceProductionModifier>
       <iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-      <iTradeRoutes>0</iTradeRoutes>
+      <iTradeRoutes>1</iTradeRoutes>
       <iCoastalTradeRoutes>0</iCoastalTradeRoutes>
       <iGlobalTradeRoutes>0</iGlobalTradeRoutes>
       <iTradeRouteModifier>0</iTradeRouteModifier>
@@ -17584,9 +17584,7 @@
       <CommerceChanges/>
       <ObsoleteSafeCommerceChanges/>
       <CommerceChangeDoubleTimes/>
-      <CommerceModifiers>
-        <iCommerce>10</iCommerce>
-      </CommerceModifiers>
+      <CommerceModifiers/>
       <GlobalCommerceModifiers/>
       <SpecialistExtraCommerces/>
       <StateReligionCommerces/>
@@ -35272,10 +35270,10 @@
       <bNoUnhappiness>0</bNoUnhappiness>
       <bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
       <bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
-      <bNeverCapture>1</bNeverCapture>
+      <bNeverCapture>0</bNeverCapture>
       <bNukeImmune>0</bNukeImmune>
       <bPrereqReligion>0</bPrereqReligion>
-      <bCenterInCity>1</bCenterInCity>
+      <bCenterInCity>0</bCenterInCity>
       <iAIWeight>0</iAIWeight>
       <iCost>500</iCost>
       <iHurryCostModifier>0</iHurryCostModifier>
@@ -35322,7 +35320,7 @@
       <iMilitaryProductionModifier>0</iMilitaryProductionModifier>
       <iSpaceProductionModifier>0</iSpaceProductionModifier>
       <iGlobalSpaceProductionModifier>0</iGlobalSpaceProductionModifier>
-      <iTradeRoutes>0</iTradeRoutes>
+      <iTradeRoutes>1</iTradeRoutes>
       <iCoastalTradeRoutes>0</iCoastalTradeRoutes>
       <iGlobalTradeRoutes>0</iGlobalTradeRoutes>
       <iTradeRouteModifier>0</iTradeRouteModifier>
@@ -35374,10 +35372,6 @@
         <Flavor>
           <FlavorType>FLAVOR_GOLD</FlavorType>
           <iFlavor>8</iFlavor>
-        </Flavor>
-        <Flavor>
-          <FlavorType>FLAVOR_SCIENCE</FlavorType>
-          <iFlavor>3</iFlavor>
         </Flavor>
       </Flavors>
       <HotKey/>
