@@ -2269,12 +2269,12 @@ class CvGameUtils:
                     if lBuildings:
                         lBuildings.sort()
                         sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()) + ": </color>"
-                        sText += ', '.join([str(lB) for lB in lBuildings])
+                        sText += ', '.join([lB for lB in lBuildings])
 
                     if lWonders:
                         lWonders.sort()
                         sText += "\n" + CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ()) + ": </color>"
-                        sText += ', '.join([str(lW) for lW in lWonders])
+                        sText += ', '.join([lW for lW in lWonders])
 
                     sText += "</font>"
                     return sText
