@@ -1126,17 +1126,17 @@ class CvGameUtils:
                     # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI Cultivation",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                     return True
 
-            # s = pOwner.getName()
             if iUnitType in L.LTradeUnits:
-                # CyInterface().addMessage(iHumanPlayer, True, 10, "Vor doAutom 1 " + s, None, 2, None, ColorTypes(5), pUnit.getX(), pUnit.getY(), False, False)
+                # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "TradeUnit: " + pOwner.getName(), None, 2, None, ColorTypes(5), pUnit.getX(), pUnit.getY(), False, False)
+                # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Vor doAutom 1", None, 2, None, ColorTypes(6), pUnit.getX(), pUnit.getY(), False, False)
                 if PAE_Trade.doAutomateMerchant(pUnit, True):
-                    CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+                    # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                     return True
                 elif PAE_Trade.doAssignTradeRoute_AI(pUnit):
                     # CyInterface().addMessage(iHumanPlayer, True, 10, "Vor doAutom 2 " + s, None, 2, None, ColorTypes(6), pUnit.getX(), pUnit.getY(), False, False)
                     # try again
                     if PAE_Trade.doAutomateMerchant(pUnit, True):
-                        CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant new trade route",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+                        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant new trade route",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                         return True
 
             # Veteran -> Eliteunit (netMessage 705)

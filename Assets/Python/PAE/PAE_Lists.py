@@ -23,6 +23,7 @@ LDesert = []
 LTradeUnits = []
 LCultivationUnits = []
 LBonusCultivatable = []
+LBonusStrategic = []
 LBonusUntradeable = [] # List of untradeable bonuses
 LBonusCorn = [] # Lists of cultivatable bonuses
 LBonusLivestock = []
@@ -102,6 +103,7 @@ def init():
     global LTradeUnits
     global LCultivationUnits
     global LBonusCultivatable
+    global LBonusStrategic
     global LBonusUntradeable # List of untradeable bonuses
     global LBonusCorn # Lists of cultivatable bonuses
     global LBonusLivestock
@@ -1074,6 +1076,13 @@ def init():
         # BonusClass wonder and general are not stored separately (bc. unnecessary)
 
     LBonusCultivatable = LBonusCorn + LBonusLivestock + LBonusPlantation + [gc.getInfoTypeForString("BONUS_HORSE")]
+    
+    LBonusStrategic = [
+        gc.getInfoTypeForString("BONUS_BRONZE"),
+        gc.getInfoTypeForString("BONUS_IRON"),
+        gc.getInfoTypeForString("BONUS_CAMEL"),
+        gc.getInfoTypeForString("BONUS_HORSE")
+    ]
 
     # # Transfer local defined variables into module ones.
     # lnames = [l for l in locals().keys() if l[0] != "_" and l != "gc"]

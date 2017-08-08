@@ -2626,7 +2626,7 @@ def doRenegadeUnit(pLoser, pWinner, pLoserPlayer, pWinnerPlayer):
         # Piratenschiffe werden normale Schiffe, alles weitere bleibt der gleiche UnitType
         iNewUnitType = L.DCaptureFromPirate.get(iLoserUnitType, iLoserUnitType)
 
-        CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 5, CyTranslator().getText("TXT_KEY_MESSAGE_TEST", ("UnitType zum Ueberlaufen: ", iNewUnitType)), None, 2, None, ColorTypes(14), pWinner.getX(), pWinner.getY(), False, False)
+        #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 5, CyTranslator().getText("TXT_KEY_MESSAGE_TEST", ("UnitType zum Ueberlaufen: ", iNewUnitType)), None, 2, None, ColorTypes(14), pWinner.getX(), pWinner.getY(), False, False)
         # Create a new unit
         NewUnit = pWinnerPlayer.initUnit(iNewUnitType, pWinner.getX(), pWinner.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
         NewUnit.finishMoves()

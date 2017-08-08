@@ -684,7 +684,7 @@ def doAssignTradeRoute_AI(pUnit):
     pUnitPlot = pUnit.plot()
 
     if pPlayer.getGold() < 50:
-        return
+        return False
 
     # friedliche Nachbarn raussuchen
     lNeighbors = []
@@ -730,7 +730,7 @@ def doAssignTradeRoute_AI(pUnit):
                 pCityPlotPlayer = pPlayerCity.plot()
                 pCityPlotNeighbor = pNeighborCity.plot()
                 # Handelsstrasse existiert schon => andere Route waehlen
-                if getPlotTradingRoad(pCityPlotPlayer, pCityPlotNeighbor) is not None:
+                if getPlotTradingRoad(pCityPlotPlayer, pCityPlotNeighbor) is None:
                     continue
                 #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Keine Handelsstrasse", None, 2, None, ColorTypes(8), pUnit.getX(), pUnit.getY(), False, False)
                 bDirection1 = False
@@ -768,12 +768,11 @@ def doAssignTradeRoute_AI(pUnit):
             break
 
     if pBestPlayerCity is not None and pBestNeighborCity is not None:
-        # s = pPlayer.getName()
-        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Stadt gefunden " + s, None, 2, None, ColorTypes(7), pUnit.getX(), pUnit.getY(), False, False)
+        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Stadt gefunden " + pBestPlayerCity.getName()+" nach "+pBestNeighborCity.getName(), None, 2, None, ColorTypes(7), pUnit.getX(), pUnit.getY(), False, False)
         lPlayerLuxuries = _getCityLuxuries(pBestPlayerCity)
         lNeighborLuxuries = _getCityLuxuries(pBestNeighborCity)
-        eBonus1 = -1
-        eBonus2 = -1
+        eBonus1 = lPlayerLuxuries[0]
+        eBonus2 = lNeighborLuxuries[0]
         for eBonus in lPlayerLuxuries:
             if not pBestNeighborCity.hasBonus(eBonus):
                 eBonus1 = eBonus
@@ -816,6 +815,12 @@ def _getCityLuxuries(pCity):
     lBonuses2 = CvUtil.getIntersection(L.LBonusLuxury, lBonuses)
     if lBonuses2:
         return lBonuses2
+    lBonuses2 = CvUtil.getIntersection(L.LBonusStrategic, lBonuses)
+    if lBonuses2:
+        return lBonuses2   
+    lBonuses2 = CvUtil.getIntersection(L.LBonusPlantation, lBonuses)
+    if lBonuses2:
+        return lBonuses2 
     return lBonuses
 
 ############# Cities with special bonus order #################
