@@ -190,7 +190,7 @@ class CvGameUtils:
                             if bOK:
                                 CyEngine().addColoredPlotAlt(iX, iY, PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_WHITE", 1)
                     (loopCity, pIter) = pPlayer.nextCity(pIter, False)
-            
+
             # Hunter
             elif iUnitType == gc.getInfoTypeForString("UNIT_HUNTER"):
                 pPlayer = gc.getPlayer(pHeadSelectedUnit.getOwner())
@@ -201,8 +201,8 @@ class CvGameUtils:
                         CyEngine().addColoredPlotAlt(loopPlot.getX(), loopPlot.getY(), PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_GREEN", 1)
                     else:
                         CyEngine().addColoredPlotAlt(loopPlot.getX(), loopPlot.getY(), PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_RED", 1)
-                    (loopCity, pIter) = pPlayer.nextCity(pIter, False)                
-            
+                    (loopCity, pIter) = pPlayer.nextCity(pIter, False)
+
         return False
 
     def isActionRecommended(self, argsList):
@@ -1065,7 +1065,7 @@ class CvGameUtils:
                             # Stadtproduktion durchgehen
                             (loopCity, pIter) = pPlayer.firstCity(False)
                             while loopCity:
-                                if not loopCity.isNone() and loopCity.getOwner() == iOwner: #only valid cities
+                                if not loopCity.isNone() and loopCity.getOwner() == iOwner:  # only valid cities
                                     if loopCity.isProductionUnit():
                                         if loopCity.getUnitProduction(iUnit):
                                             bUnit = True
@@ -1140,18 +1140,17 @@ class CvGameUtils:
                 if PAE_Cultivation.doCultivation_AI(pUnit):
                     #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI Cultivation",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                     return True
-                
+
                 #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "CultivationUnit: False", None, 2, None, ColorTypes(5), 0, 0, False, False)
                 if not pUnit.plot().isCity():
                     pCity = PAE_Unit.getNearestCity(pUnit)
-                    if pCity != None:
+                    if pCity is not None:
                         pUnit.getGroup().pushMoveToMission(pCity.getX(), pCity.getY())
                         return True
-                
+
                 pUnit.getGroup().pushMission(MissionTypes.MISSION_SKIP, 0, 0, 0, True, False, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
                 return True
-            
-            
+
             if iUnitType in L.LTradeUnits:
                 #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "TradeUnit: " + pOwner.getName(), None, 2, None, ColorTypes(5), 0, 0, False, False)
                 #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Vor doAutom 1", None, 2, None, ColorTypes(6), 0, 0, False, False)
@@ -1425,7 +1424,6 @@ class CvGameUtils:
                 PAE_Unit.doUpgradeRang(iOwner, pUnit.getID())
                 return True
 
-
             # Terrain Promos - Ausbildner / Trainer (in City)
             lTrainerPromotions = [
                 gc.getInfoTypeForString("PROMOTION_WOODSMAN5"),
@@ -1486,7 +1484,7 @@ class CvGameUtils:
                                 NewUnit.changeMoves(90)
                                 # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
                                 pUnit.kill(True, -1)  # RAMK_CTD
-                                pLoopUnit.kill(False, -1) # andere Einheit direkt toeten, siehe isSuicide im CombatResult
+                                pLoopUnit.kill(False, -1)  # andere Einheit direkt toeten, siehe isSuicide im CombatResult
                                 return True
             # END Unit -> Horse UPGRADE
 
@@ -1736,7 +1734,7 @@ class CvGameUtils:
                             lCityX = lCity
 
                     if lCityX:
-                        if not pUnit.atPlot(lCityX.plot()) and pUnit.generatePath(lCityX.plot(), 0, False, None): # generatePath returns True, if a path was found.
+                        if not pUnit.atPlot(lCityX.plot()) and pUnit.generatePath(lCityX.plot(), 0, False, None):  # generatePath returns True, if a path was found.
                             pUnit.getGroup().pushMoveToMission(lCityX.getX(), lCityX.getY())
                         else:
                             lCityX.changePopulation(1)
@@ -2849,7 +2847,6 @@ class CvGameUtils:
                                     PAE_City.doInquisitorPersecution2(iOwner, pCity.getID(), -1, iReligion, pUnit.getID())
                                     return True
 
-
     def getExperienceNeeded(self, argsList):
         # use this function to set how much experience a unit needs
         iLevel, iOwner = argsList
@@ -2861,7 +2858,7 @@ class CvGameUtils:
         # 2,5,10,17,26
         #iExperienceNeeded = iLevel * iLevel + 1
 
-        # PAE IV: ab Lvl 7 mehr XP notwendig        
+        # PAE IV: ab Lvl 7 mehr XP notwendig
         #if iLevel > 7: iExperienceNeeded += iLevel * 2
 
         # PAE V: L * (L+2) - (L / 2)
@@ -2900,7 +2897,6 @@ class CvGameUtils:
                 pUnit.kill(True, -1)  # RAMK_CTD
                 return True
 
-
     # Veteran -> Reservist in city for AI
     def _doReservist_AI(self, pUnit):
         pUnitGroup = pUnit.getGroup()
@@ -2930,7 +2926,7 @@ class CvGameUtils:
 
                         (pCity, pIter) = pOwner.firstCity(False)
                         while pCity:
-                            iNum = pCity.getFreeSpecialistCount(19) # SPECIALIST_RESERVIST
+                            iNum = pCity.getFreeSpecialistCount(19)  # SPECIALIST_RESERVIST
                             if iNum <= iSeek or iNum == 0:
                                 pSeekCity = pCity
                                 iSeek = iNum
@@ -2946,7 +2942,6 @@ class CvGameUtils:
                                 # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
                                 pUnit.kill(True, -1)  # RAMK_CTD
                                 return True
-
 
     # Promotion Trainer Building (Forest 1, Hills 1, ...) -------------------
     def _AI_SettleTrainer(self, pUnit):

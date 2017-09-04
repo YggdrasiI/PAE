@@ -111,10 +111,14 @@ def changeBuildingHappyChange(pCity, iBuilding, iChange):
         iChange)
 
 # Returns whether pCity has access to eBonus, ignoring free bonuses (from trade). Gets an own function bc. it used several times.
+
+
 def hasBonusIgnoreFreeBonuses(pCity, eBonus):
     return (pCity.getNumBonuses(eBonus) - pCity.getFreeBonus(eBonus)) > 0
 
 # Returns intersection of two lists (Schnitt beider Listen).
+
+
 def getIntersection(lList1, lList2):
     lIntersection = []
     for a in lList1:
@@ -233,8 +237,10 @@ def shuffle(num, rand):
 
 
 def spawnUnit(iUnit, pPlot, pPlayer):
-    if gc.getUnitInfo(iUnit).getCombat() > 0: iType = UnitAITypes.UNITAI_ATTACK
-    else: iType = UnitAITypes.NO_UNITAI
+    if gc.getUnitInfo(iUnit).getCombat() > 0:
+        iType = UnitAITypes.UNITAI_ATTACK
+    else:
+        iType = UnitAITypes.NO_UNITAI
     pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), iType, DirectionTypes.DIRECTION_SOUTH)
     return 1
 
@@ -559,7 +565,7 @@ OtherFontIcons = {'happy': FontSymbols.HAPPY_CHAR,
                   'map': FontSymbols.MAP_CHAR,
                   'occupation': FontSymbols.OCCUPATION_CHAR,
                   'power': FontSymbols.POWER_CHAR,
-                 }
+                  }
 
 GlobalInfosMap = {'bonus': {'NUM': gc.getNumBonusInfos, 'GET': gc.getBonusInfo},
                   'improvement': {'NUM': gc.getNumImprovementInfos, 'GET': gc.getImprovementInfo},
@@ -574,7 +580,7 @@ GlobalInfosMap = {'bonus': {'NUM': gc.getNumBonusInfos, 'GET': gc.getBonusInfo},
                   'feature': {'NUM': gc.getNumFeatureInfos, 'GET': gc.getFeatureInfo},
                   'route': {'NUM': gc.getNumRouteInfos, 'GET': gc.getRouteInfo},
                   'promotion': {'NUM': gc.getNumPromotionInfos, 'GET': gc.getPromotionInfo},
-                 }
+                  }
 
 
 # Ramk - Helperfunctions to en- and decode script data strings
@@ -629,13 +635,15 @@ def encode_script_data(dData):
 #
 # I recommend to use keylist = ["{Your Key}", "t"]. This
 # will use the full script data string as fallback.
+
+
 def getScriptData(pOwner, keylist=None, default=""):
     sData = pOwner.getScriptData()
     # iRange = gc.getMAX_PLAYERS()
     # for iPlayer in range(iRange):
-        # player = gc.getPlayer(iPlayer)
-        # if player.isAlive() and player.isHuman():
-            # CyInterface().addMessage(iPlayer, True, 10, sData, None, 2, None, ColorTypes(10), 0, 0, False, False)
+    # player = gc.getPlayer(iPlayer)
+    # if player.isAlive() and player.isHuman():
+    # CyInterface().addMessage(iPlayer, True, 10, sData, None, 2, None, ColorTypes(10), 0, 0, False, False)
     if keylist is None:
         return decode_script_data(sData)
     data = decode_script_data(sData)
@@ -643,20 +651,20 @@ def getScriptData(pOwner, keylist=None, default=""):
         try:
             s = data[k]
             # if k == "t":
-                # if len(keylist) == 1:
-                    # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("please check call "+str(k)+" "+str(s),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
-                # else:
-                    # dDict = decode_script_data(s)
-                    # removeScriptData(pOwner, "t")
-                    # for k2 in dDict:
-                        # if k2 == "t":
-                            # for k3 in keylist:
-                                # if k3 != "t":
-                                    # k2 = k3
-                        # if k2 == "t":
-                            # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("please check call "+str(k)+" "+str(s),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
-                        # addScriptData(pOwner, k2, dDict[k2])
-                        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("reassigned value "+str(k2)+" "+str(dDict[k2]),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+            # if len(keylist) == 1:
+            # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("please check call "+str(k)+" "+str(s),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+            # else:
+            # dDict = decode_script_data(s)
+            # removeScriptData(pOwner, "t")
+            # for k2 in dDict:
+            # if k2 == "t":
+            # for k3 in keylist:
+            # if k3 != "t":
+            # k2 = k3
+            # if k2 == "t":
+            # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("please check call "+str(k)+" "+str(s),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+            # addScriptData(pOwner, k2, dDict[k2])
+            # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("reassigned value "+str(k2)+" "+str(dDict[k2]),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
             # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("result "+str(k)+" "+str(s),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
             return s
         except KeyError:
@@ -666,6 +674,7 @@ def getScriptData(pOwner, keylist=None, default=""):
 
 def setScriptData(pOwner, sd):
     pOwner.setScriptData(encode_script_data(sd))
+
 
 def addScriptData(pOwner, key, value):
     sd = getScriptData(pOwner, None, {})

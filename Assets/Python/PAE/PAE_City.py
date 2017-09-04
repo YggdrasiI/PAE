@@ -132,7 +132,7 @@ def onModNetMessage(argsList):
             # Auxiliars as gift:
             #iAnz = 1 + CvUtil.myRandom(3, "Auxiliars as gift")
             #if iAnz == 1: szBuffer = szBuffer + CyTranslator().getText("TXT_KEY_POPUP_PROVINZHAUPTSTADT_THX_MAIN2_SINGULAR",("", ))
-            #else: szBuffer = szBuffer + CyTranslator().getText("TXT_KEY_POPUP_PROVINZHAUPTSTADT_THX_MAIN2_PLURAL",(iAnz, ))
+            # else: szBuffer = szBuffer + CyTranslator().getText("TXT_KEY_POPUP_PROVINZHAUPTSTADT_THX_MAIN2_PLURAL",(iAnz, ))
             szBuffer = szBuffer + CyTranslator().getText("TXT_KEY_POPUP_PROVINZHAUPTSTADT_THX_MAIN2", (gc.getUnitInfo(lGift[iRand]).getDescriptionForm(0),))
 
             popupInfo = CyPopupInfo()
@@ -155,9 +155,9 @@ def onModNetMessage(argsList):
             popupInfo = CyPopupInfo()
             popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
             popupInfo.setText(CyTranslator().getText("TXT_KEY_POPUP_STATTHALTER_0", (pCity.getName(),)))
-            popupInfo.setData1(iData2) # CityID
-            popupInfo.setData2(iData3) # iPlayer
-            popupInfo.setData3(-1) # iTyp (Einfluss oder Tribut)
+            popupInfo.setData1(iData2)  # CityID
+            popupInfo.setData2(iData3)  # iPlayer
+            popupInfo.setData3(-1)  # iTyp (Einfluss oder Tribut)
             popupInfo.setOnClickedPythonCallback("popupStatthalterTribut")
 
             # Button 0: Einfluss verbessern
@@ -203,9 +203,9 @@ def onModNetMessage(argsList):
                 popupInfo = CyPopupInfo()
                 popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
                 popupInfo.setText(szText)
-                popupInfo.setData1(iData2) # CityID
-                popupInfo.setData2(iData3) # iPlayer
-                popupInfo.setData3(iData4) # iTyp (Einfluss oder Tribut)
+                popupInfo.setData1(iData2)  # CityID
+                popupInfo.setData2(iData3)  # iPlayer
+                popupInfo.setData3(iData4)  # iTyp (Einfluss oder Tribut)
                 popupInfo.setOnClickedPythonCallback("popupStatthalterTribut")
 
                 # Button 0: kleine Spende
@@ -276,9 +276,9 @@ def onModNetMessage(argsList):
                 popupInfo = CyPopupInfo()
                 popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
                 popupInfo.setText(szText)
-                popupInfo.setData1(iData2) # CityID
-                popupInfo.setData2(iData3) # iPlayer
-                popupInfo.setData3(iData4) # iTyp (Einfluss oder Tribut)
+                popupInfo.setData1(iData2)  # CityID
+                popupInfo.setData2(iData3)  # iPlayer
+                popupInfo.setData3(iData4)  # iTyp (Einfluss oder Tribut)
                 popupInfo.setOnClickedPythonCallback("popupStatthalterTribut")
 
                 # Button 0: Goldkarren
@@ -333,6 +333,7 @@ def onModNetMessage(argsList):
                 PAEStatthalterTribut.setdefault(iData3, 0)
                 PAEStatthalterTribut[iData3] = 1
 
+
 def doMessageCityGrowing(pCity):
     if pCity is None or pCity.isNone():
         return
@@ -364,12 +365,12 @@ def doMessageCityGrowing(pCity):
             iBonusHealth = kBuildingDorf.getHealth()
             iBonusHappy = kBuildingDorf.getHappiness()
             # for iBonus in gc.getNumBonuses():
-                # iAddHealth = kBuildingDorf.getBonusHealthChanges(iBonus)
-                # if iAddHealth != -1:
-                  # iBonusHealth += iAddHealth
-                # iAddHappy = kBuildingDorf.getBonusHappinessChanges(iBonus)
-                # if iAddHappy != -1:
-                  # iBonusHappy += iAddHappy
+            # iAddHealth = kBuildingDorf.getBonusHealthChanges(iBonus)
+            # if iAddHealth != -1:
+            # iBonusHealth += iAddHealth
+            # iAddHappy = kBuildingDorf.getBonusHappinessChanges(iBonus)
+            # if iAddHappy != -1:
+            # iBonusHappy += iAddHappy
         elif iPop == iPopStadt and pCity.getNumRealBuilding(iBuildingStadt) == 0:
             iBonusHealth = kBuildingStadt.getHealth()
             iBonusHappy = kBuildingStadt.getHappiness()
@@ -464,6 +465,7 @@ def doCheckTraitBuildings(pCity):
     else:
         pCity.setNumRealBuilding(iCreativeLocal, 0)
 
+
 def doCheckGlobalTraitBuildings(iPlayer, pCity=None, iOriginalOwner=-1):
     pOwner = gc.getPlayer(iPlayer)
     lGlobal = [
@@ -499,6 +501,7 @@ def doCheckGlobalBuilding(iPlayer, iBuilding):
 
 # Begin Inquisition -------------------------------
 
+
 def doInquisitorPersecution(pCity, pUnit):
     pPlayer = gc.getPlayer(pCity.getOwner())
     iPlayer = pPlayer.getID()
@@ -512,7 +515,7 @@ def doInquisitorPersecution(pCity, pUnit):
         popupInfo.setData1(iPlayer)
         popupInfo.setData2(pCity.getID())
         popupInfo.setData3(pUnit.getID())
-        popupInfo.setOnClickedPythonCallback("popupReliaustreibung") # EntryPoints/CvScreenInterface und CvGameUtils / 704
+        popupInfo.setOnClickedPythonCallback("popupReliaustreibung")  # EntryPoints/CvScreenInterface und CvGameUtils / 704
         for iReligion in range(iNumReligions):
             if iReligion != pPlayer.getStateReligion() and pCity.isHasReligion(iReligion) and pCity.isHolyCityByType(iReligion) == 0:
                 popupInfo.addPythonButton(gc.getReligionInfo(iReligion).getText(), gc.getReligionInfo(iReligion).getButton())
@@ -522,6 +525,7 @@ def doInquisitorPersecution(pCity, pUnit):
 
     # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
     pUnit.kill(True, -1)  # RAMK_CTD
+
 
 def doInquisitorPersecution2(iPlayer, iCity, iButton, iReligion, iUnit):
     pPlayer = gc.getPlayer(iPlayer)
@@ -568,9 +572,9 @@ def doInquisitorPersecution2(iPlayer, iCity, iButton, iReligion, iUnit):
                     thisBuildingClass = gc.getBuildingClassInfo(iBuildingClass)
                     if iRequiredReligion == iReligion and thisBuildingClass.getMaxGlobalInstances() != 1:
                         pCity.setNumRealBuilding(iBuildingLoop, 0)
-                        #if pPlayer.isHuman():
-                            ##Meldung dass das Gebaeude zerstoert wurde
-                            #CyInterface().addMessage(iPlayer,True,15,CyTranslator().getText("TXT_KEY_MESSAGE_INQUISITION_Bildersturm",(pCity.getName(),)),"AS2D_PLAGUE",2,szButton,ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+                        # if pPlayer.isHuman():
+                        # Meldung dass das Gebaeude zerstoert wurde
+                        # CyInterface().addMessage(iPlayer,True,15,CyTranslator().getText("TXT_KEY_MESSAGE_INQUISITION_Bildersturm",(pCity.getName(),)),"AS2D_PLAGUE",2,szButton,ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 
             # increasing Anger or Sympathy for an AI
             iRange = gc.getMAX_PLAYERS()
@@ -609,6 +613,7 @@ def doInquisitorPersecution2(iPlayer, iCity, iButton, iReligion, iUnit):
   # ------
 
 # end Inquisition / Religionsaustreibung
+
 
 def doTurnCityRevolt(pCity):
     iPlayer = pCity.getOwner()
@@ -720,6 +725,7 @@ def doTurnCityRevolt(pCity):
   # City Revolt
   # iTurns = deaktiv
 
+
 def doCityRevolt(pCity, iTurns):
     pPlot = pCity.plot()
 
@@ -801,6 +807,7 @@ def doNextCityRevolt(iX, iY, iOwner, iAttacker):
                     CyInterface().addMessage(iOwner, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_REVOLTS_2_"+str(iRand), (pCity.getName(), 0)), "AS2D_REVOLTSTART", 2, "Art/Interface/Buttons/Techs/button_brandschatzen.dds", ColorTypes(7), pCity.getX(), pCity.getY(), True, True)
 
   # --- next city revolt
+
 
 def doDesertification(pCity, pUnit):
     iPlayer = pCity.getOwner()
@@ -1144,6 +1151,7 @@ def doProvinceRebellion(pCity):
                             if CvUtil.myRandom(100, "provReb2") < iChance:
                                 doRenegadeCity(loopCity, iNewOwner, -1)
         doRenegadeCity(pCity, iNewOwner, -1)
+
 
 def doRenegadeOnCombatResult(pLoser, pCity, iWinnerPlayer):
     # Trait Protective: Staedte laufen nicht ueber / cities do not renegade
@@ -1571,10 +1579,10 @@ def doUnitSupply(pCity, iPlayer):
             lUnitIndex = CvUtil.shuffle(numUnits, gc.getGame().getSorenRand())[:iMaintainUnits]
 
             # while len(lUnitIndex)<iMaintainUnits and iI < 3*numUnits:
-                # iI += 1
-                # iRand = CvUtil.myRandom(numUnits, "nextUnitSupply")
-                # if not iRand in lUnitIndex:
-                    # lUnitIndex.append(iRand)
+            # iI += 1
+            # iRand = CvUtil.myRandom(numUnits, "nextUnitSupply")
+            # if not iRand in lUnitIndex:
+            # lUnitIndex.append(iRand)
 
             # Betrifft Stadt
             # 20%: -1 Pop
@@ -2010,6 +2018,7 @@ def bonusMissing(pCity, eBuilding):
                 eRequiredBonus = None
                 break
     return eRequiredBonus
+
 
 def onEmigrantBuilt(city, unit):
     iPlayer = city.getOwner()
@@ -2767,9 +2776,9 @@ def doSettledSlavesAndReservists(pCity):
                     bChristSlaves = False
                     if iCitySlaves > 0 and iCityGlads > 0:
                         iRand = CvUtil.myRandom(2, "1 settled Slave (Slave or gladiator) gets killed")
-                        bChristSlaves = (iRand == 0) # 0 = Slaves, 1 = Glads
+                        bChristSlaves = (iRand == 0)  # 0 = Slaves, 1 = Glads
                     else:
-                        bChristSlaves = (iCitySlaves > 0) # either slaves or glads
+                        bChristSlaves = (iCitySlaves > 0)  # either slaves or glads
 
                     if bChristSlaves:
                         if iCitySlavesHaus > 0 and iCitySlavesFood > 0 and iCitySlavesProd > 0:
@@ -2822,6 +2831,8 @@ def doSettledSlavesAndReservists(pCity):
                     pCity.setHasReligion(iReligion, 1, 1, 0)
                     if pPlayer.isHuman():
                         CyInterface().addMessage(iPlayer, True, 8, CyTranslator().getText("TXT_KEY_SLAVES_SPREAD_CHRISTIANITY", (pCity.getName(), )), None, 2, "Art/Interface/Buttons/Actions/button_kreuz.dds", ColorTypes(13), pCity.getX(), pCity.getY(), True, True)
+
+
 def doMissionaryForCivs(iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
     pCity = None
@@ -2876,6 +2887,7 @@ def doMissionaryForCivs(iPlayer):
                     # popupInfo.setText(CyTranslator().getText("TXT_KEY_MESSAGE_EGYPT_MISSIONAR",("", )))
                     # popupInfo.addPopup(iPlayer)
 
+
 def catchGreatPeople(pCity, iNewOwner, iPreviousOwner, bAssimilation):
     """# --- gets captured: 50 % | can flee: 40 % | get killed: 10 %"""
     pNewOwner = gc.getPlayer(iNewOwner)
@@ -2885,7 +2897,7 @@ def catchGreatPeople(pCity, iNewOwner, iPreviousOwner, bAssimilation):
         [gc.getInfoTypeForString("UNIT_PROPHET"), 3, 3, 3],
         [gc.getInfoTypeForString("UNIT_ARTIST"), 3, 3, 3],
         [gc.getInfoTypeForString("UNIT_SCIENTIST"), 3, 3, 3],
-        [gc.getInfoTypeForString("UNIT_MERCHANT"), 3 , 3, 3],
+        [gc.getInfoTypeForString("UNIT_MERCHANT"), 3, 3, 3],
         [gc.getInfoTypeForString("UNIT_ENGINEER"), 3, 3, 4],
         [gc.getInfoTypeForString("UNIT_GREAT_GENERAL"), 11, 3, 10],
         [gc.getInfoTypeForString("UNIT_GREAT_SPY"), 4, 3, 4],
@@ -2950,6 +2962,7 @@ def catchGreatPeople(pCity, iNewOwner, iPreviousOwner, bAssimilation):
                 text = CyTranslator().getText("TXT_KEY_MESSAGE_UNCATCH_GP"+str(i+1)+"_"+str(iRand), (0, 0))
                 CyInterface().addMessage(iNewOwner, True, 10, text, None, 2, None, ColorTypes(7), 0, 0, False, False)
 
+
 def correctCityBuildings(pCity, pPlayer, pPreviousOwner):
     # Provinzpalast und Praefectur muss raus, Bischofssitz kann bleiben
     # TODO: wuerd es nicht reichen, die Eroberungswahrscheinlichkeit auf 0 zu stellen?
@@ -2982,6 +2995,7 @@ def correctCityBuildings(pCity, pPlayer, pPreviousOwner):
         if not pCity.isHasBuilding(iBuildingPalisade):
             pCity.setNumRealBuilding(iBuildingPalisade, 1)
 
+
 def doFreeTechMissionary(iTechType, iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
 
@@ -3008,7 +3022,7 @@ def doFreeTechMissionary(iTechType, iPlayer):
         lCities = []
         (loopCity, pIter) = pPlayer.firstCity(False)
         while loopCity:
-            if not loopCity.isNone() and loopCity.getOwner() == iPlayer: #only valid cities
+            if not loopCity.isNone() and loopCity.getOwner() == iPlayer:  # only valid cities
                 lCities.append(loopCity)
             (loopCity, pIter) = pPlayer.nextCity(pIter, False)
 
@@ -3079,6 +3093,7 @@ def doFreeTechMissionary(iTechType, iPlayer):
                     pass
     except KeyError:
         pass
+
 
 def doFreeTechSettler(iTechType, pPlayer):
     lSettlerCivs = [
@@ -3181,11 +3196,13 @@ def getTechOnConquer(pCity, iPreviousOwner, iNewOwner):
             if pPreviousOwner.isHuman():
                 CyInterface().addMessage(iPreviousOwner, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_CONQUER_RESEARCH_LOSER", (iProgress,)), None, 2, None, ColorTypes(7), 0, 0, False, False)
 
+
 def getGoldkarren(pCity, pPlayer):
     iBeute = int(pCity.getPopulation() / 2)
     if iBeute > 0:
         for _ in range(iBeute):
             CvUtil.spawnUnit(gc.getInfoTypeForString("UNIT_GOLDKARREN"), pCity.plot(), pPlayer)
+
 
 def doRefugeeToNeighborCity(pCity, iPreviousOwner, iNewOwner):
     # --- Bevoelkerungszuwachs bei Nachbarstaedten (50% Chance pro Stadt fuer + 1 Pop)
@@ -3216,6 +3233,7 @@ def doRefugeeToNeighborCity(pCity, iPreviousOwner, iNewOwner):
                             # ***TEST***
                             #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Stadtpop gewachsen durch Krieg (Zeile 3493)",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
 
+
 def removeSwamp(pCity, sText):
     iPlayer = pCity.getOwner()
     pPlayer = gc.getPlayer(iPlayer)
@@ -3231,7 +3249,7 @@ def removeSwamp(pCity, sText):
                 loopPlot.setTerrainType(terrain_grass, 1, 1)
                 bFeatSwamp = True
     if bFeatSwamp and pPlayer.isHuman():
-        CyInterface().addMessage(iPlayer, True, 10, CyTranslator().getText(sText,(pCity.getName(),)), None, 2, None, ColorTypes(14), iX, iY, False, False)
+        CyInterface().addMessage(iPlayer, True, 10, CyTranslator().getText(sText, (pCity.getName(),)), None, 2, None, ColorTypes(14), iX, iY, False, False)
 
     # ***TEST***
     #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Sumpf wird entfernt (Zeile 2232)",1)), None, 2, None, ColorTypes(10), iX, iY, False, False)

@@ -1,6 +1,6 @@
 # Plot features and events per turn
 
-### Imports
+# Imports
 from CvPythonExtensions import *
 # import CvEventInterface
 import CvUtil
@@ -8,7 +8,7 @@ import PAE_Barbaren
 import PAE_Lists as L
 
 import PyHelpers
-### Defines
+# Defines
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
 
@@ -75,6 +75,8 @@ lNumHistoryTexts = {
 # ------ Berberloewen erzeugen
 # ------ Wildpferde, Wildelefanten, Wildkamele ab PAE V
 # ------ Barbarenfort beleben (PAE V Patch 4)
+
+
 def doPlotFeatures():
     iBarbPlayer = gc.getBARBARIAN_PLAYER()
     pBarbPlayer = gc.getPlayer(iBarbPlayer)
@@ -223,6 +225,8 @@ def doPlotFeatures():
 
 # --------- Strandgut -----------
 # -- PAE V: Treibgut -> Strandgut
+
+
 def doStrandgut():
     iBarbPlayer = gc.getBARBARIAN_PLAYER()
     pBarbPlayer = gc.getPlayer(iBarbPlayer)
@@ -269,6 +273,8 @@ def doStrandgut():
 ##### Goody-Doerfer erstellen (goody-huts / GoodyHuts / Goodies / Villages) ####
 # PAE V: Treibgut erstellen
 # PAE V: Barbarenfort erstellen
+
+
 def setGoodyHuts():
     # Keine extra GoodyHuts bei MultiBarbPlayer
     # Keine Festungen mit deaktvierten Barbaren
@@ -365,7 +371,7 @@ def setGoodyHuts():
                                     imp = impBarbFort
                             loopPlot.setImprovementType(imp)
                             iNumSetGoodies += 1
-                            #loopPlot.isActiveVisible(0)
+                            # loopPlot.isActiveVisible(0)
 
                             # Einheit in die Festung setzen
                             if imp == impBarbFort:
@@ -390,7 +396,7 @@ def doSeewind():
     feat_ice = gc.getInfoTypeForString("FEATURE_ICE")
 
     iNumDirection = 8
-    iWindplots = 6 # amount of wind arrows (plots) per wind
+    iWindplots = 6  # amount of wind arrows (plots) per wind
     OceanPlots = []
     iDarkIce = gc.getInfoTypeForString("FEATURE_DARK_ICE")
 
@@ -427,7 +433,7 @@ def doSeewind():
                         continue
                     if loopPlot.getFeatureType() != feat_ice and loopPlot.getTerrainType() == terr_ocean:
                         loopPlot.setFeatureType(L.LSeewind[iDirection], 0)
-                        iDirection = (iDirection+CvUtil.myRandom(3, "doSeewind3")-1)%iNumDirection
+                        iDirection = (iDirection+CvUtil.myRandom(3, "doSeewind3")-1) % iNumDirection
                         loopPlot = plotDirection(loopPlot.getX(), loopPlot.getY(), DirectionTypes(iDirection))
 
 
@@ -454,21 +460,23 @@ def doHistory():
             text = CyTranslator().getText("TXT_KEY_HISTORY", ("",)) + " " + CyTranslator().getText(text, ("",))
             CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 15, text, None, 2, None, ColorTypes(14), 0, 0, False, False)
 
+
 def doRevoltAnarchy(iPlayer):
     pPlayer = gc.getPlayer(iPlayer)
     iRand = CvUtil.myRandom(3, "getAnarchyTurns")
     if iRand == 1:
         iBuilding = gc.getInfoTypeForString("BUILDING_PLAGUE")
         iNumCities = pPlayer.getNumCities()
-        if iNumCities == 0: return
+        if iNumCities == 0:
+            return
         iCityPlague = 0
         iCityRevolt = 0
         (loopCity, pIter) = pPlayer.firstCity(False)
         while loopCity:
-            if not loopCity.isNone() and loopCity.getOwner() == iPlayer: #only valid cities
+            if not loopCity.isNone() and loopCity.getOwner() == iPlayer:  # only valid cities
                 if loopCity.isHasBuilding(iBuilding):
                     iCityPlague += 1
-                if loopCity.getOccupationTimer() > 1: # Flunky: changed 0->1, because the counter is not yet updated from the previous round.
+                if loopCity.getOccupationTimer() > 1:  # Flunky: changed 0->1, because the counter is not yet updated from the previous round.
                     iCityRevolt += 1
             (loopCity, pIter) = pPlayer.nextCity(pIter, False)
 
