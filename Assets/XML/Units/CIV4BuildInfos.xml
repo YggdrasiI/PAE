@@ -284,7 +284,7 @@
       <Help/>
       <PrereqTech>TECH_BOOTSBAU</PrereqTech>
       <iTime>0</iTime>
-      <iCost>8</iCost>
+      <iCost>5</iCost>
       <bKill>1</bKill>
       <ImprovementType>IMPROVEMENT_FISHING_BOATS</ImprovementType>
       <RouteType>NONE</RouteType>
@@ -584,7 +584,7 @@
       <Help/>
       <PrereqTech>TECH_WARENHANDEL</PrereqTech>
       <iTime>0</iTime>
-      <iCost>0</iCost>
+      <iCost>25</iCost>
       <bKill>1</bKill>
       <ImprovementType>IMPROVEMENT_HANDELSPOSTEN</ImprovementType>
       <RouteType>NONE</RouteType>

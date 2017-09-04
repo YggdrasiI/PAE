@@ -1333,10 +1333,12 @@ def doCityUnitPromotions(pCity, pUnit):
                 iPromoGarrison = gc.getInfoTypeForString("PROMOTION_CITY_GARRISON1")
                 if not pUnit.isHasPromotion(iPromoGarrison):
                     doGiveUnitPromo(pUnit, iPromoGarrison, pCity)
+                    return
             elif pUnit.getUnitCombatType() in [gc.getInfoTypeForString("UNITCOMBAT_AXEMAN"), gc.getInfoTypeForString("UNITCOMBAT_SWORDSMAN")]:
                 iPromoRaider = gc.getInfoTypeForString("PROMOTION_CITY_RAIDER1")
                 if not pUnit.isHasPromotion(iPromoRaider):
                     doGiveUnitPromo(pUnit, iPromoRaider, pCity)
+                    return
 
     # not for rams
     lRams = [
@@ -2568,17 +2570,13 @@ def huntingResult(pLoser, pWinner):
     iJagd = gc.getInfoTypeForString("TECH_HUNTING")
     team = gc.getTeam(pWinnerPlayer.getTeam())
     if team.isHasTech(iJagd):
-        iX = pWinner.getX()
-        iY = pWinner.getY()
-        CityArray = []
-        for x in range(-4, 5):
-            for y in range(-4, 5):
-                loopPlot = plotXY(iX, iY, x, y)
-                if loopPlot is not None and not loopPlot.isNone():
-                    if loopPlot.isCity():
-                        pCity = loopPlot.getPlotCity()
-                        if pCity.getOwner() == iWinnerPlayer:
-                            CityArray.append(pCity)
+        CityArray = []        
+        (loopCity, pIter) = pWinnerPlayer.firstCity(False)
+        while loopCity:
+            if huntingDistance(loopCity.plot(), pWinner.plot()):
+                CityArray.append(loopCity)
+            (loopCity, pIter) = pWinnerPlayer.nextCity(pIter, False)
+        
         if CityArray:
             iFoodMin, iFoodRand = L.DJagd.get(iLoserUnitType, L.DJagd[None])
 
@@ -2591,6 +2589,13 @@ def huntingResult(pLoser, pWinner):
             CityArray[iCity].changeFood(iFoodAdd)
             if pWinnerPlayer.isHuman():
                 CyInterface().addMessage(iWinnerPlayer, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_ADD_FOOD", (pWinner.getName(), CityArray[iCity].getName(), iFoodAdd)), None, 2, pLoser.getButton(), ColorTypes(13), pLoser.getX(), pLoser.getY(), True, True)
+
+def huntingDistance(pPlot1, pPlot2):
+    if pPlot1 is not None and not pPlot1.isNone():
+        if pPlot2 is not None and not pPlot2.isNone():
+            if gc.getMap().calculatePathDistance(pPlot1, pPlot2) <= 4: 
+                return True
+    return False    
 
 def convertToPirate(city, unit):
     """unused due to possible OOS with to many pirates"""
@@ -2701,7 +2706,6 @@ def convert(pOldUnit, iNewUnit, pPlayer):
     # Original unit killen
     pOldUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
 
-
 def initUnitFromUnit(pOldUnit, pNewUnit):
     pNewUnit.setExperience(pOldUnit.getExperience(), -1)
     pNewUnit.setLevel(pOldUnit.getLevel())
@@ -2741,3 +2745,18 @@ def InquisitionPossible(pCity, iUnitOwner):
                             if iReligion != iStateReligion:
                                 return True
     return False
+
+def getNearestCity(pUnit):
+    pUnitPlot = pUnit.plot()
+    pPlayer = gc.getPlayer(pUnit.getOwner())
+    iBestDistance = 999
+    
+    pCity = None
+    (loopCity, pIter) = pPlayer.firstCity(False)
+    while loopCity:
+        if not loopCity.isNone():
+            iDistance = CyMap().calculatePathDistance(pUnitPlot, loopCity.plot())
+            if iDistance != -1 and iDistance < iBestDistance:
+                pCity = loopCity
+        (loopCity, pIter) = pPlayer.nextCity(pIter, False)
+    return pCity

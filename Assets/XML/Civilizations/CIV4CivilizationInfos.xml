@@ -4527,7 +4527,7 @@
       </Buildings>
       <Units>
         <Unit>
-          <UnitClassType>UNITCLASS_SPECIAL5</UnitClassType>
+          <UnitClassType>UNITCLASS_SPECIAL3</UnitClassType>
           <UnitType>UNIT_CELTIBERIAN_CAVALRY</UnitType>
         </Unit>
         <Unit>
@@ -9163,7 +9163,7 @@
         <Unit>
           <UnitClassType>UNITCLASS_STATTHALTER</UnitClassType>
           <UnitType>UNIT_STATTHALTER_GRECO</UnitType>
-        </Unit>        
+        </Unit>
         <Unit>
           <UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
           <UnitType>UNIT_FOEDERATI</UnitType>

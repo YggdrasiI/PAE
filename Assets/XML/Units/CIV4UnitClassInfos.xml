@@ -268,7 +268,7 @@
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>
       <iMaxTeamInstances>-1</iMaxTeamInstances>
       <iMaxPlayerInstances>3</iMaxPlayerInstances>
-      <iInstanceCostModifier>10</iInstanceCostModifier>
+      <iInstanceCostModifier>0</iInstanceCostModifier>
       <DefaultUnit>UNIT_SPECIAL1</DefaultUnit>
     </UnitClassInfo>
     <UnitClassInfo>
@@ -277,7 +277,7 @@
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>
       <iMaxTeamInstances>-1</iMaxTeamInstances>
       <iMaxPlayerInstances>3</iMaxPlayerInstances>
-      <iInstanceCostModifier>10</iInstanceCostModifier>
+      <iInstanceCostModifier>0</iInstanceCostModifier>
       <DefaultUnit>UNIT_SPECIAL2</DefaultUnit>
     </UnitClassInfo>
     <UnitClassInfo>
@@ -286,7 +286,7 @@
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>
       <iMaxTeamInstances>-1</iMaxTeamInstances>
       <iMaxPlayerInstances>3</iMaxPlayerInstances>
-      <iInstanceCostModifier>10</iInstanceCostModifier>
+      <iInstanceCostModifier>0</iInstanceCostModifier>
       <DefaultUnit>UNIT_SPECIAL3</DefaultUnit>
     </UnitClassInfo>
     <UnitClassInfo>
@@ -295,7 +295,7 @@
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>
       <iMaxTeamInstances>-1</iMaxTeamInstances>
       <iMaxPlayerInstances>-1</iMaxPlayerInstances>
-      <iInstanceCostModifier>10</iInstanceCostModifier>
+      <iInstanceCostModifier>0</iInstanceCostModifier>
       <DefaultUnit>UNIT_SPECIAL4</DefaultUnit>
     </UnitClassInfo>
     <UnitClassInfo>
@@ -304,7 +304,7 @@
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>
       <iMaxTeamInstances>-1</iMaxTeamInstances>
       <iMaxPlayerInstances>-1</iMaxPlayerInstances>
-      <iInstanceCostModifier>10</iInstanceCostModifier>
+      <iInstanceCostModifier>0</iInstanceCostModifier>
       <DefaultUnit>UNIT_SPECIAL5</DefaultUnit>
     </UnitClassInfo>
     <UnitClassInfo>

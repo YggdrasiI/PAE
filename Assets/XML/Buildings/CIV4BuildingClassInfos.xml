@@ -208,6 +208,18 @@
       <VictoryThresholds/>
     </BuildingClassInfo>
     <BuildingClassInfo>
+      <Type>BUILDINGCLASS_WATERMILL</Type>
+      <Description>TXT_KEY_BUILDING_WATERMILL</Description>
+      <iMaxGlobalInstances>-1</iMaxGlobalInstances>
+      <iMaxTeamInstances>-1</iMaxTeamInstances>
+      <iMaxPlayerInstances>-1</iMaxPlayerInstances>
+      <iExtraPlayerInstances>0</iExtraPlayerInstances>
+      <bNoLimit>0</bNoLimit>
+      <bMonument>0</bMonument>
+      <DefaultBuilding>BUILDING_WATERMILL</DefaultBuilding>
+      <VictoryThresholds/>
+    </BuildingClassInfo>
+    <BuildingClassInfo>
       <Type>BUILDINGCLASS_SCHMIEDE_BRONZE</Type>
       <Description>TXT_KEY_BUILDING_SCHMIEDE_BRONZE</Description>
       <iMaxGlobalInstances>-1</iMaxGlobalInstances>

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Civ4GameText xmlns="http://www.firaxis.com">
   <TEXT>
+    <Tag>TXT_KEY_PLAYER_OPTION_MISSIONARIES_AUTOMATED</Tag>
+    <English>Missionaries and Cultists Start Automated</English>
+    <French>Les missionnaires et les cultistes d&#233;butent en mode "automatis&#233;"</French>
+    <German>Missionare und Kult-Anh&#228;nger automatisch starten</German>
+    <Italian>Missionari e Funzionari cominciano automatizzati</Italian>
+    <Spanish>Misioneros y seguidores empiezan automatizados</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PLAYER_OPTION_MISSIONARIES_AUTOMATED_HELP</Tag>
+    <English>All Religion Missionaries and Cultists start the game automated</English>
+    <French>Tous les missionnaires des religions et les culteurs d&#233;butent la partie en mode "automatis&#233;"</French>
+    <German>Alle Religionsmissionare und Anh&#228;nger von Kulten beginnen das Spiel automatisch</German>
+    <Italian>Tutti i missionari religiosi e i funzionari culti cominciano la partita automatizzati.</Italian>
+    <Spanish>Todos los misioneros y seguidores empiezan la partida automatizados</Spanish>
+  </TEXT>
+  <TEXT>
     <Tag>TXT_KEY_BUILDING_COASTAL_TRADE_ROUTES</Tag>
     <English>[ICON_BULLET]%D1_Change Trade Routes in All Coastal Cities</English>
     <French>[ICON_BULLET]%D1_Change [NUM1:Route commerciale:Routes commerciales] dans toutes les villes c&#244;ti&#232;res</French>
@@ -103,6 +119,38 @@
     <German>Herzlichen Gl&#252;ckwunsch! Ihr habt Euren ersten [COLOR_UNIT_TEXT]Getreidekarren[COLOR_REVERT] in %s2City_Name errichtet! Diese Einheit kann dazu verwendet werden, benachbarte St&#228;dte schneller wachsen zu lassen (liefert Nahrungsmittel) oder um kultivierbare Resourcen (Getreide, Tiere, Oliven,..) im eigenen Land zu verbreiten! Dazu muss der Karren in einer Stadt mit dem Gut beladen werden. Auf der Karte wird nun angezeigt, wo die Resource kultivierbar ist. Im Umkreis von D&#246;rfern kann nur 1 Resource nutzbar gemacht werden, in St&#228;dten 2, in Provinzst&#228;dten 3 und in Metropolen sogar bis zu 4.</German>
     <Italian>Congratulations, you have trained your first [COLOR_UNIT_TEXT]grain wagon[COLOR_REVERT] in %s2City_Name! This unit can be used to make neighbor cities grow faster (supplies food) or to spread cultivable resources (cereals, animals, olives, etc.) in your own country! To do this, the cart must be loaded with the goods in a city. The map then shows where the resource can be cultivated. In the vicinity of villages only 1 resource can be used, in cities 2, in provincial cities 3 and in metropolises even up to 4.</Italian>
     <Spanish>&#161;Enhorabuena, has entrenado tu primera [COLOR_UNIT_TEXT]Carreta de grano[COLOR_REVERT] en %s2City_Name! &#161;Esta unidad puede ser usada para hacer que las ciudades vecinas crezcan m&#225;s r&#225;pido (aportando comida) o para propagar recursos cultivables (cereales, ganado, olivas, etc) en tu propio pa&#237;s! Para hacer esto, la carreta debe ser cargada con las mercanc&#237;as en la ciudad. El mapa mostrar&#225; los lugares donde puede ser cultivado. En las cercan&#237;as de un municipio solo 1 recurso puede ser usado, en las ciudades 2, en las ciudades provinciales 3 y en las metr&#243;polis sube hasta 4.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PLAYER_OPTION_MODDER_2</Tag>
+    <English>Activate the field-of-view bar</English>
+    <French>Activate the field-of-view bar</French>
+    <German>Field-Of-View-Balken aktivieren</German>
+    <Italian>Activate the field-of-view bar</Italian>
+    <Spanish>Activate the field-of-view bar</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_PLAYER_OPTION_MODDER_2_HELP</Tag>
+    <English>With this bar, it is possible to vary the viewing distance to the surface of the earth. Requires game reload.</English>
+    <French>With this bar, it is possible to vary the viewing distance to the surface of the earth. Requires game reload.</French>
+    <German>Mithilfe dieses Balkens ist es m&#246;glich die Sichtdistanz zur Erdoberfl&#228;che zu variieren. Neustart des Spiels erforderlich.</German>
+    <Italian>With this bar, it is possible to vary the viewing distance to the surface of the earth. Requires game reload.</Italian>
+    <Spanish>With this bar, it is possible to vary the viewing distance to the surface of the earth. Requires game reload.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_HELP_HUNTER_DISTANCE_OK</Tag>
+    <English>Green marked cities can be delivered with hunting.</English>
+    <French>Les villes marqu&#233;es vertes peuvent &#234;tre livr&#233;es avec la chasse.</French>
+    <German>Gr&#252;n markierte St&#228;dte sind in Reichweite der Jagdbeute.</German>
+    <Italian>Le citt&#224; contrassegnate con verde possono essere consegnate con la caccia.</Italian>
+    <Spanish>Las ciudades marcadas verdes se pueden entregar con la caza.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_HELP_HUNTER_DISTANCE_NOTOK</Tag>
+    <English>Your cities are out of reach of the hunter!</English>
+    <French>Vos villes sont hors de port&#233;e du chasseur!</French>
+    <German>Eure St&#228;dte sind ausserhalb der Reichweite des J&#228;gers!</German>
+    <Italian>Le tue citt&#224; sono fuori dalla portata del cacciatore!</Italian>
+    <Spanish>&#161;Tus ciudades est&#225;n fuera del alcance del cazador!</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_BUILDING_BOMBARD_DEFENSE_MOD</Tag>

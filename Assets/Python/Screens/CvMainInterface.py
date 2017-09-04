@@ -41,7 +41,8 @@ MAX_BONUS_ROWS = 10
 
 # BUG - field of view slider - start
 DEFAULT_FIELD_OF_VIEW = 44
-bFieldOfView = True  # PAE (False for better ingame python programming)
+# PAE (False for better ingame python programming)
+bFieldOfView = CyUserProfile().getPlayerOption(PlayerOptionTypes.PLAYEROPTION_MODDER_2)
 # BUG - field of view slider - end
 
 # SPECIALIST STACKER        05/02/07      JOHNY
@@ -1974,12 +1975,34 @@ class CvMainInterface:
                                 screen.show("BottomButtonContainer")
                                 iCount = iCount + 1
                                 return
+                                
+                        # --------------------
+                        # Hunter / Jaeger -> Info Button ob Cities in Reichweite sind                       
+                        if iUnitType == gc.getInfoTypeForString("UNIT_HUNTER"):
+                            bOK = False
+                            (loopCity, pIter) = pUnitOwner.firstCity(False)
+                            while loopCity:
+                                if PAE_Unit.huntingDistance(loopCity.plot(), pUnit.plot()):
+                                    bOK = True
+                                    break
+                                (loopCity, pIter) = pUnitOwner.nextCity(pIter, False)
+                            
+                            if bOK:
+                                screen.appendMultiListButton("BottomButtonContainer", "Art/Interface/Buttons/Actions/button_hunter_ok.dds", 0, WidgetTypes.WIDGET_GENERAL, 721, 7, False)
+                                screen.show("BottomButtonContainer")
+                                iCount = iCount + 1
+                            else:
+                                screen.appendMultiListButton("BottomButtonContainer", "Art/Interface/Buttons/Actions/button_hunter_no.dds", 0, WidgetTypes.WIDGET_GENERAL, 721, 8, False)
+                                screen.show("BottomButtonContainer")
+                                iCount = iCount + 1
+                            return
+                            
 
                         # --------------------
                         # Elefant / Kamel
                         if iUnitType == gc.getInfoTypeForString("UNIT_ELEFANT"):
                             # in city
-                            if bCity:
+                            if bCity and pCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_KOLONIE")):
                                 if not pCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE")):
                                     if pCity.getOwner() == iUnitOwner or gc.getTeam(pCity.getTeam()).isVassal(gc.getPlayer(iUnitOwner).getTeam()):
                                         # Check plots (Klima / climate)
@@ -2013,7 +2036,7 @@ class CvMainInterface:
                         # --------------------
                         elif iUnitType == gc.getInfoTypeForString("UNIT_CAMEL") or iUnitType == gc.getInfoTypeForString("UNIT_WILD_CAMEL"):
                             # in city
-                            if bCity:
+                            if bCity and pCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_KOLONIE")):
                                 if not pCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
                                     if pCity.getOwner() == iUnitOwner or gc.getTeam(pCity.getTeam()).isVassal(gc.getPlayer(iUnitOwner).getTeam()):
                                         # Check plots (Klima / climate)
@@ -2412,10 +2435,16 @@ class CvMainInterface:
                                             screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_BUY").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 1, True)
                                             screen.show("BottomButtonContainer")
                                             iCount = iCount + 1
+                                    elif iIsCity:    
+                                        iPrice = PAE_Trade.calculateBonusSellingPrice(pUnit, pPlot.getPlotCity())
+                                        screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_SELL").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 741, iPrice, False)
+                                        screen.show("BottomButtonContainer")
+                                        iCount = iCount + 1
                                     else:
                                         screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_COLLECT_IMPOSSIBLE").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 739, 739, False)
                                         screen.show("BottomButtonContainer")
                                         iCount = iCount + 1
+
                                     # Cultivate bonus onto plot
                                     if eBonus != -1 and PAE_Cultivation.isBonusCultivatable(pUnit):
                                         screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_TRADE_CULTIVATE").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 738, 738, iIsCity)
@@ -2649,7 +2678,7 @@ class CvMainInterface:
                                 # Auswanderer / Emigrant -> in der eigenen Stadt
                                 if iUnitType == gc.getInfoTypeForString("UNIT_EMIGRANT"):
                                     # Stadt aufloesen / disband city
-                                    if pUnitOwner.getNumCities() > 1 and pCity.getPopulation() < 3 and not pCity.isCapital():
+                                    if pUnitOwner.getNumCities() > 1 and pCity.getPopulation() < 4 and not pCity.isCapital():
                                         screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_DISBAND_CITY").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 673, 673, True)
                                     else:
                                         screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_DISBAND_CITY2").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 673, 673, False)
@@ -2662,7 +2691,7 @@ class CvMainInterface:
                                 # Siedler -> in der eigenen Stadt
                                 elif iUnitType == gc.getInfoTypeForString("UNIT_SETTLER"):
                                     # Stadt aufloesen / disband city
-                                    if pUnitOwner.getNumCities() > 1 and pCity.getPopulation() < 3 and not pCity.isCapital():
+                                    if pUnitOwner.getNumCities() > 1 and pCity.getPopulation() < 4 and not pCity.isCapital():
                                         screen.appendMultiListButton("BottomButtonContainer", ArtFileMgr.getInterfaceArtInfo("INTERFACE_DISBAND_CITY").getPath(), 0, WidgetTypes.WIDGET_GENERAL, 673, 673, True)
                                         iCount = iCount + 1
 
@@ -2939,7 +2968,7 @@ class CvMainInterface:
                                             if pTeam.isHasTech(gc.getInfoTypeForString("TECH_BRANDSCHATZEN")):
                                                 iFormation = gc.getInfoTypeForString("PROMOTION_FORM_FOURAGE")
                                                 if pUnit.isHasPromotion(iFormation):
-                                                    screen.appendMultiListButton("BottomButtonContainer", "Art/Interface/Buttons/Formations/button_formation_fourage_gr.dds", 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, iFormation, 718, False)
+                                                    screen.appendMultiListButton("BottomButtonContainer", "Art/Interface/Buttons/Formations/button_formation_fourage_gr.dds", 0, WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION, iFormation, -1, False)
                                                     screen.show("BottomButtonContainer")
                                                     iCount = iCount + 1
                                                     bFormationUndo = True
@@ -5191,6 +5220,7 @@ class CvMainInterface:
 
                 # BUG - Stack Promotions - start
                 # + PAE Unit Info Bar inits
+                iNumMilitaryUnits = 0
                 iNumPromotions = gc.getNumPromotionInfos()
                 lPromotionCounts = [0] * iNumPromotions
                 for i in range(CyInterface().getLengthSelectionList()):
@@ -5199,7 +5229,7 @@ class CvMainInterface:
                         for j in range(iNumPromotions):
                             if pUnit.isHasPromotion(j):
                                 lPromotionCounts[j] += 1
-
+                        
                         # PAE Unit Info Bar
                         if pUnit.getUnitCombatType() == gc.getInfoTypeForString("UNITCOMBAT_HEALER"):
                             UnitBarType = "HEALER"
@@ -5208,7 +5238,7 @@ class CvMainInterface:
                             # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Current Supply "+str(iSup)+" max Supply "+str(iMax),)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                             iValue1 += iSup
                             iValue2 += iMax
-
+                        
                         elif pUnit.getUnitType() == gc.getInfoTypeForString("UNIT_EMIGRANT"):
                             UnitBarType = "EMIGRANT"
                             sPlayer = CvUtil.getScriptData(pUnit, ["p", "t"])
@@ -5216,12 +5246,14 @@ class CvMainInterface:
                                 iValue1 = int(sPlayer)
                             else:
                                 iValue1 = pUnit.getOwner()
-
+                        
                         # elif pUnit.getUnitType() in L.LTradeUnits:
                         #  UnitBarType = "TRADE"
                         #  iValue1 = CvUtil.getScriptData(pUnit, ["b"], -1)
-
-                if CyInterface().getLengthSelectionList() > 19 and UnitBarType != "HEALER":
+                        
+                        if pUnit.isMilitaryHappiness(): iNumMilitaryUnits += 1
+                        
+                if iNumMilitaryUnits > 19 and UnitBarType != "HEALER":
                     UnitBarType = "NO_HEALER"
                 # ------
 

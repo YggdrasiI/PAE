@@ -2585,7 +2585,7 @@
     </ProductionTraits>
       <Flavors/>
       <iAIWeight>0</iAIWeight>
-      <iCost>0</iCost>
+      <iCost>100</iCost>
       <iHurryCostModifier>0</iHurryCostModifier>
       <iAdvancedStartCost>200</iAdvancedStartCost>
       <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -3610,7 +3610,7 @@
       <Capture>UNITCLASS_GOLDKARREN</Capture>
       <Combat>NONE</Combat>
       <Domain>DOMAIN_LAND</Domain>
-      <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
+      <DefaultUnitAI>UNITAI_RESERVE</DefaultUnitAI>
       <Invisible>NONE</Invisible>
       <SeeInvisible>NONE</SeeInvisible>
       <Description>TXT_KEY_UNIT_GOLDKARREN</Description>
@@ -18202,7 +18202,7 @@
       <ProductionTraits/>
       <Flavors/>
       <iAIWeight>0</iAIWeight>
-      <iCost>-1</iCost>
+      <iCost>140</iCost>
       <iHurryCostModifier>0</iHurryCostModifier>
       <iAdvancedStartCost>100</iAdvancedStartCost>
       <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -22265,14 +22265,11 @@
       <PrereqTech>TECH_ARMOR</PrereqTech>
       <TechTypes/>
       <BonusType>NONE</BonusType>
-      <PrereqBonuses>
-        <BonusType>BONUS_BRONZE</BonusType>
-        <BonusType>BONUS_IRON</BonusType>
-      </PrereqBonuses>
+      <PrereqBonuses/>
       <ProductionTraits/>
       <Flavors/>
       <iAIWeight>0</iAIWeight>
-      <iCost>-1</iCost>
+      <iCost>140</iCost>
       <iHurryCostModifier>0</iHurryCostModifier>
       <iAdvancedStartCost>100</iAdvancedStartCost>
       <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -37699,7 +37696,7 @@
       <ProductionTraits/>
       <Flavors/>
       <iAIWeight>0</iAIWeight>
-      <iCost>120</iCost>
+      <iCost>160</iCost>
       <iHurryCostModifier>0</iHurryCostModifier>
       <iAdvancedStartCost>100</iAdvancedStartCost>
       <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>

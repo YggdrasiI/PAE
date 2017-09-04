@@ -106,11 +106,11 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_UNIT_RADSCHA_STRATEGY</Tag>
-    <English>This elite unit is well suited for the attack and defense of cities.</English>
-    <French>Cette unit&#233; d'&#233;lite convient parfaitement pour attaquer ou d&#233;fendre les villes.</French>
-    <German>Diese Eliteeinheit eignet sich gut f&#252;r den Angriff und die Verteidung von St&#228;dten.</German>
-    <Italian>Questa unit&#224; d'elite &#232; adatto per l'attacco e la difesa delle citt&#224;.</Italian>
-    <Spanish>Esta unidad &#233;lite es muy adecuada para el ataque y la defensa de las ciudades.</Spanish>
+    <English>This unit can be promoted from a veteran spearman.</English>
+    <French>Cette unit&#233; peut &#234;tre promue par un lanceur de v&#233;t&#233;rans.</French>
+    <German>Diese Einheit kann aus einem Veteran-Speerk&#228;mpfer belobigt werden.</German>
+    <Italian>Questa unit&#224; pu&#242; essere promossa da un guerriero veterano.</Italian>
+    <Spanish>Esta unidad se puede promover de un veterano lanceros.</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_UNIT_HORSEMAN_SKYTHEN_STRATEGY</Tag>
@@ -426,11 +426,11 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_TECH_WASSERRAD_STRATEGY</Tag>
-    <English></English>
-    <French></French>
-    <German></German>
-    <Italian></Italian>
-    <Spanish></Spanish>
+    <English>Research this technology to increase the production of your cities.</English>
+    <French>Research this technology to increase the production of your cities.</French>
+    <German>Erforsche diese Technologie um die Produktion deiner St&#228;dte zu erh&#246;hen.</German>
+    <Italian>Research this technology to increase the production of your cities.</Italian>
+    <Spanish>Investiga esta tecnolog&#237;a para incrementar la producci&#243;n de tus ciudades.</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_TECH_MANUFAKTUREN2_STRATEGY</Tag>
@@ -455,6 +455,14 @@
     <German>Das [COLOR_BUILDING_TEXT]Asklepieion[COLOR_REVERT] erzeugt einen Bonus von +1 [ICON_HEALTHY] und gibt gegen&#252;ber dem normalen [COLOR_BUILDING_TEXT]Badehaus[COLOR_REVERT] einen Forschungsbonus.</German>
     <Italian>The [COLOR_BUILDING_TEXT]Asklepieion[COLOR_REVERT] produces a bonus of +1 [ICON_HEALTHY] and unlike the normal [COLOR_BUILDING_TEXT]bath house[COLOR_REVERT] provides an additional science bonus.</Italian>
     <Spanish>Las [COLOR_BUILDING_TEXT]Termas[COLOR_REVERT] produce un bonus de +1 [ICON_HEALTHY] y a diferencia de la [COLOR_BUILDING_TEXT]Casa de Ba&#241;os[COLOR_REVERT] provee un bonus adicional de ciencia.</Spanish>
+  </TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_BUILDING_WATERMILL_STRATEGY</Tag>
+    <English>This building boosts the production of your city.</English>
+    <French>This building boosts the production of your city.</French>
+    <German>Dieses Geb&#228;ude steigert die Produktion deiner Stadt.</German>
+    <Italian>This building boosts the production of your city.</Italian>
+    <Spanish>Este edificio aumenta la producci&#243;n de tu ciudad.</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_TECH_FUTURE_TECH_STRATEGY</Tag>

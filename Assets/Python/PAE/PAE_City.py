@@ -370,7 +370,7 @@ def doMessageCityGrowing(pCity):
                 # iAddHappy = kBuildingDorf.getBonusHappinessChanges(iBonus)
                 # if iAddHappy != -1:
                   # iBonusHappy += iAddHappy
-        elif iPop == iPopStadt:
+        elif iPop == iPopStadt and pCity.getNumRealBuilding(iBuildingStadt) == 0:
             iBonusHealth = kBuildingStadt.getHealth()
             iBonusHappy = kBuildingStadt.getHappiness()
         elif iPop == iPopProvinz:
@@ -381,14 +381,14 @@ def doMessageCityGrowing(pCity):
             iBonusHappy = kBuildingMetropole.getHappiness()
 
         if pCity.happyLevel() - pCity.unhappyLevel(0) + iBonusHappy <= 0:
-            if pCity.happyLevel() - pCity.unhappyLevel(0) == 0:
+            if pCity.happyLevel() - pCity.unhappyLevel(0) >= 0:
                 CyInterface().addMessage(iPlayer, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_GETS_UNHAPPY", (pCity.getName(),)), None, 2, "Art/Interface/Buttons/General/button_alert_new.dds", ColorTypes(7), pCity.getX(), pCity.getY(), True, True)
             else:
                 CyInterface().addMessage(iPlayer, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_IS_UNHAPPY", (pCity.getName(),)), None, 2, "Art/Interface/Buttons/General/button_alert_new.dds", ColorTypes(7), pCity.getX(), pCity.getY(), True, True)
 
         # MESSAGE: city gets/is unhealthy / Stadt wird/ist ungesund
         if pCity.goodHealth() - pCity.badHealth(False) + iBonusHealth <= 0:
-            if pCity.goodHealth() - pCity.badHealth(False) == 0:
+            if pCity.goodHealth() - pCity.badHealth(False) >= 0:
                 CyInterface().addMessage(iPlayer, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_GETS_UNHEALTY", (pCity.getName(),)), None, 2, "Art/Interface/Buttons/General/button_alert_new.dds", ColorTypes(7), pCity.getX(), pCity.getY(), True, True)
             else:
                 CyInterface().addMessage(iPlayer, True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_CITY_IS_UNHEALTY", (pCity.getName(),)), None, 2, "Art/Interface/Buttons/General/button_alert_new.dds", ColorTypes(7), pCity.getX(), pCity.getY(), True, True)
@@ -398,7 +398,7 @@ def doMessageCityGrowing(pCity):
 
 # PAE City status --------------------------
 # Check City colony or province after events
-# once getting a province: keep being a province
+# once getting a city: keep being a city
 def doCheckCityState(pCity):
     if pCity is None or pCity.isNone():
         return
@@ -1374,7 +1374,7 @@ def doRenegadeCity(pCity, iNewOwner, LoserUnit):
             elif iUnitType == gc.getInfoTypeForString('UNIT_TRADE_MERCHANTMAN'):
                 iUnitAIType = 19
             else:
-                iUnitAIType = 0
+                iUnitAIType = -1
 
         # Slaves will be freed, nur wenn dessen Besitzer neu ist
         if iUnitType == gc.getInfoTypeForString('UNIT_SLAVE'):
@@ -1390,7 +1390,7 @@ def doRenegadeCity(pCity, iNewOwner, LoserUnit):
             NewUnit = pNewOwner.initUnit(iUnitType, iX, iY, UnitAITypes(iUnitAIType), DirectionTypes.DIRECTION_SOUTH)
             PAE_Unit.copyName(NewUnit, iUnitType, pLoopUnit.getName())
             if iUnitCombatType != -1:
-                PAE_Unit.initUnitFromUnit(NewUnit, pLoopUnit)
+                PAE_Unit.initUnitFromUnit(pLoopUnit, NewUnit)
                 NewUnit.setDamage(pLoopUnit.getDamage(), -1)
                 # PAE V: Trait-Promotions
                 # 1. Agg Promo weg

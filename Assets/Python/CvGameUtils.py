@@ -136,30 +136,31 @@ class CvGameUtils:
 
                 (loopCity, pIter) = pPlayer.firstCity(False)
                 while loopCity:
-                    if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE")):
-                        # Check plots (Klima / climate)
-                        bOK1 = False
-                        bOK2 = False
-                        bOK = False
-                        iX = loopCity.getX()
-                        iY = loopCity.getY()
-                        iRange = 1
-                        for i in range(-iRange, iRange+1):
-                            for j in range(-iRange, iRange+1):
-                                pLoopPlot = plotXY(iX, iY, i, j)
-                                if pLoopPlot is not None and not pLoopPlot.isNone():
-                                    if pLoopPlot.getTerrainType() == terr_desert or pLoopPlot.getFeatureType() == feat_jungle:
-                                        bOK1 = True
-                                    if pLoopPlot.getTerrainType() == terr_plains and pLoopPlot.getBonusType(pLoopPlot.getOwner()) == -1:
-                                        bOK2 = True
-                                    if bOK1 and bOK2:
-                                        bOK = True
-                                        break
-                            if bOK:
-                                break
+                    if loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_KOLONIE")):
+                        if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE")):
+                            # Check plots (Klima / climate)
+                            bOK1 = False
+                            bOK2 = False
+                            bOK = False
+                            iX = loopCity.getX()
+                            iY = loopCity.getY()
+                            iRange = 1
+                            for i in range(-iRange, iRange+1):
+                                for j in range(-iRange, iRange+1):
+                                    pLoopPlot = plotXY(iX, iY, i, j)
+                                    if pLoopPlot is not None and not pLoopPlot.isNone():
+                                        if pLoopPlot.getTerrainType() == terr_desert or pLoopPlot.getFeatureType() == feat_jungle:
+                                            bOK1 = True
+                                        if pLoopPlot.getTerrainType() == terr_plains and pLoopPlot.getBonusType(pLoopPlot.getOwner()) == -1:
+                                            bOK2 = True
+                                        if bOK1 and bOK2:
+                                            bOK = True
+                                            break
+                                if bOK:
+                                    break
 
-                        if bOK:
-                            CyEngine().addColoredPlotAlt(iX, iY, PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_WHITE", 1)
+                            if bOK:
+                                CyEngine().addColoredPlotAlt(iX, iY, PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_WHITE", 1)
 
                     (loopCity, pIter) = pPlayer.nextCity(pIter, False)
 
@@ -170,25 +171,38 @@ class CvGameUtils:
 
                 (loopCity, pIter) = pPlayer.firstCity(False)
                 while loopCity:
-                    if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
-                        # Check plots (Klima / climate)
-                        bOK = False
-                        iX = loopCity.getX()
-                        iY = loopCity.getY()
-                        iRange = 1
-                        for i in range(-iRange, iRange+1):
-                            for j in range(-iRange, iRange+1):
-                                pLoopPlot = plotXY(iX, iY, i, j)
-                                if pLoopPlot is not None and not pLoopPlot.isNone():
-                                    if pLoopPlot.getTerrainType() == terr_desert and pLoopPlot.getBonusType(pLoopPlot.getOwner()) == -1:
-                                        bOK = True
-                                        break
+                    if loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_KOLONIE")):
+                        if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
+                            # Check plots (Klima / climate)
+                            bOK = False
+                            iX = loopCity.getX()
+                            iY = loopCity.getY()
+                            iRange = 1
+                            for i in range(-iRange, iRange+1):
+                                for j in range(-iRange, iRange+1):
+                                    pLoopPlot = plotXY(iX, iY, i, j)
+                                    if pLoopPlot is not None and not pLoopPlot.isNone():
+                                        if pLoopPlot.getTerrainType() == terr_desert and pLoopPlot.getBonusType(pLoopPlot.getOwner()) == -1:
+                                            bOK = True
+                                            break
+                                if bOK:
+                                    break
                             if bOK:
-                                break
-                        if bOK:
-                            CyEngine().addColoredPlotAlt(iX, iY, PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_WHITE", 1)
+                                CyEngine().addColoredPlotAlt(iX, iY, PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_WHITE", 1)
                     (loopCity, pIter) = pPlayer.nextCity(pIter, False)
-
+            
+            # Hunter
+            elif iUnitType == gc.getInfoTypeForString("UNIT_HUNTER"):
+                pPlayer = gc.getPlayer(pHeadSelectedUnit.getOwner())
+                (loopCity, pIter) = pPlayer.firstCity(False)
+                while loopCity:
+                    loopPlot = loopCity.plot()
+                    if PAE_Unit.huntingDistance(loopPlot, pHeadSelectedUnit.plot()):
+                        CyEngine().addColoredPlotAlt(loopPlot.getX(), loopPlot.getY(), PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_GREEN", 1)
+                    else:
+                        CyEngine().addColoredPlotAlt(loopPlot.getX(), loopPlot.getY(), PlotStyles.PLOT_STYLE_CIRCLE, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS, "COLOR_RED", 1)
+                    (loopCity, pIter) = pPlayer.nextCity(pIter, False)                
+            
         return False
 
     def isActionRecommended(self, argsList):
@@ -1122,21 +1136,33 @@ class CvGameUtils:
             # if pUnit.getUnitAIType() ==
             # gc.getInfoTypeForString("UNITAI_MERCHANT") and iUnitType != gc.getInfoTypeForString("UNIT_MERCHANT") and iOwner != iBarbarianPlayer:
             if iUnitType in L.LCultivationUnits:
+                #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "CultivationUnit: " + pOwner.getName(), None, 2, None, ColorTypes(5), 0, 0, False, False)
                 if PAE_Cultivation.doCultivation_AI(pUnit):
-                    # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI Cultivation",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+                    #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI Cultivation",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                     return True
-
+                
+                #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "CultivationUnit: False", None, 2, None, ColorTypes(5), 0, 0, False, False)
+                if not pUnit.plot().isCity():
+                    pCity = PAE_Unit.getNearestCity(pUnit)
+                    if pCity != None:
+                        pUnit.getGroup().pushMoveToMission(pCity.getX(), pCity.getY())
+                        return True
+                
+                pUnit.getGroup().pushMission(MissionTypes.MISSION_SKIP, 0, 0, 0, True, False, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
+                return True
+            
+            
             if iUnitType in L.LTradeUnits:
-                # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "TradeUnit: " + pOwner.getName(), None, 2, None, ColorTypes(5), pUnit.getX(), pUnit.getY(), False, False)
-                # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Vor doAutom 1", None, 2, None, ColorTypes(6), pUnit.getX(), pUnit.getY(), False, False)
+                #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "TradeUnit: " + pOwner.getName(), None, 2, None, ColorTypes(5), 0, 0, False, False)
+                #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Vor doAutom 1", None, 2, None, ColorTypes(6), 0, 0, False, False)
                 if PAE_Trade.doAutomateMerchant(pUnit, True):
-                    # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+                    #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                     return True
                 elif PAE_Trade.doAssignTradeRoute_AI(pUnit):
-                    # CyInterface().addMessage(iHumanPlayer, True, 10, "Vor doAutom 2 " + s, None, 2, None, ColorTypes(6), pUnit.getX(), pUnit.getY(), False, False)
+                    # CyInterface().addMessage(iHumanPlayer, True, 10, "Vor doAutom 2 " + s, None, 2, None, ColorTypes(6), 0, 0, False, False)
                     # try again
                     if PAE_Trade.doAutomateMerchant(pUnit, True):
-                        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant new trade route",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
+                        #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, CyTranslator().getText("TXT_KEY_MESSAGE_TEST",("Python AI automate merchant new trade route",1)), None, 2, None, ColorTypes(10), 0, 0, False, False)
                         return True
 
             # Veteran -> Eliteunit (netMessage 705)
@@ -2541,7 +2567,7 @@ class CvGameUtils:
             if iData1 == 720:
                 return CyTranslator().getText("TXT_KEY_HELP_LEGEND_HERO_TO_GENERAL", ())
 
-            # Elefantenstall
+            # Info Buttons: Elefanten / Kamel / Hunter
             if iData1 == 721:
                 if iData2 == 1:
                     return CyTranslator().getText("TXT_KEY_HELP_ELEFANTENSTALL1", ())
@@ -2555,6 +2581,10 @@ class CvGameUtils:
                     return CyTranslator().getText("TXT_KEY_HELP_KAMELSTALL2", ())
                 elif iData2 == 6:
                     return CyTranslator().getText("TXT_KEY_HELP_KAMELSTALL3", ())
+                elif iData2 == 7:
+                    return CyTranslator().getText("TXT_KEY_HELP_HUNTER_DISTANCE_OK", ())
+                elif iData2 == 8:
+                    return CyTranslator().getText("TXT_KEY_HELP_HUNTER_DISTANCE_NOTOK", ())
 
             # Piraten-Feature
             if iData1 == 722:
@@ -2724,31 +2754,32 @@ class CvGameUtils:
                 iJungle = gc.getInfoTypeForString("FEATURE_JUNGLE")
                 (loopCity, pIter) = pPlayer.firstCity(False)
                 while loopCity:
-                    if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE")):
-                        # Check plots (Klima / climate)
-                        bOK = False
-                        iX = loopCity.getX()
-                        iY = loopCity.getY()
-                        for i in [-1, 0, 1]:
-                            for j in [-1, 0, 1]:
-                                loopPlot = plotXY(iX, iY, i-1, j-1)
-                                if loopPlot is not None and not loopPlot.isNone():
-                                    if loopPlot.getTerrainType() == iDesert or loopPlot.getFeatureType() == iJungle:
-                                        bOK = True
-                                        break
-                            if bOK:
-                                break
+                    if loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_KOLONIE")):
+                        if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE")):
+                            # Check plots (Klima / climate)
+                            bOK = False
+                            iX = loopCity.getX()
+                            iY = loopCity.getY()
+                            for i in [-1, 0, 1]:
+                                for j in [-1, 0, 1]:
+                                    loopPlot = plotXY(iX, iY, i-1, j-1)
+                                    if loopPlot is not None and not loopPlot.isNone():
+                                        if loopPlot.getTerrainType() == iDesert or loopPlot.getFeatureType() == iJungle:
+                                            bOK = True
+                                            break
+                                if bOK:
+                                    break
 
-                        if bOK:
-                            if pUnit.generatePath(loopCity.plot(), 0, False, None):
-                                if not pUnit.atPlot(loopCity.plot()):
-                                    pUnitGroup.clearMissionQueue()
-                                    pUnitGroup.pushMission(MissionTypes.MISSION_MOVE_TO, iX, iY, 0, False, False, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
-                                else:
-                                    loopCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE"), 1)
-                                    # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
-                                    pUnit.kill(True, -1)  # RAMK_CTD
-                                    return True
+                            if bOK:
+                                if pUnit.generatePath(loopCity.plot(), 0, False, None):
+                                    if not pUnit.atPlot(loopCity.plot()):
+                                        pUnitGroup.clearMissionQueue()
+                                        pUnitGroup.pushMission(MissionTypes.MISSION_MOVE_TO, iX, iY, 0, False, False, MissionAITypes.NO_MISSIONAI, pUnit.plot(), pUnit)
+                                    else:
+                                        loopCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_ELEPHANT_STABLE"), 1)
+                                        # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
+                                        pUnit.kill(True, -1)  # RAMK_CTD
+                                        return True
                     (loopCity, pIter) = pPlayer.nextCity(pIter, False)
 
     # Kamellager
@@ -2767,28 +2798,29 @@ class CvGameUtils:
 
                 (loopCity, pIter) = pPlayer.firstCity(False)
                 while loopCity:
-                    if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
+                    if loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_KOLONIE")):
+                        if not loopCity.isHasBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE")):
                             # Check plots (Klima / climate)
-                        iX = loopCity.getX()
-                        iY = loopCity.getY()
-                        bOK = False
-                        for iI in range(-1, DirectionTypes.NUM_DIRECTION_TYPES):
-                            pLoopPlot = plotDirection(iX, iY, DirectionTypes(iI))
-                            if pLoopPlot is not None and not pLoopPlot.isNone():
-                                if pLoopPlot.getTerrainType() == iDesert:
-                                    bOK = True
-                                    break
+                            iX = loopCity.getX()
+                            iY = loopCity.getY()
+                            bOK = False
+                            for iI in range(-1, DirectionTypes.NUM_DIRECTION_TYPES):
+                                pLoopPlot = plotDirection(iX, iY, DirectionTypes(iI))
+                                if pLoopPlot is not None and not pLoopPlot.isNone():
+                                    if pLoopPlot.getTerrainType() == iDesert:
+                                        bOK = True
+                                        break
 
-                        if bOK:
-                            if pUnit.generatePath(loopCity.plot(), 0, False, None):
-                                if not pUnit.atPlot(loopCity.plot()):
-                                    pUnitGroup.clearMissionQueue()
-                                    pUnit.getGroup().pushMoveToMission(iX, iY)
-                                else:
-                                    loopCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE"), 1)
-                                    # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
-                                    pUnit.kill(True, -1)  # RAMK_CTD
-                                return True
+                            if bOK:
+                                if pUnit.generatePath(loopCity.plot(), 0, False, None):
+                                    if not pUnit.atPlot(loopCity.plot()):
+                                        pUnitGroup.clearMissionQueue()
+                                        pUnit.getGroup().pushMoveToMission(iX, iY)
+                                    else:
+                                        loopCity.setNumRealBuilding(gc.getInfoTypeForString("BUILDING_CAMEL_STABLE"), 1)
+                                        # pUnit.doCommand(CommandTypes.COMMAND_DELETE, -1, -1)
+                                        pUnit.kill(True, -1)  # RAMK_CTD
+                                    return True
                     (loopCity, pIter) = pPlayer.nextCity(pIter, False)
 
     # Inquisitor -------------------
@@ -2826,13 +2858,15 @@ class CvGameUtils:
 
         # BTS: regular epic game experience
         # and PAE VI again
-        iExperienceNeeded = iLevel * iLevel + 1
+        # 2,5,10,17,26
+        #iExperienceNeeded = iLevel * iLevel + 1
 
-        # PAE IV: ab Lvl 7 mehr XP notwendig
+        # PAE IV: ab Lvl 7 mehr XP notwendig        
         #if iLevel > 7: iExperienceNeeded += iLevel * 2
 
         # PAE V: L * (L+2) - (L / 2)
-        #iExperienceNeeded = (iLevel * (iLevel+2)) - (iLevel/2)
+        # 2,7,13,22,32
+        iExperienceNeeded = iLevel * (iLevel+2) - iLevel/2
 
         iModifier = gc.getPlayer(iOwner).getLevelExperienceModifier()
         if iModifier != 0:

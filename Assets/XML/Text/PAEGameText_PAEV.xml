@@ -1242,10 +1242,10 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_PROMOTION_FORM_NONE</Tag>
-    <English>Loose Formation</English>
+    <English>Cancel Formation</English>
     <French>Annuler la formation</French>
-    <German>Keine Formation</German>
-    <Italian>Loose Formation</Italian>
+    <German>Formation aufheben</German>
+    <Italian>Cancel Formation</Italian>
     <Spanish>Formaci&#243;n abierta</Spanish>
   </TEXT>
   <TEXT>
@@ -2497,12 +2497,12 @@
     <Spanish>Arquero a Caballo Escita</Spanish>
   </TEXT>
   <TEXT>
-    <Tag>TXT_KEY_FREE</Tag>
-    <English></English>
-    <French></French>
-    <German></German>
-    <Italian></Italian>
-    <Spanish></Spanish>
+    <Tag>TXT_KEY_BUILDING_WATERMILL</Tag>
+    <English>Watermills</English>
+    <French>Moulins &#224; eau</French>
+    <German>Wasserm&#252;hlen</German>
+    <Italian>Mulini ad acqua</Italian>
+    <Spanish>Molinos de agua</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_UNIT_UR</Tag>
@@ -3703,14 +3703,6 @@
     <German>Heldendenkmal</German>
     <Italian>Heroic Monument</Italian>
     <Spanish>Monumento a los h&#233;roes</Spanish>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_FREE</Tag>
-    <English></English>
-    <French></French>
-    <German></German>
-    <Italian></Italian>
-    <Spanish></Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_PROMOTION_RANG_ROM_EQUES_3</Tag>

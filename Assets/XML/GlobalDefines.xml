@@ -479,11 +479,11 @@
   </Define>
   <Define>
     <DefineName>GREAT_GENERALS_THRESHOLD_INCREASE</DefineName>
-    <iDefineIntVal>100</iDefineIntVal>
+    <iDefineIntVal>80</iDefineIntVal>
   </Define>
   <Define>
     <DefineName>GREAT_GENERALS_THRESHOLD_INCREASE_TEAM</DefineName>
-    <iDefineIntVal>100</iDefineIntVal>
+    <iDefineIntVal>80</iDefineIntVal>
   </Define>
   <Define>
     <DefineName>GREAT_GENERALS_THRESHOLD</DefineName>
@@ -1632,7 +1632,7 @@
   </Define>
   <Define>
     <DefineName>USE_MODDERS_PLAYEROPTION_2</DefineName>
-    <iDefineIntVal>0</iDefineIntVal>
+    <iDefineIntVal>1</iDefineIntVal>
   </Define>
   <Define>
     <DefineName>USE_MODDERS_PLAYEROPTION_3</DefineName>

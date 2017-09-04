@@ -1809,6 +1809,16 @@
       <Button>,Art/Interface/Buttons/Buildings/Forge.dds,Art/Interface/Buttons/Buildings_Atlas.dds,1,9</Button>
     </BuildingArtInfo>
     <BuildingArtInfo>
+      <Type>ART_DEF_BUILDING_WATERMILL</Type>
+      <LSystem>LSYSTEM_2x2</LSystem>
+      <bAnimated>1</bAnimated>
+      <fScale>1.31</fScale>
+      <fInterfaceScale>0.47</fInterfaceScale>
+      <NIF>Art/Structures/Improvements/WaterMill/WaterMill.nif</NIF>
+      <KFM/>
+      <Button>,Art/Interface/Buttons/Builds/BuildWaterMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,8</Button>
+    </BuildingArtInfo>
+    <BuildingArtInfo>
       <Type>ART_DEF_BUILDING_WAFFENMANUFAKTUR_SCHWERT</Type>
       <LSystem>LSYSTEM_1x1</LSystem>
       <bAnimated>0</bAnimated>

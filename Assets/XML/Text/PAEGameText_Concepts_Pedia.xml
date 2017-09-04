@@ -5,8 +5,9 @@
     <English>
 [H1]Distribution of bonus resources[\H1]
 
-Grain wagons, which are unlocked by the tech cultivation, can be used to increase the food storage of a city by 50[ICON_FOOD] (however, they decrease the storage of the city in which they are built by the half) or to spread certain resources near cities. These resources are divided into four groups:
-Grain:
+Besides of increasing the food storage of other cities (+50[ICON_FOOD]), grain wagons can also spread certain resources nearby cities:
+
+Types of grain:
 [ICON_BULLET] Wheat
 [ICON_BULLET] Barley
 [ICON_BULLET] Oat
@@ -17,97 +18,62 @@ Cattle:
 [ICON_BULLET] Cow
 [ICON_BULLET] Pig
 [ICON_BULLET] Sheep
-Camel:
-[ICON_BULLET] Camel
 Misc:
+[ICON_BULLET] Grapes
 [ICON_BULLET] Olives
 [ICON_BULLET] Dates
 
-A resource can only be distributed if you already own at least one resource of this type. You can choose by yourself which resource shall be distributed, it will be placed on one of the tiles adjacent to the city (3x3 square) and the grain wagon will be disbanded. If there is already a resource of this group near the city, the new one will replace the old one (otherwise, the resource is placed on a tile without any resource) so each city cannot get more than one resource per group.
+A resource can be spread as soon as it is in the city's trade network, where it has to be loaded with a grain waggon. If the resource is in the surrounding area of the city, the purchase is cheaper. Green circles on the map make a possible cultivation visible. The grain waggon will be disbanded during a cultivation.
+If you drag the grain waggon onto a plot with a cultivable bonus resource, you can remove it from the plot and place it somewhere else. The info on what the grain cart is loaded is on the lower left of the unit properties in the main interface.
 
 [H1]Conditions[\H1]
 
-There are certain climatic condition for every resource which need to be fulfilled in order to distribute the resource. If they are not met, the distribution is impossible.
-There are two kinds of conditions: Some resources need a certain number (at least or maximum, depending on the resource) of plots with a particular feature (plains, desert etc.) near the city (3x3 square); others only need this feature on the plot where they are supposed to be distributed.
+One bonus resource can be made cultivable per city level. Even the city radius of neighboring cities counts. Look at a bar on the left in the city view to see how many bonus goods can be cultivated.
+
+Settlement and village: 1
+City: 2
+Provincial city: 3
+Metropolis: 4
+
+[H1]Climate conditions[\H1]
 
 [H2]Grain[\H2]
 [ICON_BULLET] All: Flatlands
 [ICON_BULLET] Wheat: Grassland, plains or flood plains
 [ICON_BULLET] Barley: Plains or flood plains
 [ICON_BULLET] Oat: Grassland or flood plains
-[ICON_BULLET] Rye: Grassland or flood plains
+[ICON_BULLET] Rye: Grassland
 [ICON_BULLET] Millet: Grassland, plains or flood plains
 [ICON_BULLET] Rice: Jungle on swamp or grassland
 
-Each desert tile adjacent to the city decreases the chance of spreading (by default 80%) by 20 percentage points.
-The chance of spreading oat and rye is decreased by 40 percentage points per adjacent plains tile.
+Grain is not always easy to grow, so there is a spread chance of only 80%.
 
 [H2]Cattle[\H2]
 [ICON_BULLET] All: Grassland or plains
 [ICON_BULLET] Cow: Flatland
 [ICON_BULLET] Pig: Flatland
-[ICON_BULLET] Sheep: Only on hills
-
-Each desert tile adjacent to the city decreases the chance of spreading (by default 80%) by 45 percentage points.
-
-[H2]Camel[\H2]
-[ICON_BULLET] Camel: Desert and flatland
+[ICON_BULLET] Sheep: Flatland or hills
 
 [H2]Misc[\H2]
-[ICON_BULLET] Olives: Plains; only on tiles adjacent to the coast
-[ICON_BULLET] Dates: Desert
+[ICON_BULLET] Olives: Plains, hills and coast
+[ICON_BULLET] Dates: Fresh water, flatlands and desert
+[ICON_BULLET] Grapes: Fresh water, grassland or plains and hills
 
 [H1]Priorities[\H1]
 The plots on which the resource can be distributed are divided into up to four priorities. The tile with the highest priority will always be chosen, if there are several possibilities, one of them is chosen randomly.
 
-[H2]Grain[\H2]
-[ICON_BULLET] Wheat, Barley, Oat, Rye, Millet:
--) Prio 1: Flood plains with farm
--) Prio 2: Unimproved flood plains or grassland/plains tiles with farm
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains/flood plains tiles
-[ICON_BULLET] Rice:
--) Prio 1: Grassland tiles with flood plains and farm
--) Prio 2: Unimproved grassland tiles with flood plains
--) Prio 3: Improved grassland tiles with flood plains
-
-[H2]Cattle[\H2]
-[ICON_BULLET] Cow:
--) Prio 1: Grassland or plains with pastures and fresh water
--) Prio 2: Unimproved grassland with fresh water or grassland/plains with pastures and without fresh water
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains tiles
-[ICON_BULLET] Pig:
--) Prio 1: Grassland or plains with swamp and pastures
--) Prio 2: Unimproved swamps or tiles with pastures
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains tiles
-[ICON_BULLET] Sheep:
--) Prio 1: Hills with pastures
--) Prio 2: Unimproved grass or plains hills
--) Prio 3: Improved grass or plains hills
-
-[H2]Camel[\H2]
-[ICON_BULLET] Camel:
+[ICON_BULLET] Camels:
 -) Prio 1: Unimproved desert tiles (flatland) with fresh water
 -) Prio 2: Unimproved desert tiles (flatland) without fresh water
 -) Prio 3: Improved desert tiles (flatland) with fresh water
 -) Prio 4: Improved desert tiles (flatland) without fresh water
-
-[H2]Misc\H2]
-[ICON_BULLET] Olives:
--) Prio 1: Unimproved plains hills
--) Prio 2: Unimproved plains tiles
--) Prio 3: Improved plains hills
--) Prio 4: Improved plains tiles
-[ICON_BULLET] Dates:
--) Prio 1: Desert tiles
     </English>
     <French>
 [H1]Distribution of bonus resources[\H1]
 
-Grain wagons, which are unlocked by the tech cultivation, can be used to increase the food storage of a city by 50[ICON_FOOD] (however, they decrease the storage of the city in which they are built by the half) or to spread certain resources near cities. These resources are divided into four groups:
-Grain:
+Besides of increasing the food storage of other cities (+50[ICON_FOOD]), grain wagons can also spread certain resources nearby cities:
+
+Types of grain:
 [ICON_BULLET] Wheat
 [ICON_BULLET] Barley
 [ICON_BULLET] Oat
@@ -118,97 +84,62 @@ Cattle:
 [ICON_BULLET] Cow
 [ICON_BULLET] Pig
 [ICON_BULLET] Sheep
-Camel:
-[ICON_BULLET] Camel
 Misc:
+[ICON_BULLET] Grapes
 [ICON_BULLET] Olives
 [ICON_BULLET] Dates
 
-A resource can only be distributed if you already own at least one resource of this type. You can choose by yourself which resource shall be distributed, it will be placed on one of the tiles adjacent to the city (3x3 square) and the grain wagon will be disbanded. If there is already a resource of this group near the city, the new one will replace the old one (otherwise, the resource is placed on a tile without any resource) so each city cannot get more than one resource per group.
+A resource can be spread as soon as it is in the city's trade network, where it has to be loaded with a grain waggon. If the resource is in the surrounding area of the city, the purchase is cheaper. Green circles on the map make a possible cultivation visible. The grain waggon will be disbanded during a cultivation.
+If you drag the grain waggon onto a plot with a cultivable bonus resource, you can remove it from the plot and place it somewhere else. The info on what the grain cart is loaded is on the lower left of the unit properties in the main interface.
 
 [H1]Conditions[\H1]
 
-There are certain climatic condition for every resource which need to be fulfilled in order to distribute the resource. If they are not met, the distribution is impossible.
-There are two kinds of conditions: Some resources need a certain number (at least or maximum, depending on the resource) of plots with a particular feature (plains, desert etc.) near the city (3x3 square); others only need this feature on the plot where they are supposed to be distributed.
+One bonus resource can be made cultivable per city level. Even the city radius of neighboring cities counts. Look at a bar on the left in the city view to see how many bonus goods can be cultivated.
+
+Settlement and village: 1
+City: 2
+Provincial city: 3
+Metropolis: 4
+
+[H1]Climate conditions[\H1]
 
 [H2]Grain[\H2]
 [ICON_BULLET] All: Flatlands
 [ICON_BULLET] Wheat: Grassland, plains or flood plains
 [ICON_BULLET] Barley: Plains or flood plains
 [ICON_BULLET] Oat: Grassland or flood plains
-[ICON_BULLET] Rye: Grassland or flood plains
+[ICON_BULLET] Rye: Grassland
 [ICON_BULLET] Millet: Grassland, plains or flood plains
 [ICON_BULLET] Rice: Jungle on swamp or grassland
 
-Each desert tile adjacent to the city decreases the chance of spreading (by default 80%) by 20 percentage points.
-The chance of spreading oat and rye is decreased by 40 percentage points per adjacent plains tile.
+Grain is not always easy to grow, so there is a spread chance of only 80%.
 
 [H2]Cattle[\H2]
 [ICON_BULLET] All: Grassland or plains
 [ICON_BULLET] Cow: Flatland
 [ICON_BULLET] Pig: Flatland
-[ICON_BULLET] Sheep: Only on hills
-
-Each desert tile adjacent to the city decreases the chance of spreading (by default 80%) by 45 percentage points.
-
-[H2]Camel[\H2]
-[ICON_BULLET] Camel: Desert and flatland
+[ICON_BULLET] Sheep: Flatland or hills
 
 [H2]Misc[\H2]
-[ICON_BULLET] Olives: Plains; only on tiles adjacent to the coast
-[ICON_BULLET] Dates: Desert
+[ICON_BULLET] Olives: Plains, hills and coast
+[ICON_BULLET] Dates: Fresh water, flatlands and desert
+[ICON_BULLET] Grapes: Fresh water, grassland or plains and hills
 
 [H1]Priorities[\H1]
 The plots on which the resource can be distributed are divided into up to four priorities. The tile with the highest priority will always be chosen, if there are several possibilities, one of them is chosen randomly.
 
-[H2]Grain[\H2]
-[ICON_BULLET] Wheat, Barley, Oat, Rye, Millet:
--) Prio 1: Flood plains with farm
--) Prio 2: Unimproved flood plains or grassland/plains tiles with farm
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains/flood plains tiles
-[ICON_BULLET] Rice:
--) Prio 1: Grassland tiles with flood plains and farm
--) Prio 2: Unimproved grassland tiles with flood plains
--) Prio 3: Improved grassland tiles with flood plains
-
-[H2]Cattle[\H2]
-[ICON_BULLET] Cow:
--) Prio 1: Grassland or plains with pastures and fresh water
--) Prio 2: Unimproved grassland with fresh water or grassland/plains with pastures and without fresh water
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains tiles
-[ICON_BULLET] Pig:
--) Prio 1: Grassland or plains with swamp and pastures
--) Prio 2: Unimproved swamps or tiles with pastures
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains tiles
-[ICON_BULLET] Sheep:
--) Prio 1: Hills with pastures
--) Prio 2: Unimproved grass or plains hills
--) Prio 3: Improved grass or plains hills
-
-[H2]Camel[\H2]
-[ICON_BULLET] Camel:
+[ICON_BULLET] Camels:
 -) Prio 1: Unimproved desert tiles (flatland) with fresh water
 -) Prio 2: Unimproved desert tiles (flatland) without fresh water
 -) Prio 3: Improved desert tiles (flatland) with fresh water
 -) Prio 4: Improved desert tiles (flatland) without fresh water
-
-[H2]Misc\H2]
-[ICON_BULLET] Olives:
--) Prio 1: Unimproved plains hills
--) Prio 2: Unimproved plains tiles
--) Prio 3: Improved plains hills
--) Prio 4: Improved plains tiles
-[ICON_BULLET] Dates:
--) Prio 1: Desert tiles
     </French>
     <German>
 [H1]Verbreitung von Bonusressourcen[\H1]
 
-Getreidekarren, die ab der Technologie Kultivierung gebaut werden k&#246;nnen, k&#246;nnen genutzt werden, um den Nahrungsspeicher einer Stadt um 50[ICON_FOOD] zu erh&#246;hen (sie leeren den Kornspeicher der Stadt, in der sie gebaut werden, allerdings auch um die H&#228;lfte) und um verschiedene Ressourcen in der N&#228;he von St&#228;dten zu verbreiten. Diese Ressourcen werden in vier Gruppen eingeteilt:
-Getreide:
+Neben der Nahrungsmittellieferung (+50[ICON_FOOD]) an St&#228;dten, kann der Getreidekarren zum Verbreiten von kultivierbaren Bonusresourcen verwendet werden:
+
+Getreidesorten:
 [ICON_BULLET] Weizen
 [ICON_BULLET] Gerste
 [ICON_BULLET] Hafer
@@ -219,97 +150,62 @@ Vieh:
 [ICON_BULLET] Kuh
 [ICON_BULLET] Schwein
 [ICON_BULLET] Schaf
-Kamele:
-[ICON_BULLET] Kamel
 Sonstiges:
+[ICON_BULLET] Trauben
 [ICON_BULLET] Oliven
 [ICON_BULLET] Datteln
 
-Eine Ressource kann nur verbreitet werden, wenn man bereits ein Exemplar dieser Ressource besitzt. Man kann selbst w&#228;hlen, welche Ressource verbreitet werden soll, diese erscheint dann (mit einer Wahrscheinlichkeit von 80%) auf einem der an die Stadt angrenzenden Felder (3x3-Quadrat), der Getreidekarren wird dabei aufgel&#246;st. Befindet sich auf einem dieser Felder bereits eine Ressource dieser Gruppe, wird die alte durch die neue ersetzt (ansonsten wird sie auf einem Feld ohne Ressource platziert), man kann in einer Stadt also nicht mehr als eine Ressource pro Gruppe verbreiten.
+Eine Ressource kann verbreitet werden, sobald es im Handelsnetz der Stadt ist, wo man es mit dem Getreidekarren aufladen muss. Liegt die Resource im Bereich der Stadt, ist der Einkauf billiger. Gr&#252;ne Kreise auf der Karte machen eine m&#246;gliche Kultivierung sichtbar. Bei der Verbreitung wird der Getreidekarren aufgel&#246;st.
+Zieht man den Getreidekarren auf ein Feld mit einem kultivierbaren Bonusgut, kann man es vom Feld l&#246;sen und woanders platzieren. Die Info, mit was der Getreidekarren beladen ist, steht links unten bei den Einheiteneigenschaften im Hauptbildschirm.
 
 [H1]Bedingungen[\H1]
 
-F&#252;r jede Ressource sind gewisse klimatische Bedingungen notwendig, um sie in einer Stadt verbreiten zu k&#246;nnen. Sind diese nicht erf&#252;llt, ist die Verbreitung nicht m&#246;glich.
-F&#252;r die meisten Ressourcen ist nur das Feld, auf dem die Ressource verbreitet werden soll, von Relevanz; f&#252;r manche ist es jedoch n&#246;tig, dass mindestens ein Gel&#228;ndefeld mit einem bestimmten Klima an die Stadt grenzt (die Ressource muss aber nicht zwangsl&#228;ufig auf diesem Feld verbreitet werden) bzw. wird die Verbreitungswahrscheinlichkeit durch die Anzahl an die Stadt grenzender Felder mit bestimmten Klima (z.B. W&#252;ste) beeinflusst. "An die Stadt grenzend" meint hierbei die bis zu acht Felder (3x3-Quadrat), die sich direkt neben der Stadt befinden.
+Pro Stadtstufe kann eine Bonusresource kultivierbar gemacht werden. Dabei z&#228;hlt der Einflussbereich jeder (benachbarten) Stadt. Im Stadtfenster links sieht man in einem Infobalken, wieviel Bonusg&#252;ter kultivierbar sind.
+
+Siedlung und Dorf: 1
+Stadt: 2
+Provinzstadt: 3
+Metropole: 4
+
+[H1]Klimabedingungen[\H1]
 
 [H2]Getreide[\H2]
 [ICON_BULLET] Alle: Flachland
-[ICON_BULLET] Weizen: Grasland, Ebene oder Schwemmland
-[ICON_BULLET] Gerste: Ebene oder Schwemmland
+[ICON_BULLET] Weizen: Grasland, Steppe oder Schwemmland
+[ICON_BULLET] Gerste: Steppe oder Schwemmland
 [ICON_BULLET] Hafer: Grasland oder Schwemmland
-[ICON_BULLET] Roggen: Grasland oder Schwemmland
+[ICON_BULLET] Roggen: Grasland
 [ICON_BULLET] Hirse: Grasland, Ebene oder Schwemmland
 [ICON_BULLET] Reis: Dschungel auf Sumpf oder Gras
 
-Pro an die Stadt grenzendem W&#252;stenfeld sinkt die Verbreitungschance (standardm&#228;&#223;ig 80%) um 20 Prozentpunkte.
-F&#252;r Roggen und Hafer sinkt die Verbreitungschance pro angrenzendem Ebenenfeld um 40 Prozentpunkte.
+Nicht immer kann Getreide leicht angebaut werden, deshalb gibt es hier eine Verbreitungschance von nur 80%.
 
 [H2]Vieh[\H2]
-[ICON_BULLET] Alle: Grasland oder Ebene
+[ICON_BULLET] Alle: Grasland oder Steppe
 [ICON_BULLET] Kuh: Flachland
 [ICON_BULLET] Schwein: Flachland
-[ICON_BULLET] Schaf: Nur auf H&#252;geln
-
-Pro an die Stadt grenzendem W&#252;stenfeld sinkt die Verbreitungschance (standardm&#228;&#223;ig 80%) um 45 Prozentpunkte.
-
-[H2]Kamel[\H2]
-[ICON_BULLET] Kamel: W&#252;ste und Flachland
+[ICON_BULLET] Schaf: Flachland oder H&#252;gel
 
 [H2]Sonstige[\H2]
-[ICON_BULLET] Oliven: Ebene; nur auf Feldern, die an die K&#252;ste grenzen
-[ICON_BULLET] Datteln: W&#252;ste
+[ICON_BULLET] Oliven: Steppe, H&#252;gel und K&#252;ste
+[ICON_BULLET] Datteln: S&#252;&#223;wasser, Flachland und W&#252;ste
+[ICON_BULLET] Trauben: S&#252;&#223;wasser, Grasland oder Steppe und H&#252;gel
 
 [H1]Priorit&#228;ten[\H1]
 Die Felder, auf denen die ausgew&#228;hlte Ressource verbreitet werden kann, werden nach bis zu vier Priorit&#228;ten geordnet. Die Ressource wird dabei immer auf einem Feld mit m&#246;glichst hoher Priorit&#228;t verbreitet, haben mehrere Felder dieselbe Priorit&#228;t, wird zuf&#228;llig gew&#228;hlt.
 
-[H2]Getreide[\H2]
-[ICON_BULLET] Weizen, Gerste, Hafer, Roggen, Hirse:
--) Prio 1: Mit Bauernhof modernisierte Schwemmlandfelder
--) Prio 2: Unmodernisierte Schwemmlandfelder oder mit Bauernhof modernisierte Ebenen- und Graslandfelder
--) Prio 3: Unmodernisierte Ebenen- und Graslandfelder
--) Prio 4: Modernisierte Schwemmland-, Ebenen- und Graslandfelder
-[ICON_BULLET] Reis:
--) Prio 1: Mit Bauernhof modernisierte Graslandschwemmlandfelder
--) Prio 2: Unmodernisierte Graslandschwemmlandfelder
--) Prio 3: Modernisierte Graslandschwemmlandfelder
-
-[H2]Vieh[\H2]
-[ICON_BULLET] Kuh:
--) Prio 1: Mit Weide modernisierte Felder mit S&#252;&#223;wasser
--) Prio 2: Unmodernisierte Graslandfelder mit S&#252;&#223;wasser oder mit Weide modernisierte Grasland- oder Ebenenfelder
--) Prio 3: Unmodernisierte Gras- und Ebenenfelder
--) Prio 4: Modernisierte Gras- und Ebenenfelder
-[ICON_BULLET] Schwein:
--) Prio 1: Mit Weide modernisierte Ebenen- oder Graslandfelder mit Sumpf
--) Prio 2: Unmodernisierte Sumpffelder oder mit Weide modernisierte Felder
--) Prio 3: Unmodernisierte Gras- und Ebenenfelder
--) Prio 4: Modernisierte Gras- und Ebenenfelder
-[ICON_BULLET] Schaf:
--) Prio 1: Mit Weide modernisierte Grasland- oder Ebenenh&#252;gel
--) Prio 2: Unmodernisierte Graslandh&#252;gel
--) Prio 3: Unmodernisierte Ebenenh&#252;gel
-
-[H2]Kamele[\H2]
-[ICON_BULLET] Kamel:
+[ICON_BULLET] Kamele:
 -) Prio 1: Unmodernisierte W&#252;stenfelder (Flachland) mit S&#252;&#223;wasser
 -) Prio 2: Unmodernisierte W&#252;stenfelder (Flachland) ohne S&#252;&#223;wasser
 -) Prio 3: Modernisierte W&#252;stenfelder (Flachland) mit S&#252;&#223;wasser
 -) Prio 4: Modernisierte W&#252;stenfelder (Flachland) ohne S&#252;&#223;wasser
-
-[H2]Sonstige[\H2]
-[ICON_BULLET] Oliven:
--) Prio 1: Unmodernisierte Ebenenh&#252;gel
--) Prio 2: Unmodernisierte Ebenenfelder
--) Prio 3: Modernisierte Ebenenh&#252;gel
--) Prio 4: Modernisierte Ebenenfelder
-[ICON_BULLET] Datteln:
--) Prio 1: W&#252;stenfelder
     </German>
     <Italian>
 [H1]Distribution of bonus resources[\H1]
 
-Grain wagons, which are unlocked by the tech cultivation, can be used to increase the food storage of a city by 50[ICON_FOOD] (however, they decrease the storage of the city in which they are built by the half) or to spread certain resources near cities. These resources are divided into four groups:
-Grain:
+Besides of increasing the food storage of other cities (+50[ICON_FOOD]), grain wagons can also spread certain resources nearby cities:
+
+Types of grain:
 [ICON_BULLET] Wheat
 [ICON_BULLET] Barley
 [ICON_BULLET] Oat
@@ -320,91 +216,55 @@ Cattle:
 [ICON_BULLET] Cow
 [ICON_BULLET] Pig
 [ICON_BULLET] Sheep
-Camel:
-[ICON_BULLET] Camel
 Misc:
+[ICON_BULLET] Grapes
 [ICON_BULLET] Olives
 [ICON_BULLET] Dates
 
-A resource can only be distributed if you already own at least one resource of this type. You can choose by yourself which resource shall be distributed, it will be placed on one of the tiles adjacent to the city (3x3 square) and the grain wagon will be disbanded. If there is already a resource of this group near the city, the new one will replace the old one (otherwise, the resource is placed on a tile without any resource) so each city cannot get more than one resource per group.
+A resource can be spread as soon as it is in the city's trade network, where it has to be loaded with a grain waggon. If the resource is in the surrounding area of the city, the purchase is cheaper. Green circles on the map make a possible cultivation visible. The grain waggon will be disbanded during a cultivation.
+If you drag the grain waggon onto a plot with a cultivable bonus resource, you can remove it from the plot and place it somewhere else. The info on what the grain cart is loaded is on the lower left of the unit properties in the main interface.
 
 [H1]Conditions[\H1]
 
-There are certain climatic condition for every resource which need to be fulfilled in order to distribute the resource. If they are not met, the distribution is impossible.
-There are two kinds of conditions: Some resources need a certain number (at least or maximum, depending on the resource) of plots with a particular feature (plains, desert etc.) near the city (3x3 square); others only need this feature on the plot where they are supposed to be distributed.
+One bonus resource can be made cultivable per city level. Even the city radius of neighboring cities counts. Look at a bar on the left in the city view to see how many bonus goods can be cultivated.
+
+Settlement and village: 1
+City: 2
+Provincial city: 3
+Metropolis: 4
+
+[H1]Climate conditions[\H1]
 
 [H2]Grain[\H2]
 [ICON_BULLET] All: Flatlands
 [ICON_BULLET] Wheat: Grassland, plains or flood plains
 [ICON_BULLET] Barley: Plains or flood plains
 [ICON_BULLET] Oat: Grassland or flood plains
-[ICON_BULLET] Rye: Grassland or flood plains
+[ICON_BULLET] Rye: Grassland
 [ICON_BULLET] Millet: Grassland, plains or flood plains
 [ICON_BULLET] Rice: Jungle on swamp or grassland
 
-Each desert tile adjacent to the city decreases the chance of spreading (by default 80%) by 20 percentage points.
-The chance of spreading oat and rye is decreased by 40 percentage points per adjacent plains tile.
+Grain is not always easy to grow, so there is a spread chance of only 80%.
 
 [H2]Cattle[\H2]
 [ICON_BULLET] All: Grassland or plains
 [ICON_BULLET] Cow: Flatland
 [ICON_BULLET] Pig: Flatland
-[ICON_BULLET] Sheep: Only on hills
-
-Each desert tile adjacent to the city decreases the chance of spreading (by default 80%) by 45 percentage points.
-
-[H2]Camel[\H2]
-[ICON_BULLET] Camel: Desert and flatland
+[ICON_BULLET] Sheep: Flatland or hills
 
 [H2]Misc[\H2]
-[ICON_BULLET] Olives: Plains; only on tiles adjacent to the coast
-[ICON_BULLET] Dates: Desert
+[ICON_BULLET] Olives: Plains, hills and coast
+[ICON_BULLET] Dates: Fresh water, flatlands and desert
+[ICON_BULLET] Grapes: Fresh water, grassland or plains and hills
 
 [H1]Priorities[\H1]
 The plots on which the resource can be distributed are divided into up to four priorities. The tile with the highest priority will always be chosen, if there are several possibilities, one of them is chosen randomly.
 
-[H2]Grain[\H2]
-[ICON_BULLET] Wheat, Barley, Oat, Rye, Millet:
--) Prio 1: Flood plains with farm
--) Prio 2: Unimproved flood plains or grassland/plains tiles with farm
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains/flood plains tiles
-[ICON_BULLET] Rice:
--) Prio 1: Grassland tiles with flood plains and farm
--) Prio 2: Unimproved grassland tiles with flood plains
--) Prio 3: Improved grassland tiles with flood plains
-
-[H2]Cattle[\H2]
-[ICON_BULLET] Cow:
--) Prio 1: Grassland or plains with pastures and fresh water
--) Prio 2: Unimproved grassland with fresh water or grassland/plains with pastures and without fresh water
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains tiles
-[ICON_BULLET] Pig:
--) Prio 1: Grassland or plains with swamp and pastures
--) Prio 2: Unimproved swamps or tiles with pastures
--) Prio 3: Unimproved grassland/plains tiles
--) Prio 4: Improved grassland/plains tiles
-[ICON_BULLET] Sheep:
--) Prio 1: Hills with pastures
--) Prio 2: Unimproved grass or plains hills
--) Prio 3: Improved grass or plains hills
-
-[H2]Camel[\H2]
-[ICON_BULLET] Camel:
+[ICON_BULLET] Camels:
 -) Prio 1: Unimproved desert tiles (flatland) with fresh water
 -) Prio 2: Unimproved desert tiles (flatland) without fresh water
 -) Prio 3: Improved desert tiles (flatland) with fresh water
 -) Prio 4: Improved desert tiles (flatland) without fresh water
-
-[H2]Misc\H2]
-[ICON_BULLET] Olives:
--) Prio 1: Unimproved plains hills
--) Prio 2: Unimproved plains tiles
--) Prio 3: Improved plains hills
--) Prio 4: Improved plains tiles
-[ICON_BULLET] Dates:
--) Prio 1: Desert tiles
     </Italian>
     <Spanish>
 [H1]Distribuci&#243;n de los recursos[\H1]

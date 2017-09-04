@@ -233,7 +233,9 @@ def shuffle(num, rand):
 
 
 def spawnUnit(iUnit, pPlot, pPlayer):
-    pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+    if gc.getUnitInfo(iUnit).getCombat() > 0: iType = UnitAITypes.UNITAI_ATTACK
+    else: iType = UnitAITypes.NO_UNITAI
+    pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), iType, DirectionTypes.DIRECTION_SOUTH)
     return 1
 
 

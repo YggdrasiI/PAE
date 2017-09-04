@@ -460,6 +460,7 @@ def doRevoltAnarchy(iPlayer):
     if iRand == 1:
         iBuilding = gc.getInfoTypeForString("BUILDING_PLAGUE")
         iNumCities = pPlayer.getNumCities()
+        if iNumCities == 0: return
         iCityPlague = 0
         iCityRevolt = 0
         (loopCity, pIter) = pPlayer.firstCity(False)

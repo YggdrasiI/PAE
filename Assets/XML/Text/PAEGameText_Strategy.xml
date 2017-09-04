@@ -210,11 +210,11 @@
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_UNIT_HUNTER_STRATEGY</Tag>
-    <English>This [COLOR_HIGHLIGHT_TEXT]exploration unit[COLOR_REVERT], which represents a national unit, increases food stuffs from slain animals.</English>
-    <French>Cette [COLOR_HIGHLIGHT_TEXT]unit&#233; d'exploration[COLOR_REVERT] peut r&#233;colter de la nourriture pour les villes proches en tuant des animaux.</French>
-    <German>Diese [COLOR_HIGHLIGHT_TEXT]Aufkl&#228;rungseinheit[COLOR_REVERT], welche eine [COLOR_HIGHLIGHT_TEXT]nationale Einheit[COLOR_REVERT] darstellt, erh&#246;ht den Nahrungaussto&#223; von erlegten Tieren.</German>
-    <Italian>This [COLOR_HIGHLIGHT_TEXT]exploration unit[COLOR_REVERT], which represents a national unit, increases food stuffs from slain animals.</Italian>
-    <Spanish>Esta [COLOR_HIGHLIGHT_TEXT]unidad exploradora[COLOR_REVERT], es una unidad nacional, incrementa los alimentos recibidos al derrotar animales.</Spanish>
+    <English>A [COLOR_HIGHLIGHT_TEXT]Hunter[COLOR_REVERT] can deliver food from killed animals to nearby cities.</English>
+    <French>Un [COLOR_HIGHLIGHT_TEXT]chasseur[COLOR_REVERT] peut livrer de la nourriture des animaux tu&#233;s aux villes voisines.</French>
+    <German>Ein [COLOR_HIGHLIGHT_TEXT]J&#228;ger[COLOR_REVERT] kann aus erlegten Tieren Nahrung an nahegelegene St&#228;dte liefern.</German>
+    <Italian>Un [COLOR_HIGHLIGHT_TEXT]cacciatore[COLOR_REVERT] pu&#242; consegnare cibo da animali uccisi alle citt&#224; vicine.</Italian>
+    <Spanish>Un [COLOR_HIGHLIGHT_TEXT]cazador[COLOR_REVERT] puede entregar comida de animales muertos a ciudades cercanas.</Spanish>
   </TEXT>
   <TEXT>
     <Tag>TXT_KEY_UNIT_CARVEL_TRADE_STRATEGY</Tag>

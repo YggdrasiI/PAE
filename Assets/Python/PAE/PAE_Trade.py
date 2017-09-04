@@ -119,8 +119,9 @@ def doSellBonus(pUnit, pCity):
 
         pSeller.changeGold(iPrice)
         iGewinnWissen = 0
-
-        iOriginCiv = CvUtil.getScriptData(pUnit, ["originCiv"], -1) # where the goods come from
+        
+        # default: iSeller weil auch der Getreidekarren sein Gut abladen kann
+        iOriginCiv = CvUtil.getScriptData(pUnit, ["originCiv"], iSeller) # where the goods come from
         CvUtil.removeScriptData(pUnit, "b")
         if iOriginCiv != iBuyer:
 
@@ -768,7 +769,7 @@ def doAssignTradeRoute_AI(pUnit):
             break
 
     if pBestPlayerCity is not None and pBestNeighborCity is not None:
-        # CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Stadt gefunden " + pBestPlayerCity.getName()+" nach "+pBestNeighborCity.getName(), None, 2, None, ColorTypes(7), pUnit.getX(), pUnit.getY(), False, False)
+        #CyInterface().addMessage(gc.getGame().getActivePlayer(), True, 10, "Stadt gefunden " + pBestPlayerCity.getName()+" nach "+pBestNeighborCity.getName(), None, 2, None, ColorTypes(7), pUnit.getX(), pUnit.getY(), False, False)
         lPlayerLuxuries = _getCityLuxuries(pBestPlayerCity)
         lNeighborLuxuries = _getCityLuxuries(pBestNeighborCity)
         eBonus1 = lPlayerLuxuries[0]
